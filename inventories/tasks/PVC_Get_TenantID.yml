@@ -1,0 +1,23 @@
+- name: Get PowerVC Tenant ID
+  uri:
+   url: '{{ OS_AUTH_URL }}projects'
+   method: GET
+   validate_certs: no
+   headers:
+    Content-Type: "application/json"
+    X-Auth-Token: "{{ TOKEN }}"
+   return_content: yes
+   status_code: 200
+  register: tenant
+  tags: tenant
+
+- name: Set Variable Tenant ID
+  set_fact: tenant_id={{ item.id }}
+  with_items:
+   - "{{ tenant.json.projects }}"
+  when: item.name == "ibm-default"
+  tags: ibm-default
+
+- fail: msg="Could not get Tenant ID"
+  when: tenant_id is undefined
+

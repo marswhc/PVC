@@ -1,0 +1,20 @@
+- name: Get an authentication PowerVC Token
+  uri:
+   url: "{{ OS_AUTH_URL }}auth/tokens"
+   method: POST
+   validate_certs: no
+   headers:
+    Content-Type: "application/json"
+   body_format: json
+   body: "{{ lookup('template', 'bodyauth.json.j2')}}"
+   return_content: yes
+   status_code: 201
+  register: token
+
+- name: Set Variable TOKEN
+  set_fact:
+   TOKEN: "{{ token['x_subject_token'] }}"
+
+- debug:
+   var: TOKEN
+  when: TOKEN is defined

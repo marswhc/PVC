@@ -1,0 +1,1657 @@
+2020-03-20 15:14:21,487 p=8247 u=root n=ansible | [WARNING]: Unable to parse /root/esun/inventories/localhost as an inventory source
+
+2020-03-20 15:14:21,488 p=8247 u=root n=ansible | [WARNING]: No inventory was parsed, only implicit localhost is available
+
+2020-03-20 15:14:21,488 p=8247 u=root n=ansible | [WARNING]: provided hosts list is empty, only localhost is available. Note that the implicit localhost does not match 'all'
+
+2020-03-20 15:14:22,079 p=8247 u=root n=ansible | PLAY [localhost] ************************************************************************************************************
+2020-03-20 15:14:22,099 p=8247 u=root n=ansible | TASK [Include the variables from the YAML file] *****************************************************************************
+2020-03-20 15:14:22,100 p=8247 u=root n=ansible | Friday 20 March 2020  15:14:22 +0800 (0:00:00.058)       0:00:00.058 ********** 
+2020-03-20 15:14:22,122 p=8247 u=root n=ansible | ok: [localhost]
+2020-03-20 15:14:22,126 p=8247 u=root n=ansible | TASK [Get an authentication PowerVC Token] **********************************************************************************
+2020-03-20 15:14:22,127 p=8247 u=root n=ansible | Friday 20 March 2020  15:14:22 +0800 (0:00:00.026)       0:00:00.086 ********** 
+2020-03-20 15:14:23,928 p=8247 u=root n=ansible | ok: [localhost]
+2020-03-20 15:14:23,944 p=8247 u=root n=ansible | TASK [Set Variable TOKEN] ***************************************************************************************************
+2020-03-20 15:14:23,944 p=8247 u=root n=ansible | Friday 20 March 2020  15:14:23 +0800 (0:00:01.817)       0:00:01.903 ********** 
+2020-03-20 15:14:24,065 p=8247 u=root n=ansible | ok: [localhost]
+2020-03-20 15:14:24,070 p=8247 u=root n=ansible | TASK [debug] ****************************************************************************************************************
+2020-03-20 15:14:24,071 p=8247 u=root n=ansible | Friday 20 March 2020  15:14:24 +0800 (0:00:00.126)       0:00:02.029 ********** 
+2020-03-20 15:14:24,207 p=8247 u=root n=ansible | ok: [localhost] => {
+    "TOKEN": "gAAAAABedG1PgU_RAYOIJumaSXUZ37c_9WyGszR2FyeOTfYYaXRHO-it-PJ8klWXny1qLPYMsh7oJBpEZm9zgULXFpCfWCj5uRNxJuxOJFGU7gP6qgiozR6VrojYblLoOmYaEdq7xQDchI3Oo0bplI43ZXo2EQo1F62jyXx-grhor670ZZfm7A_MOI-SRccBwCpTEipld05Ud2h8zNqTrfzfht_ZACI896W3ZxbkQ9gYEdTkY4jHIVM"
+}
+2020-03-20 15:14:24,214 p=8247 u=root n=ansible | TASK [Get PowerVC Tenant ID] ************************************************************************************************
+2020-03-20 15:14:24,215 p=8247 u=root n=ansible | Friday 20 March 2020  15:14:24 +0800 (0:00:00.144)       0:00:02.174 ********** 
+2020-03-20 15:14:25,067 p=8247 u=root n=ansible | ok: [localhost]
+2020-03-20 15:14:25,074 p=8247 u=root n=ansible | TASK [Set Variable Tenant ID] ***********************************************************************************************
+2020-03-20 15:14:25,075 p=8247 u=root n=ansible | Friday 20 March 2020  15:14:25 +0800 (0:00:00.859)       0:00:03.034 ********** 
+2020-03-20 15:14:25,186 p=8247 u=root n=ansible | skipping: [localhost] => (item={u'is_domain': False, u'description': u'RESTAPI Created', u'links': {u'self': u'https://192.168.56.101:5000/v3/projects/4f98e00b5dc04801a3157a6e2e09bf06'}, u'tags': [], u'enabled': True, u'domain_id': u'default', u'parent_id': u'default', u'id': u'4f98e00b5dc04801a3157a6e2e09bf06', u'name': u'project2'}) 
+2020-03-20 15:14:25,187 p=8247 u=root n=ansible | skipping: [localhost] => (item={u'is_domain': False, u'description': u'IBM Tenant for storing VM NVRAM data for remote restart', u'links': {u'self': u'https://192.168.56.101:5000/v3/projects/a9e9cecbabe94fcd94a106a6ce2b9a48'}, u'tags': [], u'enabled': True, u'domain_id': u'f9cea94e8c134d68b849e4d53a340966', u'parent_id': u'f9cea94e8c134d68b849e4d53a340966', u'id': u'a9e9cecbabe94fcd94a106a6ce2b9a48', u'name': u'powervm'}) 
+2020-03-20 15:14:25,203 p=8247 u=root n=ansible | ok: [localhost] => (item={u'is_domain': False, u'description': u'IBM Default Tenant', u'links': {u'self': u'https://192.168.56.101:5000/v3/projects/b2eb6efb8b4e468d93e53935f291716d'}, u'tags': [], u'enabled': True, u'domain_id': u'default', u'parent_id': u'default', u'id': u'b2eb6efb8b4e468d93e53935f291716d', u'name': u'ibm-default'})
+2020-03-20 15:14:25,217 p=8247 u=root n=ansible | skipping: [localhost] => (item={u'is_domain': False, u'description': u'IBM Service Tenant for service users and groups', u'links': {u'self': u'https://192.168.56.101:5000/v3/projects/d343d73e12be4272931d6ca2c1ce1720'}, u'tags': [], u'enabled': True, u'domain_id': u'f9cea94e8c134d68b849e4d53a340966', u'parent_id': u'f9cea94e8c134d68b849e4d53a340966', u'id': u'd343d73e12be4272931d6ca2c1ce1720', u'name': u'service'}) 
+2020-03-20 15:14:25,230 p=8247 u=root n=ansible | skipping: [localhost] => (item={u'is_domain': False, u'description': u'demotest', u'links': {u'self': u'https://192.168.56.101:5000/v3/projects/e6435b7219fe4875afcf1dc0ffe256ec'}, u'tags': [], u'enabled': True, u'domain_id': u'default', u'parent_id': u'default', u'id': u'e6435b7219fe4875afcf1dc0ffe256ec', u'name': u'marsproject'}) 
+2020-03-20 15:14:25,249 p=8247 u=root n=ansible | TASK [fail] *****************************************************************************************************************
+2020-03-20 15:14:25,250 p=8247 u=root n=ansible | Friday 20 March 2020  15:14:25 +0800 (0:00:00.175)       0:00:03.209 ********** 
+2020-03-20 15:14:25,336 p=8247 u=root n=ansible | skipping: [localhost]
+2020-03-20 15:14:25,338 p=8247 u=root n=ansible | PLAY RECAP ******************************************************************************************************************
+2020-03-20 15:14:25,339 p=8247 u=root n=ansible | localhost                  : ok=6    changed=0    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   
+2020-03-20 15:14:25,339 p=8247 u=root n=ansible | Friday 20 March 2020  15:14:25 +0800 (0:00:00.089)       0:00:03.298 ********** 
+2020-03-20 15:14:25,339 p=8247 u=root n=ansible | =============================================================================== 
+2020-03-20 15:14:25,339 p=8247 u=root n=ansible | Get an authentication PowerVC Token ---------------------------------------------------------------------------------- 1.82s
+2020-03-20 15:14:25,339 p=8247 u=root n=ansible | Get PowerVC Tenant ID ------------------------------------------------------------------------------------------------ 0.86s
+2020-03-20 15:14:25,339 p=8247 u=root n=ansible | Set Variable Tenant ID ----------------------------------------------------------------------------------------------- 0.18s
+2020-03-20 15:14:25,340 p=8247 u=root n=ansible | debug ---------------------------------------------------------------------------------------------------------------- 0.14s
+2020-03-20 15:14:25,340 p=8247 u=root n=ansible | Set Variable TOKEN --------------------------------------------------------------------------------------------------- 0.13s
+2020-03-20 15:14:25,340 p=8247 u=root n=ansible | fail ----------------------------------------------------------------------------------------------------------------- 0.09s
+2020-03-20 15:14:25,340 p=8247 u=root n=ansible | Include the variables from the YAML file ----------------------------------------------------------------------------- 0.03s
+2020-03-20 15:16:57,481 p=14269 u=root n=ansible | [WARNING]: provided hosts list is empty, only localhost is available. Note that the implicit localhost does not match 'all'
+
+2020-03-20 15:16:58,433 p=14269 u=root n=ansible | Friday 20 March 2020  15:16:58 +0800 (0:00:00.134)       0:00:00.134 ********** 
+2020-03-20 15:16:58,435 p=14269 u=root n=ansible | [WARNING]: Failure using method (v2_runner_on_start) in callback plugin
+(<ansible.plugins.callback.dense.CallbackModule_dense object at 0x7f44dc62d510>): 'show_per_host_start'
+
+2020-03-20 15:16:58,517 p=14269 u=root n=ansible | Friday 20 March 2020  15:16:58 +0800 (0:00:00.083)       0:00:00.218 ********** 
+2020-03-20 15:17:00,555 p=14269 u=root n=ansible | Friday 20 March 2020  15:17:00 +0800 (0:00:02.038)       0:00:02.257 ********** 
+2020-03-20 15:17:00,654 p=14269 u=root n=ansible | Friday 20 March 2020  15:17:00 +0800 (0:00:00.098)       0:00:02.355 ********** 
+2020-03-20 15:17:00,756 p=14269 u=root n=ansible | Friday 20 March 2020  15:17:00 +0800 (0:00:00.102)       0:00:02.458 ********** 
+2020-03-20 15:17:01,594 p=14269 u=root n=ansible | Friday 20 March 2020  15:17:01 +0800 (0:00:00.837)       0:00:03.295 ********** 
+2020-03-20 15:17:01,821 p=14269 u=root n=ansible | Friday 20 March 2020  15:17:01 +0800 (0:00:00.227)       0:00:03.523 ********** 
+2020-03-20 15:17:01,926 p=14269 u=root n=ansible | Friday 20 March 2020  15:17:01 +0800 (0:00:00.105)       0:00:03.628 ********** 
+2020-03-20 15:17:01,926 p=14269 u=root n=ansible | =============================================================================== 
+2020-03-20 15:17:01,927 p=14269 u=root n=ansible | Get an authentication PowerVC Token ---------------------------------------------------------------------------------- 2.04s
+2020-03-20 15:17:01,927 p=14269 u=root n=ansible | Get PowerVC Tenant ID ------------------------------------------------------------------------------------------------ 0.84s
+2020-03-20 15:17:01,927 p=14269 u=root n=ansible | Set Variable Tenant ID ----------------------------------------------------------------------------------------------- 0.23s
+2020-03-20 15:17:01,927 p=14269 u=root n=ansible | fail ----------------------------------------------------------------------------------------------------------------- 0.11s
+2020-03-20 15:17:01,927 p=14269 u=root n=ansible | debug ---------------------------------------------------------------------------------------------------------------- 0.10s
+2020-03-20 15:17:01,927 p=14269 u=root n=ansible | Set Variable TOKEN --------------------------------------------------------------------------------------------------- 0.10s
+2020-03-20 15:17:01,927 p=14269 u=root n=ansible | Include the variables from the YAML file ----------------------------------------------------------------------------- 0.08s
+2020-03-20 15:17:50,581 p=16623 u=root n=ansible | [WARNING]: provided hosts list is empty, only localhost is available. Note that the implicit localhost does not match 'all'
+
+2020-03-20 15:17:51,097 p=16623 u=root n=ansible | Friday 20 March 2020  15:17:51 +0800 (0:00:00.054)       0:00:00.054 ********** 
+2020-03-20 15:17:51,100 p=16623 u=root n=ansible | [WARNING]: Failure using method (v2_runner_on_start) in callback plugin
+(<ansible.plugins.callback.dense.CallbackModule_dense object at 0x7fc026b38510>): 'show_per_host_start'
+
+2020-03-20 15:17:51,127 p=16623 u=root n=ansible | Friday 20 March 2020  15:17:51 +0800 (0:00:00.030)       0:00:00.084 ********** 
+2020-03-20 15:17:52,833 p=16623 u=root n=ansible | Friday 20 March 2020  15:17:52 +0800 (0:00:01.706)       0:00:01.790 ********** 
+2020-03-20 15:17:52,924 p=16623 u=root n=ansible | Friday 20 March 2020  15:17:52 +0800 (0:00:00.090)       0:00:01.881 ********** 
+2020-03-20 15:17:53,032 p=16623 u=root n=ansible | Friday 20 March 2020  15:17:53 +0800 (0:00:00.107)       0:00:01.989 ********** 
+2020-03-20 15:17:54,056 p=16623 u=root n=ansible | Friday 20 March 2020  15:17:54 +0800 (0:00:01.024)       0:00:03.013 ********** 
+2020-03-20 15:17:54,282 p=16623 u=root n=ansible | Friday 20 March 2020  15:17:54 +0800 (0:00:00.226)       0:00:03.240 ********** 
+2020-03-20 15:17:54,375 p=16623 u=root n=ansible | Friday 20 March 2020  15:17:54 +0800 (0:00:00.092)       0:00:03.332 ********** 
+2020-03-20 15:17:54,375 p=16623 u=root n=ansible | =============================================================================== 
+2020-03-20 15:17:54,376 p=16623 u=root n=ansible | Get an authentication PowerVC Token ---------------------------------------------------------------------------------- 1.71s
+2020-03-20 15:17:54,376 p=16623 u=root n=ansible | Get PowerVC Tenant ID ------------------------------------------------------------------------------------------------ 1.02s
+2020-03-20 15:17:54,376 p=16623 u=root n=ansible | Set Variable Tenant ID ----------------------------------------------------------------------------------------------- 0.23s
+2020-03-20 15:17:54,376 p=16623 u=root n=ansible | debug ---------------------------------------------------------------------------------------------------------------- 0.11s
+2020-03-20 15:17:54,376 p=16623 u=root n=ansible | fail ----------------------------------------------------------------------------------------------------------------- 0.09s
+2020-03-20 15:17:54,377 p=16623 u=root n=ansible | Set Variable TOKEN --------------------------------------------------------------------------------------------------- 0.09s
+2020-03-20 15:17:54,377 p=16623 u=root n=ansible | Include the variables from the YAML file ----------------------------------------------------------------------------- 0.03s
+2020-03-20 15:18:02,608 p=16982 u=root n=ansible | [WARNING]: provided hosts list is empty, only localhost is available. Note that the implicit localhost does not match 'all'
+
+2020-03-20 15:18:03,146 p=16982 u=root n=ansible | PLAY [localhost] ************************************************************************************************************
+2020-03-20 15:18:03,162 p=16982 u=root n=ansible | TASK [Include the variables from the YAML file] *****************************************************************************
+2020-03-20 15:18:03,163 p=16982 u=root n=ansible | Friday 20 March 2020  15:18:03 +0800 (0:00:00.051)       0:00:00.051 ********** 
+2020-03-20 15:18:03,181 p=16982 u=root n=ansible | ok: [localhost]
+2020-03-20 15:18:03,187 p=16982 u=root n=ansible | TASK [Get an authentication PowerVC Token] **********************************************************************************
+2020-03-20 15:18:03,187 p=16982 u=root n=ansible | Friday 20 March 2020  15:18:03 +0800 (0:00:00.024)       0:00:00.075 ********** 
+2020-03-20 15:18:04,955 p=16982 u=root n=ansible | ok: [localhost]
+2020-03-20 15:18:04,964 p=16982 u=root n=ansible | TASK [Set Variable TOKEN] ***************************************************************************************************
+2020-03-20 15:18:04,964 p=16982 u=root n=ansible | Friday 20 March 2020  15:18:04 +0800 (0:00:01.777)       0:00:01.852 ********** 
+2020-03-20 15:18:05,068 p=16982 u=root n=ansible | ok: [localhost]
+2020-03-20 15:18:05,073 p=16982 u=root n=ansible | TASK [debug] ****************************************************************************************************************
+2020-03-20 15:18:05,073 p=16982 u=root n=ansible | Friday 20 March 2020  15:18:05 +0800 (0:00:00.109)       0:00:01.962 ********** 
+2020-03-20 15:18:05,198 p=16982 u=root n=ansible | ok: [localhost] => {
+    "TOKEN": "gAAAAABedG4sQMAGVgXSNlf091P-s4zBnk1Y-EV2pKSXIGRXpDFVoNZZ-QdFtwxuknDzyyocEMzEuUxB6M4QpqbDmDL9hG-Xpm1rnW9wUxLzIeju__63LDOwXm3HjZagM67oPIdtPlAYr5o4HRGk_0zHHDu4Rh0k2Z-zuiSRCVMstte7hLxek6mzpqR7esf4_LjbtsQcmQkzF1V3LIIZX84N_wH7U8AQQuFoKeVGHR2XKJ7kfTz5DKM"
+}
+2020-03-20 15:18:05,203 p=16982 u=root n=ansible | TASK [Get PowerVC Tenant ID] ************************************************************************************************
+2020-03-20 15:18:05,204 p=16982 u=root n=ansible | Friday 20 March 2020  15:18:05 +0800 (0:00:00.129)       0:00:02.092 ********** 
+2020-03-20 15:18:06,004 p=16982 u=root n=ansible | ok: [localhost]
+2020-03-20 15:18:06,010 p=16982 u=root n=ansible | TASK [Set Variable Tenant ID] ***********************************************************************************************
+2020-03-20 15:18:06,010 p=16982 u=root n=ansible | Friday 20 March 2020  15:18:06 +0800 (0:00:00.806)       0:00:02.898 ********** 
+2020-03-20 15:18:06,118 p=16982 u=root n=ansible | skipping: [localhost] => (item={u'is_domain': False, u'description': u'RESTAPI Created', u'links': {u'self': u'https://192.168.56.101:5000/v3/projects/4f98e00b5dc04801a3157a6e2e09bf06'}, u'tags': [], u'enabled': True, u'domain_id': u'default', u'parent_id': u'default', u'id': u'4f98e00b5dc04801a3157a6e2e09bf06', u'name': u'project2'}) 
+2020-03-20 15:18:06,129 p=16982 u=root n=ansible | skipping: [localhost] => (item={u'is_domain': False, u'description': u'IBM Tenant for storing VM NVRAM data for remote restart', u'links': {u'self': u'https://192.168.56.101:5000/v3/projects/a9e9cecbabe94fcd94a106a6ce2b9a48'}, u'tags': [], u'enabled': True, u'domain_id': u'f9cea94e8c134d68b849e4d53a340966', u'parent_id': u'f9cea94e8c134d68b849e4d53a340966', u'id': u'a9e9cecbabe94fcd94a106a6ce2b9a48', u'name': u'powervm'}) 
+2020-03-20 15:18:06,146 p=16982 u=root n=ansible | ok: [localhost] => (item={u'is_domain': False, u'description': u'IBM Default Tenant', u'links': {u'self': u'https://192.168.56.101:5000/v3/projects/b2eb6efb8b4e468d93e53935f291716d'}, u'tags': [], u'enabled': True, u'domain_id': u'default', u'parent_id': u'default', u'id': u'b2eb6efb8b4e468d93e53935f291716d', u'name': u'ibm-default'})
+2020-03-20 15:18:06,158 p=16982 u=root n=ansible | skipping: [localhost] => (item={u'is_domain': False, u'description': u'IBM Service Tenant for service users and groups', u'links': {u'self': u'https://192.168.56.101:5000/v3/projects/d343d73e12be4272931d6ca2c1ce1720'}, u'tags': [], u'enabled': True, u'domain_id': u'f9cea94e8c134d68b849e4d53a340966', u'parent_id': u'f9cea94e8c134d68b849e4d53a340966', u'id': u'd343d73e12be4272931d6ca2c1ce1720', u'name': u'service'}) 
+2020-03-20 15:18:06,172 p=16982 u=root n=ansible | skipping: [localhost] => (item={u'is_domain': False, u'description': u'demotest', u'links': {u'self': u'https://192.168.56.101:5000/v3/projects/e6435b7219fe4875afcf1dc0ffe256ec'}, u'tags': [], u'enabled': True, u'domain_id': u'default', u'parent_id': u'default', u'id': u'e6435b7219fe4875afcf1dc0ffe256ec', u'name': u'marsproject'}) 
+2020-03-20 15:18:06,181 p=16982 u=root n=ansible | TASK [fail] *****************************************************************************************************************
+2020-03-20 15:18:06,182 p=16982 u=root n=ansible | Friday 20 March 2020  15:18:06 +0800 (0:00:00.171)       0:00:03.070 ********** 
+2020-03-20 15:18:06,280 p=16982 u=root n=ansible | skipping: [localhost]
+2020-03-20 15:18:06,283 p=16982 u=root n=ansible | PLAY RECAP ******************************************************************************************************************
+2020-03-20 15:18:06,283 p=16982 u=root n=ansible | localhost                  : ok=6    changed=0    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   
+2020-03-20 15:18:06,283 p=16982 u=root n=ansible | Friday 20 March 2020  15:18:06 +0800 (0:00:00.101)       0:00:03.171 ********** 
+2020-03-20 15:18:06,283 p=16982 u=root n=ansible | =============================================================================== 
+2020-03-20 15:18:06,283 p=16982 u=root n=ansible | Get an authentication PowerVC Token ---------------------------------------------------------------------------------- 1.78s
+2020-03-20 15:18:06,283 p=16982 u=root n=ansible | Get PowerVC Tenant ID ------------------------------------------------------------------------------------------------ 0.81s
+2020-03-20 15:18:06,284 p=16982 u=root n=ansible | Set Variable Tenant ID ----------------------------------------------------------------------------------------------- 0.17s
+2020-03-20 15:18:06,284 p=16982 u=root n=ansible | debug ---------------------------------------------------------------------------------------------------------------- 0.13s
+2020-03-20 15:18:06,284 p=16982 u=root n=ansible | Set Variable TOKEN --------------------------------------------------------------------------------------------------- 0.11s
+2020-03-20 15:18:06,284 p=16982 u=root n=ansible | fail ----------------------------------------------------------------------------------------------------------------- 0.10s
+2020-03-20 15:18:06,284 p=16982 u=root n=ansible | Include the variables from the YAML file ----------------------------------------------------------------------------- 0.02s
+2020-03-20 15:18:36,660 p=18635 u=root n=ansible | [WARNING]: provided hosts list is empty, only localhost is available. Note that the implicit localhost does not match 'all'
+
+2020-03-20 15:18:37,189 p=18635 u=root n=ansible | PLAY [localhost] ************************************************************************************************************
+2020-03-20 15:18:37,210 p=18635 u=root n=ansible | TASK [Include the variables from the YAML file] *****************************************************************************
+2020-03-20 15:18:37,210 p=18635 u=root n=ansible | Friday 20 March 2020  15:18:37 +0800 (0:00:00.052)       0:00:00.053 ********** 
+2020-03-20 15:18:37,234 p=18635 u=root n=ansible | ok: [localhost]
+2020-03-20 15:18:37,241 p=18635 u=root n=ansible | TASK [Get an authentication PowerVC Token] **********************************************************************************
+2020-03-20 15:18:37,241 p=18635 u=root n=ansible | Friday 20 March 2020  15:18:37 +0800 (0:00:00.031)       0:00:00.084 ********** 
+2020-03-20 15:18:38,928 p=18635 u=root n=ansible | ok: [localhost]
+2020-03-20 15:18:38,938 p=18635 u=root n=ansible | TASK [Set Variable TOKEN] ***************************************************************************************************
+2020-03-20 15:18:38,938 p=18635 u=root n=ansible | Friday 20 March 2020  15:18:38 +0800 (0:00:01.696)       0:00:01.780 ********** 
+2020-03-20 15:18:39,030 p=18635 u=root n=ansible | ok: [localhost]
+2020-03-20 15:18:39,034 p=18635 u=root n=ansible | TASK [debug] ****************************************************************************************************************
+2020-03-20 15:18:39,034 p=18635 u=root n=ansible | Friday 20 March 2020  15:18:39 +0800 (0:00:00.096)       0:00:01.877 ********** 
+2020-03-20 15:18:39,157 p=18635 u=root n=ansible | ok: [localhost] => {
+    "TOKEN": "gAAAAABedG5O2hwcahjCzmPNHKaAOLqIjThhTaSUMNj4JkxSrYr2XQG90g-c1t9GK-X9j6IgLUkDzA14TCtaTTm7SQBD8clIPd-cFjDQ_l2qTYXC5BcpdwmBD5P5CXTRjGAXw8b8vIch8A4WQ74uGnxYfFGwEzHZY5AdGJM2H0wwZQ8e9x1resyAgp4zi7uig5GUH2tSCLFkXLGWZySV7BFmr04WyuAa1Dzr_Hiiy59Px_dtj4whFA0"
+}
+2020-03-20 15:18:39,163 p=18635 u=root n=ansible | TASK [Get PowerVC Tenant ID] ************************************************************************************************
+2020-03-20 15:18:39,163 p=18635 u=root n=ansible | Friday 20 March 2020  15:18:39 +0800 (0:00:00.128)       0:00:02.005 ********** 
+2020-03-20 15:18:40,097 p=18635 u=root n=ansible | ok: [localhost]
+2020-03-20 15:18:40,104 p=18635 u=root n=ansible | TASK [Set Variable Tenant ID] ***********************************************************************************************
+2020-03-20 15:18:40,104 p=18635 u=root n=ansible | Friday 20 March 2020  15:18:40 +0800 (0:00:00.941)       0:00:02.946 ********** 
+2020-03-20 15:18:40,237 p=18635 u=root n=ansible | ok: [localhost] => (item={u'is_domain': False, u'description': u'IBM Default Tenant', u'links': {u'self': u'https://192.168.56.101:5000/v3/projects/b2eb6efb8b4e468d93e53935f291716d'}, u'tags': [], u'enabled': True, u'domain_id': u'default', u'parent_id': u'default', u'id': u'b2eb6efb8b4e468d93e53935f291716d', u'name': u'ibm-default'})
+2020-03-20 15:18:40,275 p=18635 u=root n=ansible | TASK [fail] *****************************************************************************************************************
+2020-03-20 15:18:40,275 p=18635 u=root n=ansible | Friday 20 March 2020  15:18:40 +0800 (0:00:00.170)       0:00:03.117 ********** 
+2020-03-20 15:18:40,361 p=18635 u=root n=ansible | PLAY RECAP ******************************************************************************************************************
+2020-03-20 15:18:40,361 p=18635 u=root n=ansible | localhost                  : ok=6    changed=0    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   
+2020-03-20 15:18:40,362 p=18635 u=root n=ansible | Friday 20 March 2020  15:18:40 +0800 (0:00:00.086)       0:00:03.204 ********** 
+2020-03-20 15:18:40,362 p=18635 u=root n=ansible | =============================================================================== 
+2020-03-20 15:18:40,362 p=18635 u=root n=ansible | Get an authentication PowerVC Token ---------------------------------------------------------------------------------- 1.70s
+2020-03-20 15:18:40,362 p=18635 u=root n=ansible | Get PowerVC Tenant ID ------------------------------------------------------------------------------------------------ 0.94s
+2020-03-20 15:18:40,362 p=18635 u=root n=ansible | Set Variable Tenant ID ----------------------------------------------------------------------------------------------- 0.17s
+2020-03-20 15:18:40,362 p=18635 u=root n=ansible | debug ---------------------------------------------------------------------------------------------------------------- 0.13s
+2020-03-20 15:18:40,362 p=18635 u=root n=ansible | Set Variable TOKEN --------------------------------------------------------------------------------------------------- 0.10s
+2020-03-20 15:18:40,362 p=18635 u=root n=ansible | fail ----------------------------------------------------------------------------------------------------------------- 0.09s
+2020-03-20 15:18:40,363 p=18635 u=root n=ansible | Include the variables from the YAML file ----------------------------------------------------------------------------- 0.03s
+2020-03-20 15:20:21,401 p=22228 u=root n=ansible | [WARNING]: provided hosts list is empty, only localhost is available. Note that the implicit localhost does not match 'all'
+
+2020-03-20 15:20:21,824 p=22228 u=root n=ansible | ERROR! Invalid callback for stdout specified: skippy, minimal
+2020-03-20 15:20:29,554 p=22908 u=root n=ansible | [WARNING]: provided hosts list is empty, only localhost is available. Note that the implicit localhost does not match 'all'
+
+2020-03-20 15:20:30,110 p=22908 u=root n=ansible | Friday 20 March 2020  15:20:30 +0800 (0:00:00.060)       0:00:00.060 ********** 
+2020-03-20 15:20:30,126 p=22908 u=root n=ansible | localhost | SUCCESS => {
+    "censored": "the output has been hidden due to the fact that 'no_log: true' was specified for this result", 
+    "changed": false
+}
+2020-03-20 15:20:30,131 p=22908 u=root n=ansible | Friday 20 March 2020  15:20:30 +0800 (0:00:00.021)       0:00:00.082 ********** 
+2020-03-20 15:20:32,023 p=22908 u=root n=ansible | localhost | SUCCESS => {
+    "changed": false, 
+    "connection": "close", 
+    "content": "{\"token\": {\"is_domain\": false, \"methods\": [\"password\"], \"roles\": [{\"id\": \"32714e16964b4234be2aa516227fca6a\", \"name\": \"admin\"}], \"expires_at\": \"2020-03-20T13:20:31.000000Z\", \"project\": {\"domain\": {\"id\": \"default\", \"name\": \"Default\"}, \"id\": \"b2eb6efb8b4e468d93e53935f291716d\", \"name\": \"ibm-default\"}, \"catalog\": [{\"endpoints\": [{\"region_id\": \"RegionOne\", \"url\": \"https://192.168.56.101:8774/v2.1/b2eb6efb8b4e468d93e53935f291716d\", \"region\": \"RegionOne\", \"interface\": \"admin\", \"id\": \"16db08fe948d4c1d9928e783524f628c\"}, {\"region_id\": \"RegionOne\", \"url\": \"https://192.168.56.101:8774/v2.1/b2eb6efb8b4e468d93e53935f291716d\", \"region\": \"RegionOne\", \"interface\": \"public\", \"id\": \"c938ca1f6a7f4e3abdbd5dce21ae8af7\"}, {\"region_id\": \"RegionOne\", \"url\": \"https://192.168.56.101:8774/v2.1/b2eb6efb8b4e468d93e53935f291716d\", \"region\": \"RegionOne\", \"interface\": \"internal\", \"id\": \"d775eeed931442b8a3cd6d19baf05e6d\"}], \"type\": \"compute\", \"id\": \"1ddf2e0d35a5433c9470af1a6d1a0b94\", \"name\": \"nova\"}, {\"endpoints\": [{\"region_id\": \"RegionOne\", \"url\": \"https://192.168.56.101:8998\", \"region\": \"RegionOne\", \"interface\": \"public\", \"id\": \"1364506b702647a4b899491c988af14d\"}, {\"region_id\": \"RegionOne\", \"url\": \"https://192.168.56.101:8998\", \"region\": \"RegionOne\", \"interface\": \"internal\", \"id\": \"24314ec21a16487a99e35fa1c6cfb858\"}, {\"region_id\": \"RegionOne\", \"url\": \"https://192.168.56.101:8998\", \"region\": \"RegionOne\", \"interface\": \"admin\", \"id\": \"4fb7ec7beeb64078aabcc4d8c9820803\"}], \"type\": \"self-service\", \"id\": \"3c6dd54c98a4468cadcad454ac9acff4\", \"name\": \"clerk\"}, {\"endpoints\": [{\"region_id\": \"RegionOne\", \"url\": \"https://192.168.56.101:9292\", \"region\": \"RegionOne\", \"interface\": \"public\", \"id\": \"72e7fd0060074bb0a306a09a39d1c3d8\"}, {\"region_id\": \"RegionOne\", \"url\": \"https://192.168.56.101:9292\", \"region\": \"RegionOne\", \"interface\": \"internal\", \"id\": \"80a13efa07e14272ad92bd2dd0526784\"}, {\"region_id\": \"RegionOne\", \"url\": \"https://192.168.56.101:9292\", \"region\": \"RegionOne\", \"interface\": \"admin\", \"id\": \"ff39d3a13bf543ed9025f7bd816982a5\"}], \"type\": \"image\", \"id\": \"4027281b33ea461ea718ae45f2cfe3c3\", \"name\": \"glance\"}, {\"endpoints\": [{\"region_id\": \"RegionOne\", \"url\": \"https://192.168.56.101:5000/v3\", \"region\": \"RegionOne\", \"interface\": \"internal\", \"id\": \"1a49aeff80464157a4b25d3be2caf532\"}, {\"region_id\": \"RegionOne\", \"url\": \"https://192.168.56.101:5000/v3\", \"region\": \"RegionOne\", \"interface\": \"public\", \"id\": \"204f545cdaf145099d294798a3c6d31a\"}, {\"region_id\": \"RegionOne\", \"url\": \"https://192.168.56.101:5000/v3\", \"region\": \"RegionOne\", \"interface\": \"admin\", \"id\": \"f52d798dcce14af78bc3c27b4b7e7ffc\"}], \"type\": \"identity\", \"id\": \"52bacea53700460aad7fb0fb5dd34421\", \"name\": \"keystone\"}, {\"endpoints\": [{\"region_id\": \"RegionOne\", \"url\": \"https://192.168.56.101:8080/v1/AUTH_b2eb6efb8b4e468d93e53935f291716d\", \"region\": \"RegionOne\", \"interface\": \"public\", \"id\": \"266cdd2540bc447c9a40af378e148224\"}, {\"region_id\": \"RegionOne\", \"url\": \"https://192.168.56.101:8080/v1/AUTH_b2eb6efb8b4e468d93e53935f291716d\", \"region\": \"RegionOne\", \"interface\": \"internal\", \"id\": \"b79803073fd949b483cf7ddb725f317b\"}, {\"region_id\": \"RegionOne\", \"url\": \"https://192.168.56.101:8080/v1/AUTH_b2eb6efb8b4e468d93e53935f291716d\", \"region\": \"RegionOne\", \"interface\": \"admin\", \"id\": \"b8159a86aa8b42dcb7eaf85feaf83303\"}], \"type\": \"object-store\", \"id\": \"70bde44a063a426c9cc49928cdcf307f\", \"name\": \"swift\"}, {\"endpoints\": [{\"region_id\": \"RegionOne\", \"url\": \"https://192.168.56.101:9000/v2/b2eb6efb8b4e468d93e53935f291716d\", \"region\": \"RegionOne\", \"interface\": \"public\", \"id\": \"24a705b11648463c94fef3daf88b2f20\"}, {\"region_id\": \"RegionOne\", \"url\": \"https://192.168.56.101:9000/v2/b2eb6efb8b4e468d93e53935f291716d\", \"region\": \"RegionOne\", \"interface\": \"admin\", \"id\": \"2bbb770727b2419f8e9296e1d0ae137e\"}, {\"region_id\": \"RegionOne\", \"url\": \"https://192.168.56.101:9000/v2/b2eb6efb8b4e468d93e53935f291716d\", \"region\": \"RegionOne\", \"interface\": \"internal\", \"id\": \"fff1172e040b4ff4b9e74f8873541293\"}], \"type\": \"volumev2\", \"id\": \"7f7f4cffbba347cb81b99c0d1013bf04\", \"name\": \"cinderv2\"}, {\"endpoints\": [{\"region_id\": \"RegionOne\", \"url\": \"https://192.168.56.101:8041\", \"region\": \"RegionOne\", \"interface\": \"public\", \"id\": \"59c5965206c943d091270ba9bfce6190\"}, {\"region_id\": \"RegionOne\", \"url\": \"https://192.168.56.101:8041\", \"region\": \"RegionOne\", \"interface\": \"internal\", \"id\": \"6b1baadec2f7467f8eebb0be6e561cb5\"}, {\"region_id\": \"RegionOne\", \"url\": \"https://192.168.56.101:8041\", \"region\": \"RegionOne\", \"interface\": \"admin\", \"id\": \"d05a5c278a39459b9800cd97bfeee8ec\"}], \"type\": \"metric\", \"id\": \"95cf8c8215044c0e96d1452a412069a2\", \"name\": \"gnocchi\"}, {\"endpoints\": [{\"region_id\": \"RegionOne\", \"url\": \"https://192.168.56.101:9000/v3/b2eb6efb8b4e468d93e53935f291716d\", \"region\": \"RegionOne\", \"interface\": \"public\", \"id\": \"67615151cf0c49269c7ac632ce529f6e\"}, {\"region_id\": \"RegionOne\", \"url\": \"https://192.168.56.101:9000/v3/b2eb6efb8b4e468d93e53935f291716d\", \"region\": \"RegionOne\", \"interface\": \"admin\", \"id\": \"c51607bf3d7b4277acfa24bbdd090b21\"}, {\"region_id\": \"RegionOne\", \"url\": \"https://192.168.56.101:9000/v3/b2eb6efb8b4e468d93e53935f291716d\", \"region\": \"RegionOne\", \"interface\": \"internal\", \"id\": \"d81e9502ddc44d4c9f1d6756175d3761\"}], \"type\": \"volumev3\", \"id\": \"9e8d92fac4bb4f739058981783fc6e44\", \"name\": \"cinderv3\"}, {\"endpoints\": [{\"region_id\": \"RegionOne\", \"url\": \"https://192.168.56.101:9696\", \"region\": \"RegionOne\", \"interface\": \"internal\", \"id\": \"0aa1bf4d493b42e99cfa7f954c7bd165\"}, {\"region_id\": \"RegionOne\", \"url\": \"https://192.168.56.101:9696\", \"region\": \"RegionOne\", \"interface\": \"admin\", \"id\": \"928c0ce0cde241fe8d57e357b2cac900\"}, {\"region_id\": \"RegionOne\", \"url\": \"https://192.168.56.101:9696\", \"region\": \"RegionOne\", \"interface\": \"public\", \"id\": \"d4336e3341704a638cad55941c596141\"}], \"type\": \"network\", \"id\": \"bd262d7414504383a00c8e368860b3e8\", \"name\": \"neutron\"}, {\"endpoints\": [{\"region_id\": \"RegionOne\", \"url\": \"https://192.168.56.101:8428\", \"region\": \"RegionOne\", \"interface\": \"public\", \"id\": \"53b655e2533349eab6fc0a519844908f\"}, {\"region_id\": \"RegionOne\", \"url\": \"https://192.168.56.101:8428\", \"region\": \"RegionOne\", \"interface\": \"admin\", \"id\": \"707abc47e6974de9a37aa72899e4b5e5\"}, {\"region_id\": \"RegionOne\", \"url\": \"https://192.168.56.101:8428\", \"region\": \"RegionOne\", \"interface\": \"internal\", \"id\": \"dd3a0e3bc36c44dfae9d1cff3c7dd673\"}], \"type\": \"ttv\", \"id\": \"be6eb3ee6967477c9717e5e1ef07aa4f\", \"name\": \"validator\"}, {\"endpoints\": [{\"region_id\": \"RegionOne\", \"url\": \"https://192.168.56.101:9000/v2/b2eb6efb8b4e468d93e53935f291716d\", \"region\": \"RegionOne\", \"interface\": \"public\", \"id\": \"1e17a7687e694af6934ef8140e37521a\"}, {\"region_id\": \"RegionOne\", \"url\": \"https://192.168.56.101:9000/v2/b2eb6efb8b4e468d93e53935f291716d\", \"region\": \"RegionOne\", \"interface\": \"admin\", \"id\": \"474a4af84ed14327ad012ad9aff2ffac\"}, {\"region_id\": \"RegionOne\", \"url\": \"https://192.168.56.101:9000/v2/b2eb6efb8b4e468d93e53935f291716d\", \"region\": \"RegionOne\", \"interface\": \"internal\", \"id\": \"e9e5a2a7bb524379ad70ab1c91f72c20\"}], \"type\": \"volume\", \"id\": \"cf39d40b7e8646b3bd9acdbd61e7eca9\", \"name\": \"cinder\"}, {\"endpoints\": [{\"region_id\": \"RegionOne\", \"url\": \"https://192.168.56.101:5470\", \"region\": \"RegionOne\", \"interface\": \"admin\", \"id\": \"875e38c31e2d45799bdc7c2032ad5ceb\"}, {\"region_id\": \"RegionOne\", \"url\": \"https://192.168.56.101:5470\", \"region\": \"RegionOne\", \"interface\": \"public\", \"id\": \"a5df6aef035c4df0a8a7d5e1a4c736cb\"}, {\"region_id\": \"RegionOne\", \"url\": \"https://192.168.56.101:5470\", \"region\": \"RegionOne\", \"interface\": \"internal\", \"id\": \"bd99cb5a39054b1ca4d9be901516d910\"}], \"type\": \"notification\", \"id\": \"fd3bcbf03645477d8cdcd1dcb5e1a8f1\", \"name\": \"bumblebee\"}, {\"endpoints\": [{\"region_id\": \"RegionOne\", \"url\": \"https://192.168.56.101:8778\", \"region\": \"RegionOne\", \"interface\": \"admin\", \"id\": \"05b54eabb90d4033ae38e8df8db5497b\"}, {\"region_id\": \"RegionOne\", \"url\": \"https://192.168.56.101:8778\", \"region\": \"RegionOne\", \"interface\": \"internal\", \"id\": \"0b2c74fbd1b0436cb268e94afa12082d\"}, {\"region_id\": \"RegionOne\", \"url\": \"https://192.168.56.101:8778\", \"region\": \"RegionOne\", \"interface\": \"public\", \"id\": \"b721cb636a1b45808cbfe9f248c48ea3\"}], \"type\": \"event\", \"id\": \"feeb7106128248f186bc336ab5a5d69f\", \"name\": \"panko\"}], \"user\": {\"password_expires_at\": null, \"domain\": {\"id\": \"default\", \"name\": \"Default\"}, \"id\": \"0688b01e6439ca32d698d20789d52169126fb41fb1a4ddafcebb97d854e836c9\", \"name\": \"root\"}, \"audit_ids\": [\"xcHamPNHTbiylpGNrfLk6g\"], \"issued_at\": \"2020-03-20T07:20:31.000000Z\", \"is_admin_project\": true}}", 
+    "content_length": "8454", 
+    "content_type": "application/json", 
+    "cookies": {}, 
+    "cookies_string": "", 
+    "date": "Fri, 20 Mar 2020 07:20:31 GMT", 
+    "elapsed": 0, 
+    "json": {
+        "token": {
+            "audit_ids": [
+                "xcHamPNHTbiylpGNrfLk6g"
+            ], 
+            "catalog": [
+                {
+                    "endpoints": [
+                        {
+                            "id": "16db08fe948d4c1d9928e783524f628c", 
+                            "interface": "admin", 
+                            "region": "RegionOne", 
+                            "region_id": "RegionOne", 
+                            "url": "https://192.168.56.101:8774/v2.1/b2eb6efb8b4e468d93e53935f291716d"
+                        }, 
+                        {
+                            "id": "c938ca1f6a7f4e3abdbd5dce21ae8af7", 
+                            "interface": "public", 
+                            "region": "RegionOne", 
+                            "region_id": "RegionOne", 
+                            "url": "https://192.168.56.101:8774/v2.1/b2eb6efb8b4e468d93e53935f291716d"
+                        }, 
+                        {
+                            "id": "d775eeed931442b8a3cd6d19baf05e6d", 
+                            "interface": "internal", 
+                            "region": "RegionOne", 
+                            "region_id": "RegionOne", 
+                            "url": "https://192.168.56.101:8774/v2.1/b2eb6efb8b4e468d93e53935f291716d"
+                        }
+                    ], 
+                    "id": "1ddf2e0d35a5433c9470af1a6d1a0b94", 
+                    "name": "nova", 
+                    "type": "compute"
+                }, 
+                {
+                    "endpoints": [
+                        {
+                            "id": "1364506b702647a4b899491c988af14d", 
+                            "interface": "public", 
+                            "region": "RegionOne", 
+                            "region_id": "RegionOne", 
+                            "url": "https://192.168.56.101:8998"
+                        }, 
+                        {
+                            "id": "24314ec21a16487a99e35fa1c6cfb858", 
+                            "interface": "internal", 
+                            "region": "RegionOne", 
+                            "region_id": "RegionOne", 
+                            "url": "https://192.168.56.101:8998"
+                        }, 
+                        {
+                            "id": "4fb7ec7beeb64078aabcc4d8c9820803", 
+                            "interface": "admin", 
+                            "region": "RegionOne", 
+                            "region_id": "RegionOne", 
+                            "url": "https://192.168.56.101:8998"
+                        }
+                    ], 
+                    "id": "3c6dd54c98a4468cadcad454ac9acff4", 
+                    "name": "clerk", 
+                    "type": "self-service"
+                }, 
+                {
+                    "endpoints": [
+                        {
+                            "id": "72e7fd0060074bb0a306a09a39d1c3d8", 
+                            "interface": "public", 
+                            "region": "RegionOne", 
+                            "region_id": "RegionOne", 
+                            "url": "https://192.168.56.101:9292"
+                        }, 
+                        {
+                            "id": "80a13efa07e14272ad92bd2dd0526784", 
+                            "interface": "internal", 
+                            "region": "RegionOne", 
+                            "region_id": "RegionOne", 
+                            "url": "https://192.168.56.101:9292"
+                        }, 
+                        {
+                            "id": "ff39d3a13bf543ed9025f7bd816982a5", 
+                            "interface": "admin", 
+                            "region": "RegionOne", 
+                            "region_id": "RegionOne", 
+                            "url": "https://192.168.56.101:9292"
+                        }
+                    ], 
+                    "id": "4027281b33ea461ea718ae45f2cfe3c3", 
+                    "name": "glance", 
+                    "type": "image"
+                }, 
+                {
+                    "endpoints": [
+                        {
+                            "id": "1a49aeff80464157a4b25d3be2caf532", 
+                            "interface": "internal", 
+                            "region": "RegionOne", 
+                            "region_id": "RegionOne", 
+                            "url": "https://192.168.56.101:5000/v3"
+                        }, 
+                        {
+                            "id": "204f545cdaf145099d294798a3c6d31a", 
+                            "interface": "public", 
+                            "region": "RegionOne", 
+                            "region_id": "RegionOne", 
+                            "url": "https://192.168.56.101:5000/v3"
+                        }, 
+                        {
+                            "id": "f52d798dcce14af78bc3c27b4b7e7ffc", 
+                            "interface": "admin", 
+                            "region": "RegionOne", 
+                            "region_id": "RegionOne", 
+                            "url": "https://192.168.56.101:5000/v3"
+                        }
+                    ], 
+                    "id": "52bacea53700460aad7fb0fb5dd34421", 
+                    "name": "keystone", 
+                    "type": "identity"
+                }, 
+                {
+                    "endpoints": [
+                        {
+                            "id": "266cdd2540bc447c9a40af378e148224", 
+                            "interface": "public", 
+                            "region": "RegionOne", 
+                            "region_id": "RegionOne", 
+                            "url": "https://192.168.56.101:8080/v1/AUTH_b2eb6efb8b4e468d93e53935f291716d"
+                        }, 
+                        {
+                            "id": "b79803073fd949b483cf7ddb725f317b", 
+                            "interface": "internal", 
+                            "region": "RegionOne", 
+                            "region_id": "RegionOne", 
+                            "url": "https://192.168.56.101:8080/v1/AUTH_b2eb6efb8b4e468d93e53935f291716d"
+                        }, 
+                        {
+                            "id": "b8159a86aa8b42dcb7eaf85feaf83303", 
+                            "interface": "admin", 
+                            "region": "RegionOne", 
+                            "region_id": "RegionOne", 
+                            "url": "https://192.168.56.101:8080/v1/AUTH_b2eb6efb8b4e468d93e53935f291716d"
+                        }
+                    ], 
+                    "id": "70bde44a063a426c9cc49928cdcf307f", 
+                    "name": "swift", 
+                    "type": "object-store"
+                }, 
+                {
+                    "endpoints": [
+                        {
+                            "id": "24a705b11648463c94fef3daf88b2f20", 
+                            "interface": "public", 
+                            "region": "RegionOne", 
+                            "region_id": "RegionOne", 
+                            "url": "https://192.168.56.101:9000/v2/b2eb6efb8b4e468d93e53935f291716d"
+                        }, 
+                        {
+                            "id": "2bbb770727b2419f8e9296e1d0ae137e", 
+                            "interface": "admin", 
+                            "region": "RegionOne", 
+                            "region_id": "RegionOne", 
+                            "url": "https://192.168.56.101:9000/v2/b2eb6efb8b4e468d93e53935f291716d"
+                        }, 
+                        {
+                            "id": "fff1172e040b4ff4b9e74f8873541293", 
+                            "interface": "internal", 
+                            "region": "RegionOne", 
+                            "region_id": "RegionOne", 
+                            "url": "https://192.168.56.101:9000/v2/b2eb6efb8b4e468d93e53935f291716d"
+                        }
+                    ], 
+                    "id": "7f7f4cffbba347cb81b99c0d1013bf04", 
+                    "name": "cinderv2", 
+                    "type": "volumev2"
+                }, 
+                {
+                    "endpoints": [
+                        {
+                            "id": "59c5965206c943d091270ba9bfce6190", 
+                            "interface": "public", 
+                            "region": "RegionOne", 
+                            "region_id": "RegionOne", 
+                            "url": "https://192.168.56.101:8041"
+                        }, 
+                        {
+                            "id": "6b1baadec2f7467f8eebb0be6e561cb5", 
+                            "interface": "internal", 
+                            "region": "RegionOne", 
+                            "region_id": "RegionOne", 
+                            "url": "https://192.168.56.101:8041"
+                        }, 
+                        {
+                            "id": "d05a5c278a39459b9800cd97bfeee8ec", 
+                            "interface": "admin", 
+                            "region": "RegionOne", 
+                            "region_id": "RegionOne", 
+                            "url": "https://192.168.56.101:8041"
+                        }
+                    ], 
+                    "id": "95cf8c8215044c0e96d1452a412069a2", 
+                    "name": "gnocchi", 
+                    "type": "metric"
+                }, 
+                {
+                    "endpoints": [
+                        {
+                            "id": "67615151cf0c49269c7ac632ce529f6e", 
+                            "interface": "public", 
+                            "region": "RegionOne", 
+                            "region_id": "RegionOne", 
+                            "url": "https://192.168.56.101:9000/v3/b2eb6efb8b4e468d93e53935f291716d"
+                        }, 
+                        {
+                            "id": "c51607bf3d7b4277acfa24bbdd090b21", 
+                            "interface": "admin", 
+                            "region": "RegionOne", 
+                            "region_id": "RegionOne", 
+                            "url": "https://192.168.56.101:9000/v3/b2eb6efb8b4e468d93e53935f291716d"
+                        }, 
+                        {
+                            "id": "d81e9502ddc44d4c9f1d6756175d3761", 
+                            "interface": "internal", 
+                            "region": "RegionOne", 
+                            "region_id": "RegionOne", 
+                            "url": "https://192.168.56.101:9000/v3/b2eb6efb8b4e468d93e53935f291716d"
+                        }
+                    ], 
+                    "id": "9e8d92fac4bb4f739058981783fc6e44", 
+                    "name": "cinderv3", 
+                    "type": "volumev3"
+                }, 
+                {
+                    "endpoints": [
+                        {
+                            "id": "0aa1bf4d493b42e99cfa7f954c7bd165", 
+                            "interface": "internal", 
+                            "region": "RegionOne", 
+                            "region_id": "RegionOne", 
+                            "url": "https://192.168.56.101:9696"
+                        }, 
+                        {
+                            "id": "928c0ce0cde241fe8d57e357b2cac900", 
+                            "interface": "admin", 
+                            "region": "RegionOne", 
+                            "region_id": "RegionOne", 
+                            "url": "https://192.168.56.101:9696"
+                        }, 
+                        {
+                            "id": "d4336e3341704a638cad55941c596141", 
+                            "interface": "public", 
+                            "region": "RegionOne", 
+                            "region_id": "RegionOne", 
+                            "url": "https://192.168.56.101:9696"
+                        }
+                    ], 
+                    "id": "bd262d7414504383a00c8e368860b3e8", 
+                    "name": "neutron", 
+                    "type": "network"
+                }, 
+                {
+                    "endpoints": [
+                        {
+                            "id": "53b655e2533349eab6fc0a519844908f", 
+                            "interface": "public", 
+                            "region": "RegionOne", 
+                            "region_id": "RegionOne", 
+                            "url": "https://192.168.56.101:8428"
+                        }, 
+                        {
+                            "id": "707abc47e6974de9a37aa72899e4b5e5", 
+                            "interface": "admin", 
+                            "region": "RegionOne", 
+                            "region_id": "RegionOne", 
+                            "url": "https://192.168.56.101:8428"
+                        }, 
+                        {
+                            "id": "dd3a0e3bc36c44dfae9d1cff3c7dd673", 
+                            "interface": "internal", 
+                            "region": "RegionOne", 
+                            "region_id": "RegionOne", 
+                            "url": "https://192.168.56.101:8428"
+                        }
+                    ], 
+                    "id": "be6eb3ee6967477c9717e5e1ef07aa4f", 
+                    "name": "validator", 
+                    "type": "ttv"
+                }, 
+                {
+                    "endpoints": [
+                        {
+                            "id": "1e17a7687e694af6934ef8140e37521a", 
+                            "interface": "public", 
+                            "region": "RegionOne", 
+                            "region_id": "RegionOne", 
+                            "url": "https://192.168.56.101:9000/v2/b2eb6efb8b4e468d93e53935f291716d"
+                        }, 
+                        {
+                            "id": "474a4af84ed14327ad012ad9aff2ffac", 
+                            "interface": "admin", 
+                            "region": "RegionOne", 
+                            "region_id": "RegionOne", 
+                            "url": "https://192.168.56.101:9000/v2/b2eb6efb8b4e468d93e53935f291716d"
+                        }, 
+                        {
+                            "id": "e9e5a2a7bb524379ad70ab1c91f72c20", 
+                            "interface": "internal", 
+                            "region": "RegionOne", 
+                            "region_id": "RegionOne", 
+                            "url": "https://192.168.56.101:9000/v2/b2eb6efb8b4e468d93e53935f291716d"
+                        }
+                    ], 
+                    "id": "cf39d40b7e8646b3bd9acdbd61e7eca9", 
+                    "name": "cinder", 
+                    "type": "volume"
+                }, 
+                {
+                    "endpoints": [
+                        {
+                            "id": "875e38c31e2d45799bdc7c2032ad5ceb", 
+                            "interface": "admin", 
+                            "region": "RegionOne", 
+                            "region_id": "RegionOne", 
+                            "url": "https://192.168.56.101:5470"
+                        }, 
+                        {
+                            "id": "a5df6aef035c4df0a8a7d5e1a4c736cb", 
+                            "interface": "public", 
+                            "region": "RegionOne", 
+                            "region_id": "RegionOne", 
+                            "url": "https://192.168.56.101:5470"
+                        }, 
+                        {
+                            "id": "bd99cb5a39054b1ca4d9be901516d910", 
+                            "interface": "internal", 
+                            "region": "RegionOne", 
+                            "region_id": "RegionOne", 
+                            "url": "https://192.168.56.101:5470"
+                        }
+                    ], 
+                    "id": "fd3bcbf03645477d8cdcd1dcb5e1a8f1", 
+                    "name": "bumblebee", 
+                    "type": "notification"
+                }, 
+                {
+                    "endpoints": [
+                        {
+                            "id": "05b54eabb90d4033ae38e8df8db5497b", 
+                            "interface": "admin", 
+                            "region": "RegionOne", 
+                            "region_id": "RegionOne", 
+                            "url": "https://192.168.56.101:8778"
+                        }, 
+                        {
+                            "id": "0b2c74fbd1b0436cb268e94afa12082d", 
+                            "interface": "internal", 
+                            "region": "RegionOne", 
+                            "region_id": "RegionOne", 
+                            "url": "https://192.168.56.101:8778"
+                        }, 
+                        {
+                            "id": "b721cb636a1b45808cbfe9f248c48ea3", 
+                            "interface": "public", 
+                            "region": "RegionOne", 
+                            "region_id": "RegionOne", 
+                            "url": "https://192.168.56.101:8778"
+                        }
+                    ], 
+                    "id": "feeb7106128248f186bc336ab5a5d69f", 
+                    "name": "panko", 
+                    "type": "event"
+                }
+            ], 
+            "expires_at": "2020-03-20T13:20:31.000000Z", 
+            "is_admin_project": true, 
+            "is_domain": false, 
+            "issued_at": "2020-03-20T07:20:31.000000Z", 
+            "methods": [
+                "password"
+            ], 
+            "project": {
+                "domain": {
+                    "id": "default", 
+                    "name": "Default"
+                }, 
+                "id": "b2eb6efb8b4e468d93e53935f291716d", 
+                "name": "ibm-default"
+            }, 
+            "roles": [
+                {
+                    "id": "32714e16964b4234be2aa516227fca6a", 
+                    "name": "admin"
+                }
+            ], 
+            "user": {
+                "domain": {
+                    "id": "default", 
+                    "name": "Default"
+                }, 
+                "id": "0688b01e6439ca32d698d20789d52169126fb41fb1a4ddafcebb97d854e836c9", 
+                "name": "root", 
+                "password_expires_at": null
+            }
+        }
+    }, 
+    "msg": "OK (8454 bytes)", 
+    "redirected": false, 
+    "server": "Apache", 
+    "status": 201, 
+    "url": "https://192.168.56.101:5000/v3/auth/tokens", 
+    "vary": "X-Auth-Token,User-Agent", 
+    "x_openstack_request_id": "req-78cd4971-8948-4c73-bd6b-68d9697c50ab", 
+    "x_subject_token": "gAAAAABedG6_J5y7HsZ1LLIQW9zuA6yZaWpcvEIH4uHg3d36f0cMOhnReyIRkp5MA61CPZHbEdFgWEBaNx7TDWF_xeWX5CJRzK2jKqpXCA1pn31-353Sf0TIqaGY0cPUB8LrvpExjtkmjpDYacH8pbZltdNFHK6Hd0nbMlq-MuxL3zV_x4isx18gS2qgFDm_-Qi0CGz4k7Tbz3E-qG-4D3HiDwTgwkARQkqDMH6lvnDSFBmvva_KVx8"
+}
+2020-03-20 15:20:32,034 p=22908 u=root n=ansible | Friday 20 March 2020  15:20:32 +0800 (0:00:01.902)       0:00:01.985 ********** 
+2020-03-20 15:20:32,126 p=22908 u=root n=ansible | localhost | SUCCESS => {
+    "ansible_facts": {
+        "TOKEN": "gAAAAABedG6_J5y7HsZ1LLIQW9zuA6yZaWpcvEIH4uHg3d36f0cMOhnReyIRkp5MA61CPZHbEdFgWEBaNx7TDWF_xeWX5CJRzK2jKqpXCA1pn31-353Sf0TIqaGY0cPUB8LrvpExjtkmjpDYacH8pbZltdNFHK6Hd0nbMlq-MuxL3zV_x4isx18gS2qgFDm_-Qi0CGz4k7Tbz3E-qG-4D3HiDwTgwkARQkqDMH6lvnDSFBmvva_KVx8"
+    }, 
+    "changed": false
+}
+2020-03-20 15:20:32,132 p=22908 u=root n=ansible | Friday 20 March 2020  15:20:32 +0800 (0:00:00.097)       0:00:02.082 ********** 
+2020-03-20 15:20:32,263 p=22908 u=root n=ansible | localhost | SUCCESS => {
+    "TOKEN": "gAAAAABedG6_J5y7HsZ1LLIQW9zuA6yZaWpcvEIH4uHg3d36f0cMOhnReyIRkp5MA61CPZHbEdFgWEBaNx7TDWF_xeWX5CJRzK2jKqpXCA1pn31-353Sf0TIqaGY0cPUB8LrvpExjtkmjpDYacH8pbZltdNFHK6Hd0nbMlq-MuxL3zV_x4isx18gS2qgFDm_-Qi0CGz4k7Tbz3E-qG-4D3HiDwTgwkARQkqDMH6lvnDSFBmvva_KVx8"
+}
+2020-03-20 15:20:32,267 p=22908 u=root n=ansible | Friday 20 March 2020  15:20:32 +0800 (0:00:00.135)       0:00:02.218 ********** 
+2020-03-20 15:20:33,101 p=22908 u=root n=ansible | localhost | SUCCESS => {
+    "changed": false, 
+    "connection": "close", 
+    "content": "{\"links\": {\"self\": \"https://192.168.56.101:5000/v3/projects\", \"previous\": null, \"next\": null}, \"projects\": [{\"is_domain\": false, \"description\": \"RESTAPI Created\", \"links\": {\"self\": \"https://192.168.56.101:5000/v3/projects/4f98e00b5dc04801a3157a6e2e09bf06\"}, \"tags\": [], \"enabled\": true, \"id\": \"4f98e00b5dc04801a3157a6e2e09bf06\", \"parent_id\": \"default\", \"domain_id\": \"default\", \"name\": \"project2\"}, {\"is_domain\": false, \"description\": \"IBM Tenant for storing VM NVRAM data for remote restart\", \"links\": {\"self\": \"https://192.168.56.101:5000/v3/projects/a9e9cecbabe94fcd94a106a6ce2b9a48\"}, \"tags\": [], \"enabled\": true, \"id\": \"a9e9cecbabe94fcd94a106a6ce2b9a48\", \"parent_id\": \"f9cea94e8c134d68b849e4d53a340966\", \"domain_id\": \"f9cea94e8c134d68b849e4d53a340966\", \"name\": \"powervm\"}, {\"is_domain\": false, \"description\": \"IBM Default Tenant\", \"links\": {\"self\": \"https://192.168.56.101:5000/v3/projects/b2eb6efb8b4e468d93e53935f291716d\"}, \"tags\": [], \"enabled\": true, \"id\": \"b2eb6efb8b4e468d93e53935f291716d\", \"parent_id\": \"default\", \"domain_id\": \"default\", \"name\": \"ibm-default\"}, {\"is_domain\": false, \"description\": \"IBM Service Tenant for service users and groups\", \"links\": {\"self\": \"https://192.168.56.101:5000/v3/projects/d343d73e12be4272931d6ca2c1ce1720\"}, \"tags\": [], \"enabled\": true, \"id\": \"d343d73e12be4272931d6ca2c1ce1720\", \"parent_id\": \"f9cea94e8c134d68b849e4d53a340966\", \"domain_id\": \"f9cea94e8c134d68b849e4d53a340966\", \"name\": \"service\"}, {\"is_domain\": false, \"description\": \"demotest\", \"links\": {\"self\": \"https://192.168.56.101:5000/v3/projects/e6435b7219fe4875afcf1dc0ffe256ec\"}, \"tags\": [], \"enabled\": true, \"id\": \"e6435b7219fe4875afcf1dc0ffe256ec\", \"parent_id\": \"default\", \"domain_id\": \"default\", \"name\": \"marsproject\"}]}\n", 
+    "content_length": "1731", 
+    "content_type": "application/json", 
+    "cookies": {}, 
+    "cookies_string": "", 
+    "date": "Fri, 20 Mar 2020 07:20:33 GMT", 
+    "elapsed": 0, 
+    "json": {
+        "links": {
+            "next": null, 
+            "previous": null, 
+            "self": "https://192.168.56.101:5000/v3/projects"
+        }, 
+        "projects": [
+            {
+                "description": "RESTAPI Created", 
+                "domain_id": "default", 
+                "enabled": true, 
+                "id": "4f98e00b5dc04801a3157a6e2e09bf06", 
+                "is_domain": false, 
+                "links": {
+                    "self": "https://192.168.56.101:5000/v3/projects/4f98e00b5dc04801a3157a6e2e09bf06"
+                }, 
+                "name": "project2", 
+                "parent_id": "default", 
+                "tags": []
+            }, 
+            {
+                "description": "IBM Tenant for storing VM NVRAM data for remote restart", 
+                "domain_id": "f9cea94e8c134d68b849e4d53a340966", 
+                "enabled": true, 
+                "id": "a9e9cecbabe94fcd94a106a6ce2b9a48", 
+                "is_domain": false, 
+                "links": {
+                    "self": "https://192.168.56.101:5000/v3/projects/a9e9cecbabe94fcd94a106a6ce2b9a48"
+                }, 
+                "name": "powervm", 
+                "parent_id": "f9cea94e8c134d68b849e4d53a340966", 
+                "tags": []
+            }, 
+            {
+                "description": "IBM Default Tenant", 
+                "domain_id": "default", 
+                "enabled": true, 
+                "id": "b2eb6efb8b4e468d93e53935f291716d", 
+                "is_domain": false, 
+                "links": {
+                    "self": "https://192.168.56.101:5000/v3/projects/b2eb6efb8b4e468d93e53935f291716d"
+                }, 
+                "name": "ibm-default", 
+                "parent_id": "default", 
+                "tags": []
+            }, 
+            {
+                "description": "IBM Service Tenant for service users and groups", 
+                "domain_id": "f9cea94e8c134d68b849e4d53a340966", 
+                "enabled": true, 
+                "id": "d343d73e12be4272931d6ca2c1ce1720", 
+                "is_domain": false, 
+                "links": {
+                    "self": "https://192.168.56.101:5000/v3/projects/d343d73e12be4272931d6ca2c1ce1720"
+                }, 
+                "name": "service", 
+                "parent_id": "f9cea94e8c134d68b849e4d53a340966", 
+                "tags": []
+            }, 
+            {
+                "description": "demotest", 
+                "domain_id": "default", 
+                "enabled": true, 
+                "id": "e6435b7219fe4875afcf1dc0ffe256ec", 
+                "is_domain": false, 
+                "links": {
+                    "self": "https://192.168.56.101:5000/v3/projects/e6435b7219fe4875afcf1dc0ffe256ec"
+                }, 
+                "name": "marsproject", 
+                "parent_id": "default", 
+                "tags": []
+            }
+        ]
+    }, 
+    "msg": "OK (1731 bytes)", 
+    "redirected": false, 
+    "server": "Apache", 
+    "status": 200, 
+    "url": "https://192.168.56.101:5000/v3/projects", 
+    "vary": "X-Auth-Token,Accept-Encoding,User-Agent", 
+    "x_openstack_request_id": "req-3681e218-f913-4474-a0b0-61deda68c556"
+}
+2020-03-20 15:20:33,106 p=22908 u=root n=ansible | Friday 20 March 2020  15:20:33 +0800 (0:00:00.838)       0:00:03.056 ********** 
+2020-03-20 15:20:33,262 p=22908 u=root n=ansible | localhost | SUCCESS => {
+    "changed": false, 
+    "msg": "All items completed", 
+    "results": [
+        {
+            "ansible_loop_var": "item", 
+            "changed": false, 
+            "item": {
+                "description": "RESTAPI Created", 
+                "domain_id": "default", 
+                "enabled": true, 
+                "id": "4f98e00b5dc04801a3157a6e2e09bf06", 
+                "is_domain": false, 
+                "links": {
+                    "self": "https://192.168.56.101:5000/v3/projects/4f98e00b5dc04801a3157a6e2e09bf06"
+                }, 
+                "name": "project2", 
+                "parent_id": "default", 
+                "tags": []
+            }, 
+            "skip_reason": "Conditional result was False", 
+            "skipped": true
+        }, 
+        {
+            "ansible_loop_var": "item", 
+            "changed": false, 
+            "item": {
+                "description": "IBM Tenant for storing VM NVRAM data for remote restart", 
+                "domain_id": "f9cea94e8c134d68b849e4d53a340966", 
+                "enabled": true, 
+                "id": "a9e9cecbabe94fcd94a106a6ce2b9a48", 
+                "is_domain": false, 
+                "links": {
+                    "self": "https://192.168.56.101:5000/v3/projects/a9e9cecbabe94fcd94a106a6ce2b9a48"
+                }, 
+                "name": "powervm", 
+                "parent_id": "f9cea94e8c134d68b849e4d53a340966", 
+                "tags": []
+            }, 
+            "skip_reason": "Conditional result was False", 
+            "skipped": true
+        }, 
+        {
+            "ansible_facts": {
+                "tenant_id": "b2eb6efb8b4e468d93e53935f291716d"
+            }, 
+            "ansible_loop_var": "item", 
+            "changed": false, 
+            "failed": false, 
+            "item": {
+                "description": "IBM Default Tenant", 
+                "domain_id": "default", 
+                "enabled": true, 
+                "id": "b2eb6efb8b4e468d93e53935f291716d", 
+                "is_domain": false, 
+                "links": {
+                    "self": "https://192.168.56.101:5000/v3/projects/b2eb6efb8b4e468d93e53935f291716d"
+                }, 
+                "name": "ibm-default", 
+                "parent_id": "default", 
+                "tags": []
+            }
+        }, 
+        {
+            "ansible_loop_var": "item", 
+            "changed": false, 
+            "item": {
+                "description": "IBM Service Tenant for service users and groups", 
+                "domain_id": "f9cea94e8c134d68b849e4d53a340966", 
+                "enabled": true, 
+                "id": "d343d73e12be4272931d6ca2c1ce1720", 
+                "is_domain": false, 
+                "links": {
+                    "self": "https://192.168.56.101:5000/v3/projects/d343d73e12be4272931d6ca2c1ce1720"
+                }, 
+                "name": "service", 
+                "parent_id": "f9cea94e8c134d68b849e4d53a340966", 
+                "tags": []
+            }, 
+            "skip_reason": "Conditional result was False", 
+            "skipped": true
+        }, 
+        {
+            "ansible_loop_var": "item", 
+            "changed": false, 
+            "item": {
+                "description": "demotest", 
+                "domain_id": "default", 
+                "enabled": true, 
+                "id": "e6435b7219fe4875afcf1dc0ffe256ec", 
+                "is_domain": false, 
+                "links": {
+                    "self": "https://192.168.56.101:5000/v3/projects/e6435b7219fe4875afcf1dc0ffe256ec"
+                }, 
+                "name": "marsproject", 
+                "parent_id": "default", 
+                "tags": []
+            }, 
+            "skip_reason": "Conditional result was False", 
+            "skipped": true
+        }
+    ]
+}
+2020-03-20 15:20:33,271 p=22908 u=root n=ansible | Friday 20 March 2020  15:20:33 +0800 (0:00:00.164)       0:00:03.221 ********** 
+2020-03-20 15:20:33,357 p=22908 u=root n=ansible | localhost | SKIPPED
+2020-03-20 15:20:33,360 p=22908 u=root n=ansible | Friday 20 March 2020  15:20:33 +0800 (0:00:00.089)       0:00:03.311 ********** 
+2020-03-20 15:20:33,360 p=22908 u=root n=ansible | =============================================================================== 
+2020-03-20 15:20:33,360 p=22908 u=root n=ansible | Get an authentication PowerVC Token ---------------------------------------------------------------------------------- 1.90s
+2020-03-20 15:20:33,360 p=22908 u=root n=ansible | Get PowerVC Tenant ID ------------------------------------------------------------------------------------------------ 0.84s
+2020-03-20 15:20:33,361 p=22908 u=root n=ansible | Set Variable Tenant ID ----------------------------------------------------------------------------------------------- 0.16s
+2020-03-20 15:20:33,361 p=22908 u=root n=ansible | debug ---------------------------------------------------------------------------------------------------------------- 0.14s
+2020-03-20 15:20:33,361 p=22908 u=root n=ansible | Set Variable TOKEN --------------------------------------------------------------------------------------------------- 0.10s
+2020-03-20 15:20:33,361 p=22908 u=root n=ansible | fail ----------------------------------------------------------------------------------------------------------------- 0.09s
+2020-03-20 15:20:33,361 p=22908 u=root n=ansible | Include the variables from the YAML file ----------------------------------------------------------------------------- 0.02s
+2020-03-20 15:21:26,523 p=25315 u=root n=ansible | [WARNING]: provided hosts list is empty, only localhost is available. Note that the implicit localhost does not match 'all'
+
+2020-03-20 15:21:27,032 p=25315 u=root n=ansible | PLAY [localhost] ************************************************************************************************************
+2020-03-20 15:21:27,049 p=25315 u=root n=ansible | TASK [Include the variables from the YAML file] *****************************************************************************
+2020-03-20 15:21:27,049 p=25315 u=root n=ansible | Friday 20 March 2020  15:21:27 +0800 (0:00:00.052)       0:00:00.052 ********** 
+2020-03-20 15:21:27,079 p=25315 u=root n=ansible | ok: [localhost]
+2020-03-20 15:21:27,085 p=25315 u=root n=ansible | TASK [Get an authentication PowerVC Token] **********************************************************************************
+2020-03-20 15:21:27,085 p=25315 u=root n=ansible | Friday 20 March 2020  15:21:27 +0800 (0:00:00.036)       0:00:00.088 ********** 
+2020-03-20 15:21:28,730 p=25315 u=root n=ansible | ok: [localhost]
+2020-03-20 15:21:28,739 p=25315 u=root n=ansible | TASK [Set Variable TOKEN] ***************************************************************************************************
+2020-03-20 15:21:28,739 p=25315 u=root n=ansible | Friday 20 March 2020  15:21:28 +0800 (0:00:01.654)       0:00:01.742 ********** 
+2020-03-20 15:21:28,844 p=25315 u=root n=ansible | ok: [localhost]
+2020-03-20 15:21:28,848 p=25315 u=root n=ansible | TASK [debug] ****************************************************************************************************************
+2020-03-20 15:21:28,849 p=25315 u=root n=ansible | Friday 20 March 2020  15:21:28 +0800 (0:00:00.109)       0:00:01.851 ********** 
+2020-03-20 15:21:28,942 p=25315 u=root n=ansible | ok: [localhost] => 
+  TOKEN: gAAAAABedG74z5GX0K2lWy-UFkJJL_Jsv19FfO96m-lpv-3dLg0IULoJIA4ZDNUV17JTMq4gJPBxWdQXPgqjg_NmD-20ukHyLIAcvkZ0ItC651xgLS6aC64Uu6FzloN9IKzyageQsc__72B2IKvIJc6Q7hk-YpODzOn_hfAHT0ECRLD9uXCDPpazATdmsz8XBau8qykICcWcOnkYjEuppoikereMNucaTet3wr0vSwBrGzNpJJb3kHo
+2020-03-20 15:21:28,946 p=25315 u=root n=ansible | TASK [Get PowerVC Tenant ID] ************************************************************************************************
+2020-03-20 15:21:28,946 p=25315 u=root n=ansible | Friday 20 March 2020  15:21:28 +0800 (0:00:00.097)       0:00:01.949 ********** 
+2020-03-20 15:21:29,760 p=25315 u=root n=ansible | ok: [localhost]
+2020-03-20 15:21:29,767 p=25315 u=root n=ansible | TASK [Set Variable Tenant ID] ***********************************************************************************************
+2020-03-20 15:21:29,767 p=25315 u=root n=ansible | Friday 20 March 2020  15:21:29 +0800 (0:00:00.820)       0:00:02.770 ********** 
+2020-03-20 15:21:29,884 p=25315 u=root n=ansible | skipping: [localhost] => (item={u'is_domain': False, u'description': u'RESTAPI Created', u'links': {u'self': u'https://192.168.56.101:5000/v3/projects/4f98e00b5dc04801a3157a6e2e09bf06'}, u'tags': [], u'enabled': True, u'domain_id': u'default', u'parent_id': u'default', u'id': u'4f98e00b5dc04801a3157a6e2e09bf06', u'name': u'project2'}) 
+2020-03-20 15:21:29,886 p=25315 u=root n=ansible | skipping: [localhost] => (item={u'is_domain': False, u'description': u'IBM Tenant for storing VM NVRAM data for remote restart', u'links': {u'self': u'https://192.168.56.101:5000/v3/projects/a9e9cecbabe94fcd94a106a6ce2b9a48'}, u'tags': [], u'enabled': True, u'domain_id': u'f9cea94e8c134d68b849e4d53a340966', u'parent_id': u'f9cea94e8c134d68b849e4d53a340966', u'id': u'a9e9cecbabe94fcd94a106a6ce2b9a48', u'name': u'powervm'}) 
+2020-03-20 15:21:29,901 p=25315 u=root n=ansible | ok: [localhost] => (item={u'is_domain': False, u'description': u'IBM Default Tenant', u'links': {u'self': u'https://192.168.56.101:5000/v3/projects/b2eb6efb8b4e468d93e53935f291716d'}, u'tags': [], u'enabled': True, u'domain_id': u'default', u'parent_id': u'default', u'id': u'b2eb6efb8b4e468d93e53935f291716d', u'name': u'ibm-default'})
+2020-03-20 15:21:29,909 p=25315 u=root n=ansible | skipping: [localhost] => (item={u'is_domain': False, u'description': u'IBM Service Tenant for service users and groups', u'links': {u'self': u'https://192.168.56.101:5000/v3/projects/d343d73e12be4272931d6ca2c1ce1720'}, u'tags': [], u'enabled': True, u'domain_id': u'f9cea94e8c134d68b849e4d53a340966', u'parent_id': u'f9cea94e8c134d68b849e4d53a340966', u'id': u'd343d73e12be4272931d6ca2c1ce1720', u'name': u'service'}) 
+2020-03-20 15:21:29,923 p=25315 u=root n=ansible | skipping: [localhost] => (item={u'is_domain': False, u'description': u'demotest', u'links': {u'self': u'https://192.168.56.101:5000/v3/projects/e6435b7219fe4875afcf1dc0ffe256ec'}, u'tags': [], u'enabled': True, u'domain_id': u'default', u'parent_id': u'default', u'id': u'e6435b7219fe4875afcf1dc0ffe256ec', u'name': u'marsproject'}) 
+2020-03-20 15:21:29,934 p=25315 u=root n=ansible | TASK [fail] *****************************************************************************************************************
+2020-03-20 15:21:29,935 p=25315 u=root n=ansible | Friday 20 March 2020  15:21:29 +0800 (0:00:00.167)       0:00:02.937 ********** 
+2020-03-20 15:21:30,026 p=25315 u=root n=ansible | skipping: [localhost]
+2020-03-20 15:21:30,030 p=25315 u=root n=ansible | PLAY RECAP ******************************************************************************************************************
+2020-03-20 15:21:30,030 p=25315 u=root n=ansible | localhost                  : ok=6    changed=0    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   
+2020-03-20 15:21:30,031 p=25315 u=root n=ansible | Friday 20 March 2020  15:21:30 +0800 (0:00:00.095)       0:00:03.033 ********** 
+2020-03-20 15:21:30,031 p=25315 u=root n=ansible | =============================================================================== 
+2020-03-20 15:21:30,031 p=25315 u=root n=ansible | Get an authentication PowerVC Token ---------------------------------------------------------------------------------- 1.65s
+2020-03-20 15:21:30,031 p=25315 u=root n=ansible | Get PowerVC Tenant ID ------------------------------------------------------------------------------------------------ 0.82s
+2020-03-20 15:21:30,031 p=25315 u=root n=ansible | Set Variable Tenant ID ----------------------------------------------------------------------------------------------- 0.17s
+2020-03-20 15:21:30,031 p=25315 u=root n=ansible | Set Variable TOKEN --------------------------------------------------------------------------------------------------- 0.11s
+2020-03-20 15:21:30,031 p=25315 u=root n=ansible | debug ---------------------------------------------------------------------------------------------------------------- 0.10s
+2020-03-20 15:21:30,031 p=25315 u=root n=ansible | fail ----------------------------------------------------------------------------------------------------------------- 0.10s
+2020-03-20 15:21:30,032 p=25315 u=root n=ansible | Include the variables from the YAML file ----------------------------------------------------------------------------- 0.04s
+2020-03-20 15:21:33,270 p=25522 u=root n=ansible | [WARNING]: provided hosts list is empty, only localhost is available. Note that the implicit localhost does not match 'all'
+
+2020-03-20 15:21:33,807 p=25522 u=root n=ansible | PLAY [localhost] ************************************************************************************************************
+2020-03-20 15:21:33,829 p=25522 u=root n=ansible | TASK [Include the variables from the YAML file] *****************************************************************************
+2020-03-20 15:21:33,829 p=25522 u=root n=ansible | Friday 20 March 2020  15:21:33 +0800 (0:00:00.056)       0:00:00.056 ********** 
+2020-03-20 15:21:33,857 p=25522 u=root n=ansible | ok: [localhost]
+2020-03-20 15:21:33,862 p=25522 u=root n=ansible | TASK [Get an authentication PowerVC Token] **********************************************************************************
+2020-03-20 15:21:33,862 p=25522 u=root n=ansible | Friday 20 March 2020  15:21:33 +0800 (0:00:00.033)       0:00:00.089 ********** 
+2020-03-20 15:21:35,662 p=25522 u=root n=ansible | ok: [localhost]
+2020-03-20 15:21:35,672 p=25522 u=root n=ansible | TASK [Set Variable TOKEN] ***************************************************************************************************
+2020-03-20 15:21:35,672 p=25522 u=root n=ansible | Friday 20 March 2020  15:21:35 +0800 (0:00:01.809)       0:00:01.899 ********** 
+2020-03-20 15:21:35,754 p=25522 u=root n=ansible | ok: [localhost]
+2020-03-20 15:21:35,760 p=25522 u=root n=ansible | TASK [debug] ****************************************************************************************************************
+2020-03-20 15:21:35,760 p=25522 u=root n=ansible | Friday 20 March 2020  15:21:35 +0800 (0:00:00.087)       0:00:01.987 ********** 
+2020-03-20 15:21:35,879 p=25522 u=root n=ansible | ok: [localhost] => 
+  TOKEN: gAAAAABedG7_rVRf7qX6zL0fBiv5l-R99voNglVvMFRochKhkdaYecYKFDw5A3IZ24tIIp7PvpYw8B9_QjOF4Uc1NAYvvXqM0Erm6pdy8L8lBR3HycL-kI7v1VNsSG_cFatSG8to0PhLz2lWF7MRIpjzH8vqcNy_7ljkqzhRUtOg1IpY1fpgAnOznzFAR9m3dHH1ZrtJSKkrWhY3L49-4Y7oEutWItr-yofZIqKWAvK4E_Un6FaL62o
+2020-03-20 15:21:35,883 p=25522 u=root n=ansible | TASK [Get PowerVC Tenant ID] ************************************************************************************************
+2020-03-20 15:21:35,883 p=25522 u=root n=ansible | Friday 20 March 2020  15:21:35 +0800 (0:00:00.123)       0:00:02.110 ********** 
+2020-03-20 15:21:36,699 p=25522 u=root n=ansible | ok: [localhost]
+2020-03-20 15:21:36,704 p=25522 u=root n=ansible | TASK [Set Variable Tenant ID] ***********************************************************************************************
+2020-03-20 15:21:36,705 p=25522 u=root n=ansible | Friday 20 March 2020  15:21:36 +0800 (0:00:00.821)       0:00:02.932 ********** 
+2020-03-20 15:21:36,809 p=25522 u=root n=ansible | skipping: [localhost] => (item={u'is_domain': False, u'description': u'RESTAPI Created', u'links': {u'self': u'https://192.168.56.101:5000/v3/projects/4f98e00b5dc04801a3157a6e2e09bf06'}, u'tags': [], u'enabled': True, u'domain_id': u'default', u'parent_id': u'default', u'id': u'4f98e00b5dc04801a3157a6e2e09bf06', u'name': u'project2'}) 
+2020-03-20 15:21:36,825 p=25522 u=root n=ansible | skipping: [localhost] => (item={u'is_domain': False, u'description': u'IBM Tenant for storing VM NVRAM data for remote restart', u'links': {u'self': u'https://192.168.56.101:5000/v3/projects/a9e9cecbabe94fcd94a106a6ce2b9a48'}, u'tags': [], u'enabled': True, u'domain_id': u'f9cea94e8c134d68b849e4d53a340966', u'parent_id': u'f9cea94e8c134d68b849e4d53a340966', u'id': u'a9e9cecbabe94fcd94a106a6ce2b9a48', u'name': u'powervm'}) 
+2020-03-20 15:21:36,834 p=25522 u=root n=ansible | ok: [localhost] => (item={u'is_domain': False, u'description': u'IBM Default Tenant', u'links': {u'self': u'https://192.168.56.101:5000/v3/projects/b2eb6efb8b4e468d93e53935f291716d'}, u'tags': [], u'enabled': True, u'domain_id': u'default', u'parent_id': u'default', u'id': u'b2eb6efb8b4e468d93e53935f291716d', u'name': u'ibm-default'})
+2020-03-20 15:21:36,857 p=25522 u=root n=ansible | skipping: [localhost] => (item={u'is_domain': False, u'description': u'IBM Service Tenant for service users and groups', u'links': {u'self': u'https://192.168.56.101:5000/v3/projects/d343d73e12be4272931d6ca2c1ce1720'}, u'tags': [], u'enabled': True, u'domain_id': u'f9cea94e8c134d68b849e4d53a340966', u'parent_id': u'f9cea94e8c134d68b849e4d53a340966', u'id': u'd343d73e12be4272931d6ca2c1ce1720', u'name': u'service'}) 
+2020-03-20 15:21:36,866 p=25522 u=root n=ansible | skipping: [localhost] => (item={u'is_domain': False, u'description': u'demotest', u'links': {u'self': u'https://192.168.56.101:5000/v3/projects/e6435b7219fe4875afcf1dc0ffe256ec'}, u'tags': [], u'enabled': True, u'domain_id': u'default', u'parent_id': u'default', u'id': u'e6435b7219fe4875afcf1dc0ffe256ec', u'name': u'marsproject'}) 
+2020-03-20 15:21:36,874 p=25522 u=root n=ansible | TASK [fail] *****************************************************************************************************************
+2020-03-20 15:21:36,875 p=25522 u=root n=ansible | Friday 20 March 2020  15:21:36 +0800 (0:00:00.169)       0:00:03.102 ********** 
+2020-03-20 15:21:36,972 p=25522 u=root n=ansible | skipping: [localhost]
+2020-03-20 15:21:36,975 p=25522 u=root n=ansible | PLAY RECAP ******************************************************************************************************************
+2020-03-20 15:21:36,975 p=25522 u=root n=ansible | localhost                  : ok=6    changed=0    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   
+2020-03-20 15:21:36,976 p=25522 u=root n=ansible | Friday 20 March 2020  15:21:36 +0800 (0:00:00.100)       0:00:03.203 ********** 
+2020-03-20 15:21:36,976 p=25522 u=root n=ansible | =============================================================================== 
+2020-03-20 15:21:36,976 p=25522 u=root n=ansible | Get an authentication PowerVC Token ---------------------------------------------------------------------------------- 1.81s
+2020-03-20 15:21:36,976 p=25522 u=root n=ansible | Get PowerVC Tenant ID ------------------------------------------------------------------------------------------------ 0.82s
+2020-03-20 15:21:36,976 p=25522 u=root n=ansible | Set Variable Tenant ID ----------------------------------------------------------------------------------------------- 0.17s
+2020-03-20 15:21:36,976 p=25522 u=root n=ansible | debug ---------------------------------------------------------------------------------------------------------------- 0.12s
+2020-03-20 15:21:36,976 p=25522 u=root n=ansible | fail ----------------------------------------------------------------------------------------------------------------- 0.10s
+2020-03-20 15:21:36,976 p=25522 u=root n=ansible | Set Variable TOKEN --------------------------------------------------------------------------------------------------- 0.09s
+2020-03-20 15:21:36,977 p=25522 u=root n=ansible | Include the variables from the YAML file ----------------------------------------------------------------------------- 0.03s
+2020-03-20 15:21:54,326 p=26418 u=root n=ansible | [WARNING]: provided hosts list is empty, only localhost is available. Note that the implicit localhost does not match 'all'
+
+2020-03-20 15:21:54,725 p=26418 u=root n=ansible | ERROR! Invalid callback for stdout specified: yaml; skippy
+2020-03-20 15:22:11,597 p=27358 u=root n=ansible | [WARNING]: provided hosts list is empty, only localhost is available. Note that the implicit localhost does not match 'all'
+
+2020-03-20 15:22:11,996 p=27358 u=root n=ansible | ERROR! Invalid callback for stdout specified: yaml, skippy
+2020-03-20 15:25:25,774 p=2596 u=root n=ansible | [WARNING]: provided hosts list is empty, only localhost is available. Note that the implicit localhost does not match 'all'
+
+2020-03-20 15:25:26,278 p=2596 u=root n=ansible | PLAY [localhost] ************************************************************************************************************
+2020-03-20 15:25:26,295 p=2596 u=root n=ansible | TASK [Include the variables from the YAML file] *****************************************************************************
+2020-03-20 15:25:26,313 p=2596 u=root n=ansible | ok: [localhost]
+2020-03-20 15:25:26,320 p=2596 u=root n=ansible | TASK [Get an authentication PowerVC Token] **********************************************************************************
+2020-03-20 15:25:27,964 p=2596 u=root n=ansible | ok: [localhost]
+2020-03-20 15:25:27,979 p=2596 u=root n=ansible | TASK [Set Variable TOKEN] ***************************************************************************************************
+2020-03-20 15:25:28,062 p=2596 u=root n=ansible | ok: [localhost]
+2020-03-20 15:25:28,067 p=2596 u=root n=ansible | TASK [debug] ****************************************************************************************************************
+2020-03-20 15:25:28,165 p=2596 u=root n=ansible | ok: [localhost] => {
+    "TOKEN": "gAAAAABedG_nEnHU1TCECDKVTdnetCrwIkiGRccpqsGgsWUxGsBHCKjJ3ghU_P7_K7gcoZ8mBq9Wf1ASCnWosgDwCjaEkx_CKi_q1FFjbY9wiKLL-ahcujpXUIzREgwlpOVVA_NKM75Dx5z0LzJs3Dex86XuCJHNm5cDPou-MfX9x_yV9bHEvtImW3_R9saSE0htPVnAGTPUFdbyS9CzTXNRmRvNKz5osQIt5zFR67LHFIbqkbIq_7U"
+}
+2020-03-20 15:25:28,170 p=2596 u=root n=ansible | TASK [Get PowerVC Tenant ID] ************************************************************************************************
+2020-03-20 15:25:29,006 p=2596 u=root n=ansible | ok: [localhost]
+2020-03-20 15:25:29,013 p=2596 u=root n=ansible | TASK [Set Variable Tenant ID] ***********************************************************************************************
+2020-03-20 15:25:29,151 p=2596 u=root n=ansible | ok: [localhost] => (item={u'is_domain': False, u'description': u'IBM Default Tenant', u'links': {u'self': u'https://192.168.56.101:5000/v3/projects/b2eb6efb8b4e468d93e53935f291716d'}, u'tags': [], u'enabled': True, u'domain_id': u'default', u'parent_id': u'default', u'id': u'b2eb6efb8b4e468d93e53935f291716d', u'name': u'ibm-default'})
+2020-03-20 15:25:29,185 p=2596 u=root n=ansible | TASK [fail] *****************************************************************************************************************
+2020-03-20 15:25:29,278 p=2596 u=root n=ansible | PLAY RECAP ******************************************************************************************************************
+2020-03-20 15:25:29,279 p=2596 u=root n=ansible | localhost                  : ok=6    changed=0    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   
+2020-03-20 15:25:29,279 p=2596 u=root n=ansible | Playbook run took 0 days, 0 hours, 0 minutes, 3 seconds
+2020-03-20 15:27:48,117 p=8043 u=root n=ansible | [WARNING]: provided hosts list is empty, only localhost is available. Note that the implicit localhost does not match 'all'
+
+2020-03-20 15:27:48,642 p=8043 u=root n=ansible | PLAY [localhost] ************************************************************************************************************
+2020-03-20 15:27:48,662 p=8043 u=root n=ansible | TASK [Include the variables from the YAML file] *****************************************************************************
+2020-03-20 15:27:48,662 p=8043 u=root n=ansible | Friday 20 March 2020  15:27:48 +0800 (0:00:00.051)       0:00:00.051 ********** 
+2020-03-20 15:27:48,681 p=8043 u=root n=ansible | ok: [localhost]
+2020-03-20 15:27:48,686 p=8043 u=root n=ansible | TASK [Get an authentication PowerVC Token] **********************************************************************************
+2020-03-20 15:27:48,686 p=8043 u=root n=ansible | Friday 20 March 2020  15:27:48 +0800 (0:00:00.023)       0:00:00.075 ********** 
+2020-03-20 15:27:50,410 p=8043 u=root n=ansible | ok: [localhost]
+2020-03-20 15:27:50,433 p=8043 u=root n=ansible | TASK [Set Variable TOKEN] ***************************************************************************************************
+2020-03-20 15:27:50,433 p=8043 u=root n=ansible | Friday 20 March 2020  15:27:50 +0800 (0:00:01.747)       0:00:01.822 ********** 
+2020-03-20 15:27:50,527 p=8043 u=root n=ansible | ok: [localhost]
+2020-03-20 15:27:50,544 p=8043 u=root n=ansible | TASK [debug] ****************************************************************************************************************
+2020-03-20 15:27:50,544 p=8043 u=root n=ansible | Friday 20 March 2020  15:27:50 +0800 (0:00:00.111)       0:00:01.933 ********** 
+2020-03-20 15:27:50,653 p=8043 u=root n=ansible | ok: [localhost] => {
+    "TOKEN": "gAAAAABedHB2el4HA05s28kUpF1eUZqbGuJDRUt2stG05MxXSaZkbl7tS7nQlD9wEMzoYPMMmuB4vtszMxh4Bn6YRr4lwlSWYjPwdZJGecenYLwVj0s2xx2xrizSFZtOWO_3bmqb00yHE4_pxJv30__C13hC8f7dynd9T1rUmFcx_ipI5wuYPIOex3bAlQrkkFC1xX-p7p9k730RSnIFGZ8azLbwvvUgVM28lkBjfxd4xmDve_pxC-M"
+}
+2020-03-20 15:27:50,657 p=8043 u=root n=ansible | TASK [Get PowerVC Tenant ID] ************************************************************************************************
+2020-03-20 15:27:50,657 p=8043 u=root n=ansible | Friday 20 March 2020  15:27:50 +0800 (0:00:00.112)       0:00:02.046 ********** 
+2020-03-20 15:27:51,475 p=8043 u=root n=ansible | ok: [localhost]
+2020-03-20 15:27:51,486 p=8043 u=root n=ansible | TASK [Set Variable Tenant ID] ***********************************************************************************************
+2020-03-20 15:27:51,486 p=8043 u=root n=ansible | Friday 20 March 2020  15:27:51 +0800 (0:00:00.828)       0:00:02.875 ********** 
+2020-03-20 15:27:51,650 p=8043 u=root n=ansible | ok: [localhost] => (item={u'is_domain': False, u'description': u'IBM Default Tenant', u'links': {u'self': u'https://192.168.56.101:5000/v3/projects/b2eb6efb8b4e468d93e53935f291716d'}, u'tags': [], u'enabled': True, u'domain_id': u'default', u'parent_id': u'default', u'id': u'b2eb6efb8b4e468d93e53935f291716d', u'name': u'ibm-default'})
+2020-03-20 15:27:51,690 p=8043 u=root n=ansible | TASK [fail] *****************************************************************************************************************
+2020-03-20 15:27:51,691 p=8043 u=root n=ansible | Friday 20 March 2020  15:27:51 +0800 (0:00:00.204)       0:00:03.080 ********** 
+2020-03-20 15:27:51,789 p=8043 u=root n=ansible | PLAY RECAP ******************************************************************************************************************
+2020-03-20 15:27:51,790 p=8043 u=root n=ansible | localhost                  : ok=6    changed=0    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   
+2020-03-20 15:27:51,790 p=8043 u=root n=ansible | Friday 20 March 2020  15:27:51 +0800 (0:00:00.099)       0:00:03.179 ********** 
+2020-03-20 15:27:51,790 p=8043 u=root n=ansible | =============================================================================== 
+2020-03-20 15:27:51,790 p=8043 u=root n=ansible | Get an authentication PowerVC Token ---------------------------------------------------------------------------------- 1.75s
+2020-03-20 15:27:51,790 p=8043 u=root n=ansible | Get PowerVC Tenant ID ------------------------------------------------------------------------------------------------ 0.83s
+2020-03-20 15:27:51,791 p=8043 u=root n=ansible | Set Variable Tenant ID ----------------------------------------------------------------------------------------------- 0.20s
+2020-03-20 15:27:51,791 p=8043 u=root n=ansible | debug ---------------------------------------------------------------------------------------------------------------- 0.11s
+2020-03-20 15:27:51,791 p=8043 u=root n=ansible | Set Variable TOKEN --------------------------------------------------------------------------------------------------- 0.11s
+2020-03-20 15:27:51,791 p=8043 u=root n=ansible | fail ----------------------------------------------------------------------------------------------------------------- 0.10s
+2020-03-20 15:27:51,791 p=8043 u=root n=ansible | Include the variables from the YAML file ----------------------------------------------------------------------------- 0.02s
+2020-03-20 15:27:51,791 p=8043 u=root n=ansible | Playbook run took 0 days, 0 hours, 0 minutes, 3 seconds
+2020-03-20 15:30:06,375 p=13928 u=root n=ansible | [WARNING]: provided hosts list is empty, only localhost is available. Note that the implicit localhost does not match 'all'
+
+2020-03-20 15:30:06,949 p=13928 u=root n=ansible | PLAY [localhost] ************************************************************************************************************
+2020-03-20 15:30:06,978 p=13928 u=root n=ansible | TASK [Include the variables from the YAML file] *****************************************************************************
+2020-03-20 15:30:06,978 p=13928 u=root n=ansible | Friday 20 March 2020  15:30:06 +0800 (0:00:00.069)       0:00:00.069 ********** 
+2020-03-20 15:30:06,999 p=13928 u=root n=ansible | ok: [localhost]
+2020-03-20 15:30:07,006 p=13928 u=root n=ansible | TASK [Get an authentication PowerVC Token] **********************************************************************************
+2020-03-20 15:30:07,006 p=13928 u=root n=ansible | Friday 20 March 2020  15:30:07 +0800 (0:00:00.027)       0:00:00.097 ********** 
+2020-03-20 15:30:08,839 p=13928 u=root n=ansible | ok: [localhost]
+2020-03-20 15:30:08,866 p=13928 u=root n=ansible | TASK [Set Variable TOKEN] ***************************************************************************************************
+2020-03-20 15:30:08,866 p=13928 u=root n=ansible | Friday 20 March 2020  15:30:08 +0800 (0:00:01.859)       0:00:01.957 ********** 
+2020-03-20 15:30:08,976 p=13928 u=root n=ansible | ok: [localhost]
+2020-03-20 15:30:08,983 p=13928 u=root n=ansible | TASK [debug] ****************************************************************************************************************
+2020-03-20 15:30:08,983 p=13928 u=root n=ansible | Friday 20 March 2020  15:30:08 +0800 (0:00:00.117)       0:00:02.074 ********** 
+2020-03-20 15:30:09,130 p=13928 u=root n=ansible | ok: [localhost] => {
+    "TOKEN": "gAAAAABedHEANLcqKEqWk1BWpcihy5kkBFpVkZxkkYlZtGvUV62zniSr6HbyGg6cEfKUvtUoame6l_hVVCcl7zrhm8ry0dm96iZj09pCOYxS9s92PFVY_Gnc_ESQ0UBXR1mr5y-qUo80RhN2zcq_xsK6w2E_tU1ezRqzgRwu2G8oncB4-7hPzNTcQ4wRWItZ4lTirqp84-woMEcDJ9-ugRplIXKr7SGTlYwVLgFzwDGIdOcQmdfs2vA"
+}
+2020-03-20 15:30:09,134 p=13928 u=root n=ansible | TASK [Get PowerVC Tenant ID] ************************************************************************************************
+2020-03-20 15:30:09,135 p=13928 u=root n=ansible | Friday 20 March 2020  15:30:09 +0800 (0:00:00.151)       0:00:02.226 ********** 
+2020-03-20 15:30:10,009 p=13928 u=root n=ansible | ok: [localhost]
+2020-03-20 15:30:10,018 p=13928 u=root n=ansible | TASK [Set Variable Tenant ID] ***********************************************************************************************
+2020-03-20 15:30:10,018 p=13928 u=root n=ansible | Friday 20 March 2020  15:30:10 +0800 (0:00:00.883)       0:00:03.109 ********** 
+2020-03-20 15:30:10,153 p=13928 u=root n=ansible | ok: [localhost] => (item={u'is_domain': False, u'description': u'IBM Default Tenant', u'links': {u'self': u'https://192.168.56.101:5000/v3/projects/b2eb6efb8b4e468d93e53935f291716d'}, u'tags': [], u'enabled': True, u'domain_id': u'default', u'parent_id': u'default', u'id': u'b2eb6efb8b4e468d93e53935f291716d', u'name': u'ibm-default'})
+2020-03-20 15:30:10,193 p=13928 u=root n=ansible | TASK [fail] *****************************************************************************************************************
+2020-03-20 15:30:10,193 p=13928 u=root n=ansible | Friday 20 March 2020  15:30:10 +0800 (0:00:00.174)       0:00:03.284 ********** 
+2020-03-20 15:30:10,289 p=13928 u=root n=ansible | PLAY RECAP ******************************************************************************************************************
+2020-03-20 15:30:10,290 p=13928 u=root n=ansible | localhost                  : ok=6    changed=0    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   
+2020-03-20 15:30:10,290 p=13928 u=root n=ansible | Friday 20 March 2020  15:30:10 +0800 (0:00:00.096)       0:00:03.381 ********** 
+2020-03-20 15:30:10,290 p=13928 u=root n=ansible | =============================================================================== 
+2020-03-20 15:30:10,290 p=13928 u=root n=ansible | Get an authentication PowerVC Token ---------------------------------------------------------------------------------- 1.86s
+2020-03-20 15:30:10,290 p=13928 u=root n=ansible | Get PowerVC Tenant ID ------------------------------------------------------------------------------------------------ 0.88s
+2020-03-20 15:30:10,290 p=13928 u=root n=ansible | Set Variable Tenant ID ----------------------------------------------------------------------------------------------- 0.18s
+2020-03-20 15:30:10,290 p=13928 u=root n=ansible | debug ---------------------------------------------------------------------------------------------------------------- 0.15s
+2020-03-20 15:30:10,290 p=13928 u=root n=ansible | Set Variable TOKEN --------------------------------------------------------------------------------------------------- 0.12s
+2020-03-20 15:30:10,291 p=13928 u=root n=ansible | fail ----------------------------------------------------------------------------------------------------------------- 0.10s
+2020-03-20 15:30:10,291 p=13928 u=root n=ansible | Include the variables from the YAML file ----------------------------------------------------------------------------- 0.03s
+2020-03-20 15:30:10,291 p=13928 u=root n=ansible | Playbook run took 0 days, 0 hours, 0 minutes, 3 seconds
+2020-03-20 15:31:38,527 p=17358 u=root n=ansible | [WARNING]: provided hosts list is empty, only localhost is available. Note that the implicit localhost does not match 'all'
+
+2020-03-20 15:31:39,127 p=17358 u=root n=ansible | PLAY [localhost] ************************************************************************************************************
+2020-03-20 15:31:39,151 p=17358 u=root n=ansible | TASK [Include the variables from the YAML file] *****************************************************************************
+2020-03-20 15:31:39,151 p=17358 u=root n=ansible | Friday 20 March 2020  15:31:39 +0800 (0:00:00.065)       0:00:00.065 ********** 
+2020-03-20 15:31:39,173 p=17358 u=root n=ansible | ok: [localhost]
+2020-03-20 15:31:39,179 p=17358 u=root n=ansible | TASK [Get an authentication PowerVC Token] **********************************************************************************
+2020-03-20 15:31:39,179 p=17358 u=root n=ansible | Friday 20 March 2020  15:31:39 +0800 (0:00:00.027)       0:00:00.093 ********** 
+2020-03-20 15:31:41,071 p=17358 u=root n=ansible | ok: [localhost]
+2020-03-20 15:31:41,092 p=17358 u=root n=ansible | TASK [Set Variable TOKEN] ***************************************************************************************************
+2020-03-20 15:31:41,092 p=17358 u=root n=ansible | Friday 20 March 2020  15:31:41 +0800 (0:00:01.912)       0:00:02.006 ********** 
+2020-03-20 15:31:41,184 p=17358 u=root n=ansible | ok: [localhost]
+2020-03-20 15:31:41,188 p=17358 u=root n=ansible | TASK [debug] ****************************************************************************************************************
+2020-03-20 15:31:41,189 p=17358 u=root n=ansible | Friday 20 March 2020  15:31:41 +0800 (0:00:00.096)       0:00:02.103 ********** 
+2020-03-20 15:31:41,278 p=17358 u=root n=ansible | ok: [localhost] => {
+    "TOKEN": "gAAAAABedHFc3LzYw4vMJmEduJdZ4tOAsyZbo8dNPoIP78zkRextNk2fNQPhsk01PnW1du9tjHfYGzy2zi9vjvSEG6MgmyMVYkHJIYUtLIjCGJs3PhsAeDedxKRa-2Xgs-IUI6QoBZ9J7UGjN6U9CGWVeIiSfi4Yu8KbZKHWXwMVOwzdAgnO4vhNrsBLeacxM83PRZj6_UPa9B-qM5mPmX7sLLt-w9Y7gYKpHiacOEZSt6SpDKkRJxI"
+}
+2020-03-20 15:31:41,282 p=17358 u=root n=ansible | TASK [Get PowerVC Tenant ID] ************************************************************************************************
+2020-03-20 15:31:41,282 p=17358 u=root n=ansible | Friday 20 March 2020  15:31:41 +0800 (0:00:00.093)       0:00:02.196 ********** 
+2020-03-20 15:31:42,167 p=17358 u=root n=ansible | ok: [localhost]
+2020-03-20 15:31:42,180 p=17358 u=root n=ansible | TASK [Set Variable Tenant ID] ***********************************************************************************************
+2020-03-20 15:31:42,180 p=17358 u=root n=ansible | Friday 20 March 2020  15:31:42 +0800 (0:00:00.897)       0:00:03.094 ********** 
+2020-03-20 15:31:42,312 p=17358 u=root n=ansible | ok: [localhost] => (item={u'is_domain': False, u'description': u'IBM Default Tenant', u'links': {u'self': u'https://192.168.56.101:5000/v3/projects/b2eb6efb8b4e468d93e53935f291716d'}, u'tags': [], u'enabled': True, u'domain_id': u'default', u'parent_id': u'default', u'id': u'b2eb6efb8b4e468d93e53935f291716d', u'name': u'ibm-default'})
+2020-03-20 15:31:42,349 p=17358 u=root n=ansible | TASK [fail] *****************************************************************************************************************
+2020-03-20 15:31:42,350 p=17358 u=root n=ansible | Friday 20 March 2020  15:31:42 +0800 (0:00:00.170)       0:00:03.264 ********** 
+2020-03-20 15:31:42,451 p=17358 u=root n=ansible | PLAY RECAP ******************************************************************************************************************
+2020-03-20 15:31:42,451 p=17358 u=root n=ansible | localhost                  : ok=6    changed=0    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   
+2020-03-20 15:31:42,451 p=17358 u=root n=ansible | Friday 20 March 2020  15:31:42 +0800 (0:00:00.101)       0:00:03.365 ********** 
+2020-03-20 15:31:42,451 p=17358 u=root n=ansible | =============================================================================== 
+2020-03-20 15:31:42,451 p=17358 u=root n=ansible | Get an authentication PowerVC Token ---------------------------------------------------------------------------------- 1.91s
+2020-03-20 15:31:42,451 p=17358 u=root n=ansible | Get PowerVC Tenant ID ------------------------------------------------------------------------------------------------ 0.90s
+2020-03-20 15:31:42,452 p=17358 u=root n=ansible | Set Variable Tenant ID ----------------------------------------------------------------------------------------------- 0.17s
+2020-03-20 15:31:42,452 p=17358 u=root n=ansible | fail ----------------------------------------------------------------------------------------------------------------- 0.10s
+2020-03-20 15:31:42,452 p=17358 u=root n=ansible | Set Variable TOKEN --------------------------------------------------------------------------------------------------- 0.10s
+2020-03-20 15:31:42,452 p=17358 u=root n=ansible | debug ---------------------------------------------------------------------------------------------------------------- 0.09s
+2020-03-20 15:31:42,452 p=17358 u=root n=ansible | Include the variables from the YAML file ----------------------------------------------------------------------------- 0.03s
+2020-03-20 15:31:42,452 p=17358 u=root n=ansible | Playbook run took 0 days, 0 hours, 0 minutes, 3 seconds
+2020-03-20 15:33:27,015 p=21719 u=root n=ansible | [WARNING]: provided hosts list is empty, only localhost is available. Note that the implicit localhost does not match 'all'
+
+2020-03-20 15:33:27,543 p=21719 u=root n=ansible | [WARNING]: The tree callback is defaulting to ~/.ansible/tree, as an invalid directory was provided: /root/.ansible/tree
+
+2020-03-20 15:33:27,565 p=21719 u=root n=ansible | PLAY [localhost] ************************************************************************************************************
+2020-03-20 15:33:27,591 p=21719 u=root n=ansible | TASK [Include the variables from the YAML file] *****************************************************************************
+2020-03-20 15:33:27,591 p=21719 u=root n=ansible | Friday 20 March 2020  15:33:27 +0800 (0:00:00.070)       0:00:00.070 ********** 
+2020-03-20 15:33:27,617 p=21719 u=root n=ansible | ok: [localhost]
+2020-03-20 15:33:27,626 p=21719 u=root n=ansible | TASK [Get an authentication PowerVC Token] **********************************************************************************
+2020-03-20 15:33:27,626 p=21719 u=root n=ansible | Friday 20 March 2020  15:33:27 +0800 (0:00:00.034)       0:00:00.105 ********** 
+2020-03-20 15:33:29,403 p=21719 u=root n=ansible | ok: [localhost]
+2020-03-20 15:33:29,448 p=21719 u=root n=ansible | TASK [Set Variable TOKEN] ***************************************************************************************************
+2020-03-20 15:33:29,448 p=21719 u=root n=ansible | Friday 20 March 2020  15:33:29 +0800 (0:00:01.822)       0:00:01.927 ********** 
+2020-03-20 15:33:29,548 p=21719 u=root n=ansible | ok: [localhost]
+2020-03-20 15:33:29,554 p=21719 u=root n=ansible | TASK [debug] ****************************************************************************************************************
+2020-03-20 15:33:29,555 p=21719 u=root n=ansible | Friday 20 March 2020  15:33:29 +0800 (0:00:00.106)       0:00:02.033 ********** 
+2020-03-20 15:33:29,686 p=21719 u=root n=ansible | ok: [localhost] => {
+    "TOKEN": "gAAAAABedHHJVrvx-FXu-US24rAzvlh8TRQv1dYa_jv6es2LjDqKuJS98uSTuh0l0HIFcfyTBSQRBoUx5DK6-yf_DJZnhsZImw0jgdY4bD66KBVubBXCHL-Xk1f3yg2PubxMEPeHP6ln5n67GlNINLpzGHVPu_4Axnc9v_3KeSVsf-8I3SI-CnhlUURllG8MKfVOcDebP2N25VK392FQ9_tDHCSqPsBctd0cpmknBYUg9SCot9Xu-Ik"
+}
+2020-03-20 15:33:29,697 p=21719 u=root n=ansible | TASK [Get PowerVC Tenant ID] ************************************************************************************************
+2020-03-20 15:33:29,698 p=21719 u=root n=ansible | Friday 20 March 2020  15:33:29 +0800 (0:00:00.142)       0:00:02.176 ********** 
+2020-03-20 15:33:30,629 p=21719 u=root n=ansible | ok: [localhost]
+2020-03-20 15:33:30,643 p=21719 u=root n=ansible | TASK [Set Variable Tenant ID] ***********************************************************************************************
+2020-03-20 15:33:30,643 p=21719 u=root n=ansible | Friday 20 March 2020  15:33:30 +0800 (0:00:00.945)       0:00:03.122 ********** 
+2020-03-20 15:33:30,798 p=21719 u=root n=ansible | ok: [localhost] => (item={u'is_domain': False, u'description': u'IBM Default Tenant', u'links': {u'self': u'https://192.168.56.101:5000/v3/projects/b2eb6efb8b4e468d93e53935f291716d'}, u'tags': [], u'enabled': True, u'domain_id': u'default', u'parent_id': u'default', u'id': u'b2eb6efb8b4e468d93e53935f291716d', u'name': u'ibm-default'})
+2020-03-20 15:33:30,854 p=21719 u=root n=ansible | TASK [fail] *****************************************************************************************************************
+2020-03-20 15:33:30,854 p=21719 u=root n=ansible | Friday 20 March 2020  15:33:30 +0800 (0:00:00.210)       0:00:03.333 ********** 
+2020-03-20 15:33:30,973 p=21719 u=root n=ansible | PLAY RECAP ******************************************************************************************************************
+2020-03-20 15:33:30,973 p=21719 u=root n=ansible | localhost                  : ok=6    changed=0    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   
+2020-03-20 15:33:30,973 p=21719 u=root n=ansible | Friday 20 March 2020  15:33:30 +0800 (0:00:00.118)       0:00:03.452 ********** 
+2020-03-20 15:33:30,973 p=21719 u=root n=ansible | =============================================================================== 
+2020-03-20 15:33:30,974 p=21719 u=root n=ansible | Get an authentication PowerVC Token ---------------------------------------------------------------------------------- 1.82s
+2020-03-20 15:33:30,974 p=21719 u=root n=ansible | Get PowerVC Tenant ID ------------------------------------------------------------------------------------------------ 0.95s
+2020-03-20 15:33:30,974 p=21719 u=root n=ansible | Set Variable Tenant ID ----------------------------------------------------------------------------------------------- 0.21s
+2020-03-20 15:33:30,974 p=21719 u=root n=ansible | debug ---------------------------------------------------------------------------------------------------------------- 0.14s
+2020-03-20 15:33:30,974 p=21719 u=root n=ansible | fail ----------------------------------------------------------------------------------------------------------------- 0.12s
+2020-03-20 15:33:30,974 p=21719 u=root n=ansible | Set Variable TOKEN --------------------------------------------------------------------------------------------------- 0.11s
+2020-03-20 15:33:30,974 p=21719 u=root n=ansible | Include the variables from the YAML file ----------------------------------------------------------------------------- 0.03s
+2020-03-20 15:33:30,974 p=21719 u=root n=ansible | Playbook run took 0 days, 0 hours, 0 minutes, 3 seconds
+2020-03-20 15:34:35,349 p=24276 u=root n=ansible | [WARNING]: provided hosts list is empty, only localhost is available. Note that the implicit localhost does not match 'all'
+
+2020-03-20 15:34:35,885 p=24276 u=root n=ansible | PLAY [localhost] ************************************************************************************************************
+2020-03-20 15:34:35,905 p=24276 u=root n=ansible | TASK [Include the variables from the YAML file] *****************************************************************************
+2020-03-20 15:34:35,905 p=24276 u=root n=ansible | Friday 20 March 2020  15:34:35 +0800 (0:00:00.055)       0:00:00.055 ********** 
+2020-03-20 15:34:35,929 p=24276 u=root n=ansible | ok: [localhost]
+2020-03-20 15:34:35,935 p=24276 u=root n=ansible | TASK [Get an authentication PowerVC Token] **********************************************************************************
+2020-03-20 15:34:35,935 p=24276 u=root n=ansible | Friday 20 March 2020  15:34:35 +0800 (0:00:00.030)       0:00:00.085 ********** 
+2020-03-20 15:34:37,785 p=24276 u=root n=ansible | ok: [localhost]
+2020-03-20 15:34:37,820 p=24276 u=root n=ansible | TASK [Set Variable TOKEN] ***************************************************************************************************
+2020-03-20 15:34:37,820 p=24276 u=root n=ansible | Friday 20 March 2020  15:34:37 +0800 (0:00:01.885)       0:00:01.970 ********** 
+2020-03-20 15:34:37,949 p=24276 u=root n=ansible | ok: [localhost]
+2020-03-20 15:34:37,954 p=24276 u=root n=ansible | TASK [debug] ****************************************************************************************************************
+2020-03-20 15:34:37,954 p=24276 u=root n=ansible | Friday 20 March 2020  15:34:37 +0800 (0:00:00.133)       0:00:02.104 ********** 
+2020-03-20 15:34:38,087 p=24276 u=root n=ansible | ok: [localhost] => {
+    "TOKEN": "gAAAAABedHINGkGDB_UN_RyYmRYMdBLYWpgEBYuX_up7HmHGCSGC9joWz9DDoZ_iufdvGFdSqulYn_sKl3MSFJg3qYepSZe_a7pxY6MXSxYvBTqtyokLRr2I3XX10HSkhlI7NOZ6KKbuAtpFjq_egpbwhiMjl2bUJKouTeokIMNprWHsbU-rXBiGMy2st7JJNBGfGHX0in7-IVdhQQzPZTd3_foOXV4qheGOiNBrV_rAFMQ9zTKJ-Tg"
+}
+2020-03-20 15:34:38,091 p=24276 u=root n=ansible | TASK [Get PowerVC Tenant ID] ************************************************************************************************
+2020-03-20 15:34:38,091 p=24276 u=root n=ansible | Friday 20 March 2020  15:34:38 +0800 (0:00:00.137)       0:00:02.241 ********** 
+2020-03-20 15:34:38,972 p=24276 u=root n=ansible | ok: [localhost]
+2020-03-20 15:34:38,982 p=24276 u=root n=ansible | TASK [Set Variable Tenant ID] ***********************************************************************************************
+2020-03-20 15:34:38,982 p=24276 u=root n=ansible | Friday 20 March 2020  15:34:38 +0800 (0:00:00.890)       0:00:03.132 ********** 
+2020-03-20 15:34:39,136 p=24276 u=root n=ansible | ok: [localhost] => (item={u'is_domain': False, u'description': u'IBM Default Tenant', u'links': {u'self': u'https://192.168.56.101:5000/v3/projects/b2eb6efb8b4e468d93e53935f291716d'}, u'tags': [], u'enabled': True, u'domain_id': u'default', u'parent_id': u'default', u'id': u'b2eb6efb8b4e468d93e53935f291716d', u'name': u'ibm-default'})
+2020-03-20 15:34:39,193 p=24276 u=root n=ansible | TASK [fail] *****************************************************************************************************************
+2020-03-20 15:34:39,193 p=24276 u=root n=ansible | Friday 20 March 2020  15:34:39 +0800 (0:00:00.210)       0:00:03.343 ********** 
+2020-03-20 15:34:39,330 p=24276 u=root n=ansible | PLAY RECAP ******************************************************************************************************************
+2020-03-20 15:34:39,330 p=24276 u=root n=ansible | localhost                  : ok=6    changed=0    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   
+2020-03-20 15:34:39,331 p=24276 u=root n=ansible | Friday 20 March 2020  15:34:39 +0800 (0:00:00.137)       0:00:03.481 ********** 
+2020-03-20 15:34:39,331 p=24276 u=root n=ansible | =============================================================================== 
+2020-03-20 15:34:39,331 p=24276 u=root n=ansible | Get an authentication PowerVC Token ---------------------------------------------------------------------------------- 1.89s
+2020-03-20 15:34:39,331 p=24276 u=root n=ansible | Get PowerVC Tenant ID ------------------------------------------------------------------------------------------------ 0.89s
+2020-03-20 15:34:39,331 p=24276 u=root n=ansible | Set Variable Tenant ID ----------------------------------------------------------------------------------------------- 0.21s
+2020-03-20 15:34:39,331 p=24276 u=root n=ansible | fail ----------------------------------------------------------------------------------------------------------------- 0.14s
+2020-03-20 15:34:39,331 p=24276 u=root n=ansible | debug ---------------------------------------------------------------------------------------------------------------- 0.14s
+2020-03-20 15:34:39,332 p=24276 u=root n=ansible | Set Variable TOKEN --------------------------------------------------------------------------------------------------- 0.13s
+2020-03-20 15:34:39,332 p=24276 u=root n=ansible | Include the variables from the YAML file ----------------------------------------------------------------------------- 0.03s
+2020-03-20 15:34:39,332 p=24276 u=root n=ansible | Playbook run took 0 days, 0 hours, 0 minutes, 3 seconds
+2020-03-20 15:34:47,618 p=25155 u=root n=ansible | [WARNING]: provided hosts list is empty, only localhost is available. Note that the implicit localhost does not match 'all'
+
+2020-03-20 15:34:48,154 p=25155 u=root n=ansible | PLAY [localhost] ************************************************************************************************************
+2020-03-20 15:34:48,169 p=25155 u=root n=ansible | TASK [Include the variables from the YAML file] *****************************************************************************
+2020-03-20 15:34:48,170 p=25155 u=root n=ansible | Friday 20 March 2020  15:34:48 +0800 (0:00:00.049)       0:00:00.049 ********** 
+2020-03-20 15:34:48,189 p=25155 u=root n=ansible | ok: [localhost]
+2020-03-20 15:34:48,194 p=25155 u=root n=ansible | TASK [Get an authentication PowerVC Token] **********************************************************************************
+2020-03-20 15:34:48,194 p=25155 u=root n=ansible | Friday 20 March 2020  15:34:48 +0800 (0:00:00.024)       0:00:00.073 ********** 
+2020-03-20 15:34:49,877 p=25155 u=root n=ansible | ok: [localhost]
+2020-03-20 15:34:49,907 p=25155 u=root n=ansible | TASK [Set Variable TOKEN] ***************************************************************************************************
+2020-03-20 15:34:49,908 p=25155 u=root n=ansible | Friday 20 March 2020  15:34:49 +0800 (0:00:01.713)       0:00:01.787 ********** 
+2020-03-20 15:34:50,027 p=25155 u=root n=ansible | ok: [localhost]
+2020-03-20 15:34:50,032 p=25155 u=root n=ansible | TASK [debug] ****************************************************************************************************************
+2020-03-20 15:34:50,033 p=25155 u=root n=ansible | Friday 20 March 2020  15:34:50 +0800 (0:00:00.124)       0:00:01.912 ********** 
+2020-03-20 15:34:50,142 p=25155 u=root n=ansible | ok: [localhost] => {
+    "TOKEN": "gAAAAABedHIZxoUrC7p6lWAoUn_p3jDNEzWOwczxducvcAyZJFZJAdJ1G7T2imGkd7xQuL0fx3S1dLqApzg1c5OKg3DffWTyq8jAjKtGl3Bl6YMHxo40QpWr0_GHkS7_5PSRzecvPAnD_NakFk30_kzNzcNNmglM_N-bthm6E5SGq7VfUx8Ebccwr-WYI44S1N3o9kOZiElejNfxWEB10Ug1tcZLsuOfMSgDoImDYNdbr5sErqHKyOU"
+}
+2020-03-20 15:34:50,149 p=25155 u=root n=ansible | TASK [Get PowerVC Tenant ID] ************************************************************************************************
+2020-03-20 15:34:50,150 p=25155 u=root n=ansible | Friday 20 March 2020  15:34:50 +0800 (0:00:00.116)       0:00:02.029 ********** 
+2020-03-20 15:34:51,099 p=25155 u=root n=ansible | ok: [localhost]
+2020-03-20 15:34:51,111 p=25155 u=root n=ansible | TASK [Set Variable Tenant ID] ***********************************************************************************************
+2020-03-20 15:34:51,111 p=25155 u=root n=ansible | Friday 20 March 2020  15:34:51 +0800 (0:00:00.961)       0:00:02.991 ********** 
+2020-03-20 15:34:51,261 p=25155 u=root n=ansible | ok: [localhost] => (item={u'is_domain': False, u'description': u'IBM Default Tenant', u'links': {u'self': u'https://192.168.56.101:5000/v3/projects/b2eb6efb8b4e468d93e53935f291716d'}, u'tags': [], u'enabled': True, u'domain_id': u'default', u'parent_id': u'default', u'id': u'b2eb6efb8b4e468d93e53935f291716d', u'name': u'ibm-default'})
+2020-03-20 15:34:51,307 p=25155 u=root n=ansible | TASK [fail] *****************************************************************************************************************
+2020-03-20 15:34:51,307 p=25155 u=root n=ansible | Friday 20 March 2020  15:34:51 +0800 (0:00:00.195)       0:00:03.187 ********** 
+2020-03-20 15:34:51,415 p=25155 u=root n=ansible | PLAY RECAP ******************************************************************************************************************
+2020-03-20 15:34:51,415 p=25155 u=root n=ansible | localhost                  : ok=6    changed=0    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   
+2020-03-20 15:34:51,415 p=25155 u=root n=ansible | Friday 20 March 2020  15:34:51 +0800 (0:00:00.107)       0:00:03.295 ********** 
+2020-03-20 15:34:51,415 p=25155 u=root n=ansible | =============================================================================== 
+2020-03-20 15:34:51,416 p=25155 u=root n=ansible | Get an authentication PowerVC Token ---------------------------------------------------------------------------------- 1.71s
+2020-03-20 15:34:51,416 p=25155 u=root n=ansible | Get PowerVC Tenant ID ------------------------------------------------------------------------------------------------ 0.96s
+2020-03-20 15:34:51,416 p=25155 u=root n=ansible | Set Variable Tenant ID ----------------------------------------------------------------------------------------------- 0.20s
+2020-03-20 15:34:51,416 p=25155 u=root n=ansible | Set Variable TOKEN --------------------------------------------------------------------------------------------------- 0.12s
+2020-03-20 15:34:51,416 p=25155 u=root n=ansible | debug ---------------------------------------------------------------------------------------------------------------- 0.12s
+2020-03-20 15:34:51,416 p=25155 u=root n=ansible | fail ----------------------------------------------------------------------------------------------------------------- 0.11s
+2020-03-20 15:34:51,417 p=25155 u=root n=ansible | Include the variables from the YAML file ----------------------------------------------------------------------------- 0.02s
+2020-03-20 15:34:51,417 p=25155 u=root n=ansible | Playbook run took 0 days, 0 hours, 0 minutes, 3 seconds
+2020-03-20 15:35:04,725 p=25328 u=root n=ansible | [WARNING]: provided hosts list is empty, only localhost is available. Note that the implicit localhost does not match 'all'
+
+2020-03-20 15:35:05,256 p=25328 u=root n=ansible | PLAY [localhost] ************************************************************************************************************
+2020-03-20 15:35:05,272 p=25328 u=root n=ansible | TASK [Include the variables from the YAML file] *****************************************************************************
+2020-03-20 15:35:05,273 p=25328 u=root n=ansible | Friday 20 March 2020  15:35:05 +0800 (0:00:00.049)       0:00:00.049 ********** 
+2020-03-20 15:35:05,292 p=25328 u=root n=ansible | ok: [localhost]
+2020-03-20 15:35:05,296 p=25328 u=root n=ansible | TASK [Get an authentication PowerVC Token] **********************************************************************************
+2020-03-20 15:35:05,296 p=25328 u=root n=ansible | Friday 20 March 2020  15:35:05 +0800 (0:00:00.023)       0:00:00.073 ********** 
+2020-03-20 15:35:07,002 p=25328 u=root n=ansible | ok: [localhost]
+2020-03-20 15:35:07,034 p=25328 u=root n=ansible | TASK [Set Variable TOKEN] ***************************************************************************************************
+2020-03-20 15:35:07,034 p=25328 u=root n=ansible | Friday 20 March 2020  15:35:07 +0800 (0:00:01.737)       0:00:01.811 ********** 
+2020-03-20 15:35:07,121 p=25328 u=root n=ansible | ok: [localhost]
+2020-03-20 15:35:07,125 p=25328 u=root n=ansible | TASK [debug] ****************************************************************************************************************
+2020-03-20 15:35:07,126 p=25328 u=root n=ansible | Friday 20 March 2020  15:35:07 +0800 (0:00:00.091)       0:00:01.902 ********** 
+2020-03-20 15:35:07,257 p=25328 u=root n=ansible | ok: [localhost] => {
+    "TOKEN": "gAAAAABedHIqUOryxBFp2sm82udB0gewyrTxDvt4dB-hCqAa__50I6VI9ozK8OEIKoiqoyLwDxwJWVmYJPQlD9eV3df21DalKCmOa6pu4KlPl3L26MBk0jGlY4BANUtuvwxiQc4RfY6OCNBV6ciVJoUMANXVRDRbCa37hiFSSieVgNkH5OSZsvabt28yALsNpwjmj2b5fFTzieimAjS-j_J-x4Kwtbt9UCToy3voRkKBWj7VxkpRsTE"
+}
+2020-03-20 15:35:07,261 p=25328 u=root n=ansible | TASK [Get PowerVC Tenant ID] ************************************************************************************************
+2020-03-20 15:35:07,261 p=25328 u=root n=ansible | Friday 20 March 2020  15:35:07 +0800 (0:00:00.135)       0:00:02.038 ********** 
+2020-03-20 15:35:08,448 p=25328 u=root n=ansible | ok: [localhost]
+2020-03-20 15:35:08,458 p=25328 u=root n=ansible | TASK [Set Variable Tenant ID] ***********************************************************************************************
+2020-03-20 15:35:08,459 p=25328 u=root n=ansible | Friday 20 March 2020  15:35:08 +0800 (0:00:01.197)       0:00:03.235 ********** 
+2020-03-20 15:35:08,598 p=25328 u=root n=ansible | ok: [localhost] => (item={u'is_domain': False, u'description': u'IBM Default Tenant', u'links': {u'self': u'https://192.168.56.101:5000/v3/projects/b2eb6efb8b4e468d93e53935f291716d'}, u'tags': [], u'enabled': True, u'domain_id': u'default', u'parent_id': u'default', u'id': u'b2eb6efb8b4e468d93e53935f291716d', u'name': u'ibm-default'})
+2020-03-20 15:35:08,633 p=25328 u=root n=ansible | TASK [fail] *****************************************************************************************************************
+2020-03-20 15:35:08,633 p=25328 u=root n=ansible | Friday 20 March 2020  15:35:08 +0800 (0:00:00.174)       0:00:03.410 ********** 
+2020-03-20 15:35:08,731 p=25328 u=root n=ansible | PLAY RECAP ******************************************************************************************************************
+2020-03-20 15:35:08,732 p=25328 u=root n=ansible | localhost                  : ok=6    changed=0    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   
+2020-03-20 15:35:08,732 p=25328 u=root n=ansible | Friday 20 March 2020  15:35:08 +0800 (0:00:00.098)       0:00:03.508 ********** 
+2020-03-20 15:35:08,732 p=25328 u=root n=ansible | =============================================================================== 
+2020-03-20 15:35:08,732 p=25328 u=root n=ansible | Get an authentication PowerVC Token ---------------------------------------------------------------------------------- 1.74s
+2020-03-20 15:35:08,732 p=25328 u=root n=ansible | Get PowerVC Tenant ID ------------------------------------------------------------------------------------------------ 1.20s
+2020-03-20 15:35:08,732 p=25328 u=root n=ansible | Set Variable Tenant ID ----------------------------------------------------------------------------------------------- 0.17s
+2020-03-20 15:35:08,732 p=25328 u=root n=ansible | debug ---------------------------------------------------------------------------------------------------------------- 0.14s
+2020-03-20 15:35:08,732 p=25328 u=root n=ansible | fail ----------------------------------------------------------------------------------------------------------------- 0.10s
+2020-03-20 15:35:08,733 p=25328 u=root n=ansible | Set Variable TOKEN --------------------------------------------------------------------------------------------------- 0.09s
+2020-03-20 15:35:08,733 p=25328 u=root n=ansible | Include the variables from the YAML file ----------------------------------------------------------------------------- 0.02s
+2020-03-20 15:35:28,955 p=26254 u=root n=ansible | [WARNING]: provided hosts list is empty, only localhost is available. Note that the implicit localhost does not match 'all'
+
+2020-03-20 15:35:29,587 p=26254 u=root n=ansible | PLAY [localhost] ************************************************************************************************************
+2020-03-20 15:35:29,616 p=26254 u=root n=ansible | TASK [Include the variables from the YAML file] *****************************************************************************
+2020-03-20 15:35:29,616 p=26254 u=root n=ansible | Friday 20 March 2020  15:35:29 +0800 (0:00:00.115)       0:00:00.115 ********** 
+2020-03-20 15:35:29,667 p=26254 u=root n=ansible | ok: [localhost]
+2020-03-20 15:35:29,680 p=26254 u=root n=ansible | TASK [Get an authentication PowerVC Token] **********************************************************************************
+2020-03-20 15:35:29,680 p=26254 u=root n=ansible | Friday 20 March 2020  15:35:29 +0800 (0:00:00.063)       0:00:00.179 ********** 
+2020-03-20 15:35:31,582 p=26254 u=root n=ansible | ok: [localhost]
+2020-03-20 15:35:31,599 p=26254 u=root n=ansible | TASK [Set Variable TOKEN] ***************************************************************************************************
+2020-03-20 15:35:31,599 p=26254 u=root n=ansible | Friday 20 March 2020  15:35:31 +0800 (0:00:01.919)       0:00:02.098 ********** 
+2020-03-20 15:35:31,723 p=26254 u=root n=ansible | ok: [localhost]
+2020-03-20 15:35:31,729 p=26254 u=root n=ansible | TASK [debug] ****************************************************************************************************************
+2020-03-20 15:35:31,729 p=26254 u=root n=ansible | Friday 20 March 2020  15:35:31 +0800 (0:00:00.130)       0:00:02.228 ********** 
+2020-03-20 15:35:31,873 p=26254 u=root n=ansible | ok: [localhost] => {
+    "TOKEN": "gAAAAABedHJDwSr7Dv1GmBoIyDtnXCSnR-PI-Dv9D_C7uDgSqqHVC5CCDZBwNYubcMaFTiYCOerVNzYrWLQUg35440mFry6r5FP7HAtW-P92_qIXov8V5b3whsHSa98rDQk6tjoMQT0DOSGI_RciCDDJkzk3Qd3H32ToXEtpNUopaUIGsqM-T5i6HME4upu0_MC86XVhAoAhk7IcSiwp5D-gl7sIMDhesJnpm9ISiq_Lf7t7Is66Hm8"
+}
+2020-03-20 15:35:31,877 p=26254 u=root n=ansible | TASK [Get PowerVC Tenant ID] ************************************************************************************************
+2020-03-20 15:35:31,878 p=26254 u=root n=ansible | Friday 20 March 2020  15:35:31 +0800 (0:00:00.148)       0:00:02.376 ********** 
+2020-03-20 15:35:32,722 p=26254 u=root n=ansible | ok: [localhost]
+2020-03-20 15:35:32,730 p=26254 u=root n=ansible | TASK [Set Variable Tenant ID] ***********************************************************************************************
+2020-03-20 15:35:32,730 p=26254 u=root n=ansible | Friday 20 March 2020  15:35:32 +0800 (0:00:00.852)       0:00:03.229 ********** 
+2020-03-20 15:35:32,880 p=26254 u=root n=ansible | ok: [localhost] => (item={u'is_domain': False, u'description': u'IBM Default Tenant', u'links': {u'self': u'https://192.168.56.101:5000/v3/projects/b2eb6efb8b4e468d93e53935f291716d'}, u'tags': [], u'enabled': True, u'domain_id': u'default', u'parent_id': u'default', u'id': u'b2eb6efb8b4e468d93e53935f291716d', u'name': u'ibm-default'})
+2020-03-20 15:35:32,912 p=26254 u=root n=ansible | TASK [fail] *****************************************************************************************************************
+2020-03-20 15:35:32,912 p=26254 u=root n=ansible | Friday 20 March 2020  15:35:32 +0800 (0:00:00.182)       0:00:03.411 ********** 
+2020-03-20 15:35:33,000 p=26254 u=root n=ansible | PLAY RECAP ******************************************************************************************************************
+2020-03-20 15:35:33,001 p=26254 u=root n=ansible | localhost                  : ok=6    changed=0    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   
+2020-03-20 15:35:33,001 p=26254 u=root n=ansible | Friday 20 March 2020  15:35:33 +0800 (0:00:00.089)       0:00:03.500 ********** 
+2020-03-20 15:35:33,001 p=26254 u=root n=ansible | =============================================================================== 
+2020-03-20 15:35:33,002 p=26254 u=root n=ansible | Get an authentication PowerVC Token ---------------------------------------------------------------------------------- 1.92s
+2020-03-20 15:35:33,002 p=26254 u=root n=ansible | Get PowerVC Tenant ID ------------------------------------------------------------------------------------------------ 0.85s
+2020-03-20 15:35:33,002 p=26254 u=root n=ansible | Set Variable Tenant ID ----------------------------------------------------------------------------------------------- 0.18s
+2020-03-20 15:35:33,002 p=26254 u=root n=ansible | debug ---------------------------------------------------------------------------------------------------------------- 0.15s
+2020-03-20 15:35:33,002 p=26254 u=root n=ansible | Set Variable TOKEN --------------------------------------------------------------------------------------------------- 0.13s
+2020-03-20 15:35:33,002 p=26254 u=root n=ansible | fail ----------------------------------------------------------------------------------------------------------------- 0.09s
+2020-03-20 15:35:33,003 p=26254 u=root n=ansible | Include the variables from the YAML file ----------------------------------------------------------------------------- 0.06s
+2020-03-20 15:35:41,344 p=27104 u=root n=ansible | [WARNING]: provided hosts list is empty, only localhost is available. Note that the implicit localhost does not match 'all'
+
+2020-03-20 15:35:41,862 p=27104 u=root n=ansible | PLAY [localhost] ************************************************************************************************************
+2020-03-20 15:35:41,886 p=27104 u=root n=ansible | TASK [Include the variables from the YAML file] *****************************************************************************
+2020-03-20 15:35:41,908 p=27104 u=root n=ansible | ok: [localhost]
+2020-03-20 15:35:41,913 p=27104 u=root n=ansible | TASK [Get an authentication PowerVC Token] **********************************************************************************
+2020-03-20 15:35:43,592 p=27104 u=root n=ansible | ok: [localhost]
+2020-03-20 15:35:43,602 p=27104 u=root n=ansible | TASK [Set Variable TOKEN] ***************************************************************************************************
+2020-03-20 15:35:43,699 p=27104 u=root n=ansible | ok: [localhost]
+2020-03-20 15:35:43,704 p=27104 u=root n=ansible | TASK [debug] ****************************************************************************************************************
+2020-03-20 15:35:43,802 p=27104 u=root n=ansible | ok: [localhost] => {
+    "TOKEN": "gAAAAABedHJP-HYzeoeLJg27qrQXTdCx1_cqKqmk2suj8p9uu1TL4SwgfF4XljwqQUx-rQ00hanFAYo07R_FeZa_uFQ2ZxveWeLg6bGoQqZhSy8gDLYVfhkgBGn1H-g9RptCV5il616kF4oKGZS1ZFd-VQLEzqjrz_6j5Q4yuYUiK_6u5R1OKKiFW2nC2-BGX39qhm-xbNlVoB9QtW0GP8_m2-J5Q8k37RBEQrFx0nvnsDPrjcNUToo"
+}
+2020-03-20 15:35:43,807 p=27104 u=root n=ansible | TASK [Get PowerVC Tenant ID] ************************************************************************************************
+2020-03-20 15:35:44,752 p=27104 u=root n=ansible | ok: [localhost]
+2020-03-20 15:35:44,758 p=27104 u=root n=ansible | TASK [Set Variable Tenant ID] ***********************************************************************************************
+2020-03-20 15:35:44,917 p=27104 u=root n=ansible | ok: [localhost] => (item={u'is_domain': False, u'description': u'IBM Default Tenant', u'links': {u'self': u'https://192.168.56.101:5000/v3/projects/b2eb6efb8b4e468d93e53935f291716d'}, u'tags': [], u'enabled': True, u'domain_id': u'default', u'parent_id': u'default', u'id': u'b2eb6efb8b4e468d93e53935f291716d', u'name': u'ibm-default'})
+2020-03-20 15:35:44,951 p=27104 u=root n=ansible | TASK [fail] *****************************************************************************************************************
+2020-03-20 15:35:45,046 p=27104 u=root n=ansible | PLAY RECAP ******************************************************************************************************************
+2020-03-20 15:35:45,046 p=27104 u=root n=ansible | localhost                  : ok=6    changed=0    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   
+2020-03-20 15:35:53,190 p=27934 u=root n=ansible | [WARNING]: provided hosts list is empty, only localhost is available. Note that the implicit localhost does not match 'all'
+
+2020-03-20 15:35:53,822 p=27934 u=root n=ansible | PLAY [localhost] ************************************************************************************************************
+2020-03-20 15:35:53,838 p=27934 u=root n=ansible | TASK [Include the variables from the YAML file] *****************************************************************************
+2020-03-20 15:35:53,858 p=27934 u=root n=ansible | ok: [localhost]
+2020-03-20 15:35:53,863 p=27934 u=root n=ansible | TASK [Get an authentication PowerVC Token] **********************************************************************************
+2020-03-20 15:35:55,710 p=27934 u=root n=ansible | ok: [localhost]
+2020-03-20 15:35:55,727 p=27934 u=root n=ansible | TASK [Set Variable TOKEN] ***************************************************************************************************
+2020-03-20 15:35:55,851 p=27934 u=root n=ansible | ok: [localhost]
+2020-03-20 15:35:55,857 p=27934 u=root n=ansible | TASK [debug] ****************************************************************************************************************
+2020-03-20 15:35:56,026 p=27934 u=root n=ansible | ok: [localhost] => {
+    "TOKEN": "gAAAAABedHJbeBg8mIhb4mWJrhwCcktVEYnKYeXO8qu5nl7PBNRDPJ0leXOW99WDw6oGN8TmcHKPFjj4agkSv4q7Xr9sdwcwVdN26d9dS3KmEZnF7XY4GqfoGN92qPAiUCRaaKkew9cdqeOukcYgYbvO6x8-MKQ4AEvd8VohvtcZDXgNH71gugK40I-Y4yehcf40QGxTzGQv0XDUxeMTkS-9Gl-nMDk3XlfUCY6GmbNMKVxAW87V6Iw"
+}
+2020-03-20 15:35:56,032 p=27934 u=root n=ansible | TASK [Get PowerVC Tenant ID] ************************************************************************************************
+2020-03-20 15:35:56,972 p=27934 u=root n=ansible | ok: [localhost]
+2020-03-20 15:35:56,980 p=27934 u=root n=ansible | TASK [Set Variable Tenant ID] ***********************************************************************************************
+2020-03-20 15:35:57,125 p=27934 u=root n=ansible | ok: [localhost] => (item={u'is_domain': False, u'description': u'IBM Default Tenant', u'links': {u'self': u'https://192.168.56.101:5000/v3/projects/b2eb6efb8b4e468d93e53935f291716d'}, u'tags': [], u'enabled': True, u'domain_id': u'default', u'parent_id': u'default', u'id': u'b2eb6efb8b4e468d93e53935f291716d', u'name': u'ibm-default'})
+2020-03-20 15:35:57,165 p=27934 u=root n=ansible | TASK [fail] *****************************************************************************************************************
+2020-03-20 15:35:57,267 p=27934 u=root n=ansible | PLAY RECAP ******************************************************************************************************************
+2020-03-20 15:35:57,267 p=27934 u=root n=ansible | localhost                  : ok=6    changed=0    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   
+2020-03-20 15:35:57,267 p=27934 u=root n=ansible | Playbook run took 0 days, 0 hours, 0 minutes, 3 seconds
+2020-03-20 15:36:23,979 p=28910 u=root n=ansible | [WARNING]: provided hosts list is empty, only localhost is available. Note that the implicit localhost does not match 'all'
+
+2020-03-20 15:36:24,648 p=28910 u=root n=ansible | PLAY [localhost] ************************************************************************************************************
+2020-03-20 15:36:24,672 p=28910 u=root n=ansible | TASK [Include the variables from the YAML file] *****************************************************************************
+2020-03-20 15:36:24,673 p=28910 u=root n=ansible | Friday 20 March 2020  15:36:24 +0800 (0:00:00.076)       0:00:00.076 ********** 
+2020-03-20 15:36:24,695 p=28910 u=root n=ansible | ok: [localhost]
+2020-03-20 15:36:24,701 p=28910 u=root n=ansible | TASK [Get an authentication PowerVC Token] **********************************************************************************
+2020-03-20 15:36:24,701 p=28910 u=root n=ansible | Friday 20 March 2020  15:36:24 +0800 (0:00:00.028)       0:00:00.105 ********** 
+2020-03-20 15:36:26,433 p=28910 u=root n=ansible | ok: [localhost]
+2020-03-20 15:36:26,449 p=28910 u=root n=ansible | TASK [Set Variable TOKEN] ***************************************************************************************************
+2020-03-20 15:36:26,449 p=28910 u=root n=ansible | Friday 20 March 2020  15:36:26 +0800 (0:00:01.747)       0:00:01.852 ********** 
+2020-03-20 15:36:26,539 p=28910 u=root n=ansible | ok: [localhost]
+2020-03-20 15:36:26,543 p=28910 u=root n=ansible | TASK [debug] ****************************************************************************************************************
+2020-03-20 15:36:26,543 p=28910 u=root n=ansible | Friday 20 March 2020  15:36:26 +0800 (0:00:00.094)       0:00:01.947 ********** 
+2020-03-20 15:36:26,651 p=28910 u=root n=ansible | ok: [localhost] => {
+    "TOKEN": "gAAAAABedHJ69JqeEnhu8N0uI1bwQr28K_UW3rffiGiLc4FldwiEqyVsw_5aTWAgW-LlICQq-Kk-noZbHfACIHZ9OgQJPcSLz2D4WGTHwtjGlcJ0z8dNdl8TFyERoHCh36k_HWwy4NE9Qq80xQOtcx3N3eru9fQ-0FSUdJceZv0xWVT30j7S2iz2cqC5bEvhMXVG1UC9_-6btRd4hskpRWsP5XTixMdFhZfq8iNQXsQ0Z-QsFRABekY"
+}
+2020-03-20 15:36:26,656 p=28910 u=root n=ansible | TASK [Get PowerVC Tenant ID] ************************************************************************************************
+2020-03-20 15:36:26,656 p=28910 u=root n=ansible | Friday 20 March 2020  15:36:26 +0800 (0:00:00.113)       0:00:02.060 ********** 
+2020-03-20 15:36:27,562 p=28910 u=root n=ansible | ok: [localhost]
+2020-03-20 15:36:27,570 p=28910 u=root n=ansible | TASK [Set Variable Tenant ID] ***********************************************************************************************
+2020-03-20 15:36:27,570 p=28910 u=root n=ansible | Friday 20 March 2020  15:36:27 +0800 (0:00:00.914)       0:00:02.974 ********** 
+2020-03-20 15:36:27,706 p=28910 u=root n=ansible | ok: [localhost] => (item={u'is_domain': False, u'description': u'IBM Default Tenant', u'links': {u'self': u'https://192.168.56.101:5000/v3/projects/b2eb6efb8b4e468d93e53935f291716d'}, u'tags': [], u'enabled': True, u'domain_id': u'default', u'parent_id': u'default', u'id': u'b2eb6efb8b4e468d93e53935f291716d', u'name': u'ibm-default'})
+2020-03-20 15:36:27,742 p=28910 u=root n=ansible | TASK [fail] *****************************************************************************************************************
+2020-03-20 15:36:27,742 p=28910 u=root n=ansible | Friday 20 March 2020  15:36:27 +0800 (0:00:00.171)       0:00:03.146 ********** 
+2020-03-20 15:36:27,857 p=28910 u=root n=ansible | PLAY RECAP ******************************************************************************************************************
+2020-03-20 15:36:27,858 p=28910 u=root n=ansible | localhost                  : ok=6    changed=0    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   
+2020-03-20 15:36:27,858 p=28910 u=root n=ansible | Friday 20 March 2020  15:36:27 +0800 (0:00:00.115)       0:00:03.261 ********** 
+2020-03-20 15:36:27,858 p=28910 u=root n=ansible | =============================================================================== 
+2020-03-20 15:36:27,858 p=28910 u=root n=ansible | Get an authentication PowerVC Token ---------------------------------------------------------------------------------- 1.75s
+2020-03-20 15:36:27,858 p=28910 u=root n=ansible | Get PowerVC Tenant ID ------------------------------------------------------------------------------------------------ 0.91s
+2020-03-20 15:36:27,858 p=28910 u=root n=ansible | Set Variable Tenant ID ----------------------------------------------------------------------------------------------- 0.17s
+2020-03-20 15:36:27,858 p=28910 u=root n=ansible | fail ----------------------------------------------------------------------------------------------------------------- 0.12s
+2020-03-20 15:36:27,859 p=28910 u=root n=ansible | debug ---------------------------------------------------------------------------------------------------------------- 0.11s
+2020-03-20 15:36:27,859 p=28910 u=root n=ansible | Set Variable TOKEN --------------------------------------------------------------------------------------------------- 0.09s
+2020-03-20 15:36:27,859 p=28910 u=root n=ansible | Include the variables from the YAML file ----------------------------------------------------------------------------- 0.03s
+2020-03-20 15:39:33,345 p=4386 u=root n=ansible | [WARNING]: provided hosts list is empty, only localhost is available. Note that the implicit localhost does not match 'all'
+
+2020-03-20 15:39:33,885 p=4386 u=root n=ansible | PLAY [localhost] ************************************************************************************************************
+2020-03-20 15:39:33,905 p=4386 u=root n=ansible | TASK [Include the variables from the YAML file] *****************************************************************************
+2020-03-20 15:39:33,905 p=4386 u=root n=ansible | Friday 20 March 2020  15:39:33 +0800 (0:00:00.067)       0:00:00.067 ********** 
+2020-03-20 15:39:33,927 p=4386 u=root n=ansible | ok: [localhost]
+2020-03-20 15:39:33,931 p=4386 u=root n=ansible | TASK [Get an authentication PowerVC Token body={{ lookup('template', 'bodyauth.json.j2')}}, url={{ OS_AUTH_URL }}auth/tokens, status_code=201, headers={u'Content-Type': u'application/json'}, body_format=json, return_content=True, validate_certs=False, method=POST] ***
+2020-03-20 15:39:33,931 p=4386 u=root n=ansible | Friday 20 March 2020  15:39:33 +0800 (0:00:00.025)       0:00:00.093 ********** 
+2020-03-20 15:39:35,745 p=4386 u=root n=ansible | ok: [localhost]
+2020-03-20 15:39:35,761 p=4386 u=root n=ansible | TASK [Set Variable TOKEN TOKEN={{ token['x_subject_token'] }}] **************************************************************
+2020-03-20 15:39:35,761 p=4386 u=root n=ansible | Friday 20 March 2020  15:39:35 +0800 (0:00:01.829)       0:00:01.923 ********** 
+2020-03-20 15:39:35,915 p=4386 u=root n=ansible | ok: [localhost]
+2020-03-20 15:39:35,921 p=4386 u=root n=ansible | TASK [debug var=TOKEN] ******************************************************************************************************
+2020-03-20 15:39:35,921 p=4386 u=root n=ansible | Friday 20 March 2020  15:39:35 +0800 (0:00:00.159)       0:00:02.082 ********** 
+2020-03-20 15:39:36,054 p=4386 u=root n=ansible | ok: [localhost] => {
+    "TOKEN": "gAAAAABedHM35NUYctlSz_v9k1XgHqs2U39QUZIfjnEzyABB4gU0o_1rC-VDFgmiAXBSLLNNSt_OtToNytFB7TUZeJQvBeYfulyt7K-EvmbpG4Jg7cJnAu7FwvP7_t0qZKtuVO5a-T-_cnErvpGZQ_VQo-efVBda9eSp_yc93HvCcXLJk5DZKw4omLv718aGPAY8iAfTBBiIsRNl3_eZlt4UgOVSqCi71plaz7W9KoEHGrPyIA0Mzf0"
+}
+2020-03-20 15:39:36,058 p=4386 u=root n=ansible | TASK [Get PowerVC Tenant ID headers={u'Content-Type': u'application/json', u'X-Auth-Token': u'{{ TOKEN }}'}, url={{ OS_AUTH_URL }}projects, status_code=200, return_content=True, validate_certs=False, method=GET] ***
+2020-03-20 15:39:36,059 p=4386 u=root n=ansible | Friday 20 March 2020  15:39:36 +0800 (0:00:00.137)       0:00:02.220 ********** 
+2020-03-20 15:39:36,899 p=4386 u=root n=ansible | ok: [localhost]
+2020-03-20 15:39:36,907 p=4386 u=root n=ansible | TASK [Set Variable Tenant ID tenant_id={{ item.id }}] ***********************************************************************
+2020-03-20 15:39:36,907 p=4386 u=root n=ansible | Friday 20 March 2020  15:39:36 +0800 (0:00:00.848)       0:00:03.068 ********** 
+2020-03-20 15:39:37,046 p=4386 u=root n=ansible | ok: [localhost] => (item={u'is_domain': False, u'description': u'IBM Default Tenant', u'links': {u'self': u'https://192.168.56.101:5000/v3/projects/b2eb6efb8b4e468d93e53935f291716d'}, u'tags': [], u'enabled': True, u'domain_id': u'default', u'parent_id': u'default', u'id': u'b2eb6efb8b4e468d93e53935f291716d', u'name': u'ibm-default'})
+2020-03-20 15:39:37,083 p=4386 u=root n=ansible | TASK [fail msg=Could not get Tenant ID] *************************************************************************************
+2020-03-20 15:39:37,084 p=4386 u=root n=ansible | Friday 20 March 2020  15:39:37 +0800 (0:00:00.176)       0:00:03.245 ********** 
+2020-03-20 15:39:37,191 p=4386 u=root n=ansible | PLAY RECAP ******************************************************************************************************************
+2020-03-20 15:39:37,191 p=4386 u=root n=ansible | localhost                  : ok=6    changed=0    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   
+2020-03-20 15:39:37,192 p=4386 u=root n=ansible | Friday 20 March 2020  15:39:37 +0800 (0:00:00.107)       0:00:03.353 ********** 
+2020-03-20 15:39:37,192 p=4386 u=root n=ansible | =============================================================================== 
+2020-03-20 15:39:37,192 p=4386 u=root n=ansible | Get an authentication PowerVC Token ---------------------------------------------------------------------------------- 1.83s
+2020-03-20 15:39:37,192 p=4386 u=root n=ansible | Get PowerVC Tenant ID ------------------------------------------------------------------------------------------------ 0.85s
+2020-03-20 15:39:37,192 p=4386 u=root n=ansible | Set Variable Tenant ID ----------------------------------------------------------------------------------------------- 0.18s
+2020-03-20 15:39:37,192 p=4386 u=root n=ansible | Set Variable TOKEN --------------------------------------------------------------------------------------------------- 0.16s
+2020-03-20 15:39:37,192 p=4386 u=root n=ansible | debug ---------------------------------------------------------------------------------------------------------------- 0.14s
+2020-03-20 15:39:37,192 p=4386 u=root n=ansible | fail ----------------------------------------------------------------------------------------------------------------- 0.11s
+2020-03-20 15:39:37,193 p=4386 u=root n=ansible | Include the variables from the YAML file ----------------------------------------------------------------------------- 0.03s
+2020-03-20 15:42:56,607 p=12182 u=root n=ansible | [WARNING]: provided hosts list is empty, only localhost is available. Note that the implicit localhost does not match 'all'
+
+2020-03-20 15:42:57,002 p=12182 u=root n=ansible | ERROR! 'syslogger' is not a valid attribute for a Play
+
+The error appears to be in '/root/esun/inventories/syslog.yml': line 1, column 3, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+
+- name: Test syslog
+  ^ here
+
+2020-03-20 15:44:10,814 p=15476 u=root n=ansible | [WARNING]: provided hosts list is empty, only localhost is available. Note that the implicit localhost does not match 'all'
+
+2020-03-20 15:44:11,150 p=15476 u=root n=ansible | ERROR! A playbook must be a list of plays, got a <class 'ansible.parsing.yaml.objects.AnsibleMapping'> instead
+
+The error appears to be in '/root/esun/inventories/syslog.yml': line 1, column 1, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+
+tasks:
+^ here
+
+2020-03-20 15:44:39,157 p=16351 u=root n=ansible | [WARNING]: provided hosts list is empty, only localhost is available. Note that the implicit localhost does not match 'all'
+
+2020-03-20 15:44:39,514 p=16351 u=root n=ansible | ERROR! A playbook must be a list of plays, got a <class 'ansible.parsing.yaml.objects.AnsibleMapping'> instead
+
+The error appears to be in '/root/esun/inventories/syslog.yml': line 1, column 2, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+
+ tasks:
+ ^ here
+
+2020-03-20 15:45:10,500 p=17285 u=root n=ansible | [WARNING]: provided hosts list is empty, only localhost is available. Note that the implicit localhost does not match 'all'
+
+2020-03-20 15:45:11,120 p=17285 u=root n=ansible | PLAY [localhost] ************************************************************************************************************
+2020-03-20 15:45:11,134 p=17285 u=root n=ansible | TASK [Gathering Facts] ******************************************************************************************************
+2020-03-20 15:45:11,134 p=17285 u=root n=ansible | Friday 20 March 2020  15:45:11 +0800 (0:00:00.048)       0:00:00.048 ********** 
+2020-03-20 15:45:12,700 p=17285 u=root n=ansible | ok: [localhost]
+2020-03-20 15:45:12,774 p=17285 u=root n=ansible | TASK [Test syslog] **********************************************************************************************************
+2020-03-20 15:45:12,775 p=17285 u=root n=ansible | Friday 20 March 2020  15:45:12 +0800 (0:00:01.640)       0:00:01.688 ********** 
+2020-03-20 15:45:13,722 p=17285 u=root n=ansible | changed: [localhost]
+2020-03-20 15:45:13,767 p=17285 u=root n=ansible | TASK [Simple Usage] *********************************************************************************************************
+2020-03-20 15:45:13,767 p=17285 u=root n=ansible | Friday 20 March 2020  15:45:13 +0800 (0:00:00.992)       0:00:02.681 ********** 
+2020-03-20 15:45:13,974 p=17285 u=root n=ansible | changed: [localhost]
+2020-03-20 15:45:13,977 p=17285 u=root n=ansible | PLAY RECAP ******************************************************************************************************************
+2020-03-20 15:45:13,978 p=17285 u=root n=ansible | localhost                  : ok=3    changed=2    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2020-03-20 15:45:13,978 p=17285 u=root n=ansible | Friday 20 March 2020  15:45:13 +0800 (0:00:00.210)       0:00:02.891 ********** 
+2020-03-20 15:45:13,978 p=17285 u=root n=ansible | =============================================================================== 
+2020-03-20 15:45:13,978 p=17285 u=root n=ansible | Gathering Facts ------------------------------------------------------------------------------------------------------ 1.64s
+2020-03-20 15:45:13,978 p=17285 u=root n=ansible | Test syslog ---------------------------------------------------------------------------------------------------------- 0.99s
+2020-03-20 15:45:13,978 p=17285 u=root n=ansible | Simple Usage --------------------------------------------------------------------------------------------------------- 0.21s
+2020-03-20 16:03:18,790 p=28124 u=root n=ansible | [WARNING]: provided hosts list is empty, only localhost is available. Note that the implicit localhost does not match 'all'
+
+2020-03-20 16:03:19,359 p=28124 u=root n=ansible | PLAY [localhost] ************************************************************************************************************
+2020-03-20 16:03:19,374 p=28124 u=root n=ansible | TASK [Include the variables from the YAML file] *****************************************************************************
+2020-03-20 16:03:19,374 p=28124 u=root n=ansible | Friday 20 March 2020  16:03:19 +0800 (0:00:00.049)       0:00:00.049 ********** 
+2020-03-20 16:03:19,392 p=28124 u=root n=ansible | ok: [localhost]
+2020-03-20 16:03:19,398 p=28124 u=root n=ansible | TASK [Get an authentication PowerVC Token] **********************************************************************************
+2020-03-20 16:03:19,399 p=28124 u=root n=ansible | Friday 20 March 2020  16:03:19 +0800 (0:00:00.024)       0:00:00.073 ********** 
+2020-03-20 16:03:21,218 p=28124 u=root n=ansible | ok: [localhost]
+2020-03-20 16:03:21,239 p=28124 u=root n=ansible | TASK [Set Variable TOKEN] ***************************************************************************************************
+2020-03-20 16:03:21,240 p=28124 u=root n=ansible | Friday 20 March 2020  16:03:21 +0800 (0:00:01.841)       0:00:01.914 ********** 
+2020-03-20 16:03:21,325 p=28124 u=root n=ansible | ok: [localhost]
+2020-03-20 16:03:21,329 p=28124 u=root n=ansible | TASK [debug] ****************************************************************************************************************
+2020-03-20 16:03:21,329 p=28124 u=root n=ansible | Friday 20 March 2020  16:03:21 +0800 (0:00:00.089)       0:00:02.004 ********** 
+2020-03-20 16:03:21,476 p=28124 u=root n=ansible | ok: [localhost] => {
+    "TOKEN": "gAAAAABedHjJcga-wYFVgDQ80scnblLTiW5ivt-uRFL0pBYaGgOUj6VXyDtJPyZtE_-L2kR638iurAOS5nAozHpQAbQcbt2ivlcodphO27L8bd0Ji8g8Tav2v7RBh_NdcA_ZSxET56ZOeWWeS9FCizU5MZdkH_U7VVyYysKkWNvbh5v_YcIlH4XUid5Bt6PQeW7OthoF2HB0F1iyEqV6lh_UZGGuadhMZ8o98ThyL5YrrVFEY8_WnQc"
+}
+2020-03-20 16:03:21,481 p=28124 u=root n=ansible | TASK [Get PowerVC Tenant ID] ************************************************************************************************
+2020-03-20 16:03:21,481 p=28124 u=root n=ansible | Friday 20 March 2020  16:03:21 +0800 (0:00:00.151)       0:00:02.156 ********** 
+2020-03-20 16:03:22,326 p=28124 u=root n=ansible | ok: [localhost]
+2020-03-20 16:03:22,335 p=28124 u=root n=ansible | TASK [Set Variable Tenant ID] ***********************************************************************************************
+2020-03-20 16:03:22,336 p=28124 u=root n=ansible | Friday 20 March 2020  16:03:22 +0800 (0:00:00.854)       0:00:03.010 ********** 
+2020-03-20 16:03:22,519 p=28124 u=root n=ansible | ok: [localhost] => (item={u'is_domain': False, u'description': u'IBM Default Tenant', u'links': {u'self': u'https://192.168.56.101:5000/v3/projects/b2eb6efb8b4e468d93e53935f291716d'}, u'tags': [], u'enabled': True, u'domain_id': u'default', u'parent_id': u'default', u'id': u'b2eb6efb8b4e468d93e53935f291716d', u'name': u'ibm-default'})
+2020-03-20 16:03:22,540 p=28124 u=root n=ansible | TASK [fail] *****************************************************************************************************************
+2020-03-20 16:03:22,540 p=28124 u=root n=ansible | Friday 20 March 2020  16:03:22 +0800 (0:00:00.204)       0:00:03.214 ********** 
+2020-03-20 16:03:22,628 p=28124 u=root n=ansible | PLAY RECAP ******************************************************************************************************************
+2020-03-20 16:03:22,628 p=28124 u=root n=ansible | localhost                  : ok=6    changed=0    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   
+2020-03-20 16:03:22,629 p=28124 u=root n=ansible | Friday 20 March 2020  16:03:22 +0800 (0:00:00.088)       0:00:03.303 ********** 
+2020-03-20 16:03:22,629 p=28124 u=root n=ansible | =============================================================================== 
+2020-03-20 16:03:22,629 p=28124 u=root n=ansible | Get an authentication PowerVC Token ---------------------------------------------------------------------------------- 1.84s
+2020-03-20 16:03:22,629 p=28124 u=root n=ansible | Get PowerVC Tenant ID ------------------------------------------------------------------------------------------------ 0.85s
+2020-03-20 16:03:22,629 p=28124 u=root n=ansible | Set Variable Tenant ID ----------------------------------------------------------------------------------------------- 0.20s
+2020-03-20 16:03:22,629 p=28124 u=root n=ansible | debug ---------------------------------------------------------------------------------------------------------------- 0.15s
+2020-03-20 16:03:22,629 p=28124 u=root n=ansible | Set Variable TOKEN --------------------------------------------------------------------------------------------------- 0.09s
+2020-03-20 16:03:22,629 p=28124 u=root n=ansible | fail ----------------------------------------------------------------------------------------------------------------- 0.09s
+2020-03-20 16:03:22,630 p=28124 u=root n=ansible | Include the variables from the YAML file ----------------------------------------------------------------------------- 0.02s
+2020-03-20 16:03:22,630 p=28124 u=root n=ansible | Playbook run took 0 days, 0 hours, 0 minutes, 3 seconds
+2020-03-20 16:04:45,713 p=31564 u=root n=ansible | [WARNING]: provided hosts list is empty, only localhost is available. Note that the implicit localhost does not match 'all'
+
+2020-03-20 16:04:46,213 p=31564 u=root n=ansible | PLAY [localhost] ************************************************************************************************************
+2020-03-20 16:04:46,231 p=31564 u=root n=ansible | TASK [Include the variables from the YAML file] *****************************************************************************
+2020-03-20 16:04:46,231 p=31564 u=root n=ansible | Friday 20 March 2020  16:04:46 +0800 (0:00:00.052)       0:00:00.052 ********** 
+2020-03-20 16:04:46,249 p=31564 u=root n=ansible | ok: [localhost]
+2020-03-20 16:04:46,254 p=31564 u=root n=ansible | TASK [Get an authentication PowerVC Token] **********************************************************************************
+2020-03-20 16:04:46,254 p=31564 u=root n=ansible | Friday 20 March 2020  16:04:46 +0800 (0:00:00.022)       0:00:00.075 ********** 
+2020-03-20 16:04:47,954 p=31564 u=root n=ansible | ok: [localhost]
+2020-03-20 16:04:47,973 p=31564 u=root n=ansible | TASK [Set Variable TOKEN] ***************************************************************************************************
+2020-03-20 16:04:47,974 p=31564 u=root n=ansible | Friday 20 March 2020  16:04:47 +0800 (0:00:01.719)       0:00:01.794 ********** 
+2020-03-20 16:04:48,066 p=31564 u=root n=ansible | ok: [localhost]
+2020-03-20 16:04:48,071 p=31564 u=root n=ansible | TASK [debug] ****************************************************************************************************************
+2020-03-20 16:04:48,071 p=31564 u=root n=ansible | Friday 20 March 2020  16:04:48 +0800 (0:00:00.097)       0:00:01.892 ********** 
+2020-03-20 16:04:48,168 p=31564 u=root n=ansible | ok: [localhost] => {
+    "TOKEN": "gAAAAABedHkfVZgmveytBM2XIA_wCk4N1pD2n9NltMI5Z8eyGGwQnQs_66_4hFv2fyzRuz8siRkD4-SPrhwsEsmBsBIBl0wtAJ4z_yJ-QODCupxlx56HErlDl-jvPYCL9U-y3GrIkRfxyFXmbFxE0mGtV9E5ozt9NUVnvy0jpNb_1t0QXVvOX7XsbmlM1abc_lBt-bPFH_hSE8BZ_N74Zjky2_rThgSG93SCKXzaYIWuPFDG6bqcBqQ"
+}
+2020-03-20 16:04:48,172 p=31564 u=root n=ansible | TASK [Get PowerVC Tenant ID] ************************************************************************************************
+2020-03-20 16:04:48,173 p=31564 u=root n=ansible | Friday 20 March 2020  16:04:48 +0800 (0:00:00.101)       0:00:01.993 ********** 
+2020-03-20 16:04:49,037 p=31564 u=root n=ansible | ok: [localhost]
+2020-03-20 16:04:49,047 p=31564 u=root n=ansible | TASK [Set Variable Tenant ID] ***********************************************************************************************
+2020-03-20 16:04:49,047 p=31564 u=root n=ansible | Friday 20 March 2020  16:04:49 +0800 (0:00:00.874)       0:00:02.867 ********** 
+2020-03-20 16:04:49,186 p=31564 u=root n=ansible | ok: [localhost] => (item={u'is_domain': False, u'description': u'IBM Default Tenant', u'links': {u'self': u'https://192.168.56.101:5000/v3/projects/b2eb6efb8b4e468d93e53935f291716d'}, u'tags': [], u'enabled': True, u'domain_id': u'default', u'parent_id': u'default', u'id': u'b2eb6efb8b4e468d93e53935f291716d', u'name': u'ibm-default'})
+2020-03-20 16:04:49,230 p=31564 u=root n=ansible | TASK [fail] *****************************************************************************************************************
+2020-03-20 16:04:49,230 p=31564 u=root n=ansible | Friday 20 March 2020  16:04:49 +0800 (0:00:00.183)       0:00:03.050 ********** 
+2020-03-20 16:04:49,316 p=31564 u=root n=ansible | PLAY RECAP ******************************************************************************************************************
+2020-03-20 16:04:49,316 p=31564 u=root n=ansible | localhost                  : ok=6    changed=0    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   
+2020-03-20 16:04:49,316 p=31564 u=root n=ansible | Friday 20 March 2020  16:04:49 +0800 (0:00:00.086)       0:00:03.137 ********** 
+2020-03-20 16:04:49,316 p=31564 u=root n=ansible | =============================================================================== 
+2020-03-20 16:04:49,317 p=31564 u=root n=ansible | Get an authentication PowerVC Token ---------------------------------------------------------------------------------- 1.72s
+2020-03-20 16:04:49,317 p=31564 u=root n=ansible | Get PowerVC Tenant ID ------------------------------------------------------------------------------------------------ 0.87s
+2020-03-20 16:04:49,317 p=31564 u=root n=ansible | Set Variable Tenant ID ----------------------------------------------------------------------------------------------- 0.18s
+2020-03-20 16:04:49,317 p=31564 u=root n=ansible | debug ---------------------------------------------------------------------------------------------------------------- 0.10s
+2020-03-20 16:04:49,317 p=31564 u=root n=ansible | Set Variable TOKEN --------------------------------------------------------------------------------------------------- 0.10s
+2020-03-20 16:04:49,317 p=31564 u=root n=ansible | fail ----------------------------------------------------------------------------------------------------------------- 0.09s
+2020-03-20 16:04:49,317 p=31564 u=root n=ansible | Include the variables from the YAML file ----------------------------------------------------------------------------- 0.02s
+2020-03-20 16:04:49,317 p=31564 u=root n=ansible | Playbook run took 0 days, 0 hours, 0 minutes, 3 seconds
+2020-03-20 16:05:41,864 p=934 u=root n=ansible | [WARNING]: provided hosts list is empty, only localhost is available. Note that the implicit localhost does not match 'all'
+
+2020-03-20 16:05:42,395 p=934 u=root n=ansible | PLAY [localhost] ************************************************************************************************************
+2020-03-20 16:05:42,412 p=934 u=root n=ansible | TASK [Include the variables from the YAML file] *****************************************************************************
+2020-03-20 16:05:42,413 p=934 u=root n=ansible | Friday 20 March 2020  16:05:42 +0800 (0:00:00.057)       0:00:00.057 ********** 
+2020-03-20 16:05:42,432 p=934 u=root n=ansible | ok: [localhost]
+2020-03-20 16:05:42,436 p=934 u=root n=ansible | TASK [Get an authentication PowerVC Token] **********************************************************************************
+2020-03-20 16:05:42,436 p=934 u=root n=ansible | Friday 20 March 2020  16:05:42 +0800 (0:00:00.023)       0:00:00.081 ********** 
+2020-03-20 16:05:44,199 p=934 u=root n=ansible | ok: [localhost]
+2020-03-20 16:05:44,246 p=934 u=root n=ansible | TASK [Set Variable TOKEN] ***************************************************************************************************
+2020-03-20 16:05:44,247 p=934 u=root n=ansible | Friday 20 March 2020  16:05:44 +0800 (0:00:01.810)       0:00:01.891 ********** 
+2020-03-20 16:05:44,369 p=934 u=root n=ansible | ok: [localhost]
+2020-03-20 16:05:44,377 p=934 u=root n=ansible | TASK [debug] ****************************************************************************************************************
+2020-03-20 16:05:44,377 p=934 u=root n=ansible | Friday 20 March 2020  16:05:44 +0800 (0:00:00.130)       0:00:02.021 ********** 
+2020-03-20 16:05:44,525 p=934 u=root n=ansible | ok: [localhost] => {
+    "TOKEN": "gAAAAABedHlY7FndljTOKVZDHau2KAoNujsGLHujTT3y5JULvrTZGcSuv2Kxvno2covr61nUEHi4ZG71HhnyldazfyXJ72sShPbXhAxNTrvnzZhiy2qxBPEg1F7HAUm4C6JR2ZF9kPgoWX_c9EuXneSbTk5CC0Pt4JHpJjrikot2pLBDtokr_FvH29r8ClvB2bx-UuuHBHqSDbJW-hhQsk2PUcpcC4D2fSe7WSYsIt9fRb5e2MVwees"
+}
+2020-03-20 16:05:44,530 p=934 u=root n=ansible | TASK [Get PowerVC Tenant ID] ************************************************************************************************
+2020-03-20 16:05:44,530 p=934 u=root n=ansible | Friday 20 March 2020  16:05:44 +0800 (0:00:00.153)       0:00:02.174 ********** 
+2020-03-20 16:05:45,524 p=934 u=root n=ansible | ok: [localhost]
+2020-03-20 16:05:45,534 p=934 u=root n=ansible | TASK [Set Variable Tenant ID] ***********************************************************************************************
+2020-03-20 16:05:45,535 p=934 u=root n=ansible | Friday 20 March 2020  16:05:45 +0800 (0:00:01.004)       0:00:03.179 ********** 
+2020-03-20 16:05:45,697 p=934 u=root n=ansible | ok: [localhost] => (item={u'is_domain': False, u'description': u'IBM Default Tenant', u'links': {u'self': u'https://192.168.56.101:5000/v3/projects/b2eb6efb8b4e468d93e53935f291716d'}, u'tags': [], u'enabled': True, u'domain_id': u'default', u'parent_id': u'default', u'id': u'b2eb6efb8b4e468d93e53935f291716d', u'name': u'ibm-default'})
+2020-03-20 16:05:45,743 p=934 u=root n=ansible | TASK [fail] *****************************************************************************************************************
+2020-03-20 16:05:45,744 p=934 u=root n=ansible | Friday 20 March 2020  16:05:45 +0800 (0:00:00.208)       0:00:03.388 ********** 
+2020-03-20 16:05:45,835 p=934 u=root n=ansible | PLAY RECAP ******************************************************************************************************************
+2020-03-20 16:05:45,835 p=934 u=root n=ansible | localhost                  : ok=6    changed=0    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   
+2020-03-20 16:05:45,835 p=934 u=root n=ansible | Friday 20 March 2020  16:05:45 +0800 (0:00:00.091)       0:00:03.480 ********** 
+2020-03-20 16:05:45,836 p=934 u=root n=ansible | =============================================================================== 
+2020-03-20 16:05:45,836 p=934 u=root n=ansible | Include the variables from the YAML file ----------------------------------------------------------------------------- 0.02s
+2020-03-20 16:05:45,836 p=934 u=root n=ansible | Get an authentication PowerVC Token ---------------------------------------------------------------------------------- 1.81s
+2020-03-20 16:05:45,836 p=934 u=root n=ansible | Set Variable TOKEN --------------------------------------------------------------------------------------------------- 0.13s
+2020-03-20 16:05:45,836 p=934 u=root n=ansible | debug ---------------------------------------------------------------------------------------------------------------- 0.15s
+2020-03-20 16:05:45,836 p=934 u=root n=ansible | Get PowerVC Tenant ID ------------------------------------------------------------------------------------------------ 1.00s
+2020-03-20 16:05:45,836 p=934 u=root n=ansible | Set Variable Tenant ID ----------------------------------------------------------------------------------------------- 0.21s
+2020-03-20 16:05:45,836 p=934 u=root n=ansible | fail ----------------------------------------------------------------------------------------------------------------- 0.09s
+2020-03-20 16:05:45,837 p=934 u=root n=ansible | Playbook run took 0 days, 0 hours, 0 minutes, 3 seconds
+2020-03-20 16:08:35,031 p=8085 u=root n=ansible | [WARNING]: provided hosts list is empty, only localhost is available. Note that the implicit localhost does not match 'all'
+
+2020-03-20 16:08:35,659 p=8085 u=root n=ansible | PLAY [localhost] ************************************************************************************************************
+2020-03-20 16:08:35,684 p=8085 u=root n=ansible | TASK [Include the variables from the YAML file] *****************************************************************************
+2020-03-20 16:08:35,684 p=8085 u=root n=ansible | Friday 20 March 2020  16:08:35 +0800 (0:00:00.064)       0:00:00.064 ********** 
+2020-03-20 16:08:35,711 p=8085 u=root n=ansible | ok: [localhost]
+2020-03-20 16:08:35,718 p=8085 u=root n=ansible | TASK [Get an authentication PowerVC Token] **********************************************************************************
+2020-03-20 16:08:35,718 p=8085 u=root n=ansible | Friday 20 March 2020  16:08:35 +0800 (0:00:00.033)       0:00:00.098 ********** 
+2020-03-20 16:08:37,449 p=8085 u=root n=ansible | ok: [localhost]
+2020-03-20 16:08:37,469 p=8085 u=root n=ansible | TASK [Set Variable TOKEN] ***************************************************************************************************
+2020-03-20 16:08:37,471 p=8085 u=root n=ansible | Friday 20 March 2020  16:08:37 +0800 (0:00:01.753)       0:00:01.852 ********** 
+2020-03-20 16:08:37,576 p=8085 u=root n=ansible | ok: [localhost]
+2020-03-20 16:08:37,581 p=8085 u=root n=ansible | TASK [debug] ****************************************************************************************************************
+2020-03-20 16:08:37,581 p=8085 u=root n=ansible | Friday 20 March 2020  16:08:37 +0800 (0:00:00.109)       0:00:01.961 ********** 
+2020-03-20 16:08:37,703 p=8085 u=root n=ansible | ok: [localhost] => {
+    "TOKEN": "gAAAAABedHoF9Dv4ROeMyH4FElvcfyPXO9sxnSMwalKskQYgb2Ikdpq-D0J2yqRF-QgFRHtNtlpI3gYKxE310OtMuFNYY7950zC0u30GznsD1JHcMCtjQECUIsPcsPN_IBJjkoWHwvjEA6zSub9Z8lAqHeZYZezTbFqF3IEkGlhNi5QRpSNxZY_VkroWmSVBsYcnJpc_JmRSEL4eJDXYGYW3g-uOU2e4Fh8mAbBUjf5ynKLKfG0F9kE"
+}
+2020-03-20 16:08:37,708 p=8085 u=root n=ansible | TASK [Get PowerVC Tenant ID] ************************************************************************************************
+2020-03-20 16:08:37,708 p=8085 u=root n=ansible | Friday 20 March 2020  16:08:37 +0800 (0:00:00.126)       0:00:02.088 ********** 
+2020-03-20 16:08:38,700 p=8085 u=root n=ansible | ok: [localhost]
+2020-03-20 16:08:38,715 p=8085 u=root n=ansible | TASK [Set Variable Tenant ID] ***********************************************************************************************
+2020-03-20 16:08:38,716 p=8085 u=root n=ansible | Friday 20 March 2020  16:08:38 +0800 (0:00:01.007)       0:00:03.096 ********** 
+2020-03-20 16:08:38,893 p=8085 u=root n=ansible | ok: [localhost] => (item={u'is_domain': False, u'description': u'IBM Default Tenant', u'links': {u'self': u'https://192.168.56.101:5000/v3/projects/b2eb6efb8b4e468d93e53935f291716d'}, u'tags': [], u'enabled': True, u'domain_id': u'default', u'parent_id': u'default', u'id': u'b2eb6efb8b4e468d93e53935f291716d', u'name': u'ibm-default'})
+2020-03-20 16:08:38,936 p=8085 u=root n=ansible | TASK [fail] *****************************************************************************************************************
+2020-03-20 16:08:38,937 p=8085 u=root n=ansible | Friday 20 March 2020  16:08:38 +0800 (0:00:00.221)       0:00:03.317 ********** 
+2020-03-20 16:08:39,041 p=8085 u=root n=ansible | PLAY RECAP ******************************************************************************************************************
+2020-03-20 16:08:39,041 p=8085 u=root n=ansible | localhost                  : ok=6    changed=0    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   
+2020-03-20 16:08:39,041 p=8085 u=root n=ansible | Friday 20 March 2020  16:08:39 +0800 (0:00:00.104)       0:00:03.421 ********** 
+2020-03-20 16:08:39,041 p=8085 u=root n=ansible | =============================================================================== 
+2020-03-20 16:08:39,042 p=8085 u=root n=ansible | Include the variables from the YAML file ----------------------------------------------------------------------------- 0.03s
+2020-03-20 16:08:39,042 p=8085 u=root n=ansible | Get an authentication PowerVC Token ---------------------------------------------------------------------------------- 1.75s
+2020-03-20 16:08:39,042 p=8085 u=root n=ansible | Set Variable TOKEN --------------------------------------------------------------------------------------------------- 0.11s
+2020-03-20 16:08:39,042 p=8085 u=root n=ansible | debug ---------------------------------------------------------------------------------------------------------------- 0.13s
+2020-03-20 16:08:39,042 p=8085 u=root n=ansible | Get PowerVC Tenant ID ------------------------------------------------------------------------------------------------ 1.01s
+2020-03-20 16:08:39,042 p=8085 u=root n=ansible | Set Variable Tenant ID ----------------------------------------------------------------------------------------------- 0.22s
+2020-03-20 16:08:39,042 p=8085 u=root n=ansible | fail ----------------------------------------------------------------------------------------------------------------- 0.10s
+2020-03-20 16:08:39,042 p=8085 u=root n=ansible | Playbook run took 0 days, 0 hours, 0 minutes, 3 seconds
+2020-03-20 16:10:03,999 p=11532 u=root n=ansible | [WARNING]: provided hosts list is empty, only localhost is available. Note that the implicit localhost does not match 'all'
+
+2020-03-20 16:10:04,517 p=11532 u=root n=ansible | PLAY [localhost] ************************************************************************************************************
+2020-03-20 16:10:04,533 p=11532 u=root n=ansible | TASK [Gathering Facts] ******************************************************************************************************
+2020-03-20 16:10:04,534 p=11532 u=root n=ansible | Friday 20 March 2020  16:10:04 +0800 (0:00:00.050)       0:00:00.050 ********** 
+2020-03-20 16:10:06,527 p=11532 u=root n=ansible | ok: [localhost]
+2020-03-20 16:10:06,604 p=11532 u=root n=ansible | TASK [Include the variables from the YAML file] *****************************************************************************
+2020-03-20 16:10:06,605 p=11532 u=root n=ansible | Friday 20 March 2020  16:10:06 +0800 (0:00:02.070)       0:00:02.121 ********** 
+2020-03-20 16:10:06,624 p=11532 u=root n=ansible | ok: [localhost]
+2020-03-20 16:10:06,676 p=11532 u=root n=ansible | TASK [Get an authentication PowerVC Token] **********************************************************************************
+2020-03-20 16:10:06,676 p=11532 u=root n=ansible | Friday 20 March 2020  16:10:06 +0800 (0:00:00.071)       0:00:02.192 ********** 
+2020-03-20 16:10:08,931 p=11532 u=root n=ansible | ok: [localhost]
+2020-03-20 16:10:08,994 p=11532 u=root n=ansible | TASK [Set Variable TOKEN] ***************************************************************************************************
+2020-03-20 16:10:08,995 p=11532 u=root n=ansible | Friday 20 March 2020  16:10:08 +0800 (0:00:02.319)       0:00:04.511 ********** 
+2020-03-20 16:10:09,085 p=11532 u=root n=ansible | ok: [localhost]
+2020-03-20 16:10:09,124 p=11532 u=root n=ansible | TASK [debug] ****************************************************************************************************************
+2020-03-20 16:10:09,124 p=11532 u=root n=ansible | Friday 20 March 2020  16:10:09 +0800 (0:00:00.129)       0:00:04.640 ********** 
+2020-03-20 16:10:09,226 p=11532 u=root n=ansible | ok: [localhost] => {
+    "TOKEN": "gAAAAABedHpgr9TXEgYGT5y9tTHjmFQtv52-A2RhCTfPdctZwaQVtznXIf7t9H3dmeLEz3KLJ_J3-yWQix_SH3m5YLMQR6Jg8vFYUDYSHBUaJ43_bWphEXSuSX1XYZBoOi-Opj_GzB3w6dDRQTR5PYgv8jcQOJ5r9cGefwjEUg2ZLqOqDjRuCZoeGqJTGMNSTy7CjIche9hWbz0TkIXLx_J5gyamXzMNbXMOUSBVLM_wyKwyInXU6xA"
+}
+2020-03-20 16:10:09,267 p=11532 u=root n=ansible | TASK [Get PowerVC Tenant ID] ************************************************************************************************
+2020-03-20 16:10:09,267 p=11532 u=root n=ansible | Friday 20 March 2020  16:10:09 +0800 (0:00:00.142)       0:00:04.783 ********** 
+2020-03-20 16:10:10,079 p=11532 u=root n=ansible | ok: [localhost]
+2020-03-20 16:10:10,125 p=11532 u=root n=ansible | TASK [Set Variable Tenant ID] ***********************************************************************************************
+2020-03-20 16:10:10,125 p=11532 u=root n=ansible | Friday 20 March 2020  16:10:10 +0800 (0:00:00.858)       0:00:05.642 ********** 
+2020-03-20 16:10:10,277 p=11532 u=root n=ansible | ok: [localhost] => (item={u'is_domain': False, u'description': u'IBM Default Tenant', u'links': {u'self': u'https://192.168.56.101:5000/v3/projects/b2eb6efb8b4e468d93e53935f291716d'}, u'tags': [], u'enabled': True, u'domain_id': u'default', u'parent_id': u'default', u'id': u'b2eb6efb8b4e468d93e53935f291716d', u'name': u'ibm-default'})
+2020-03-20 16:10:10,359 p=11532 u=root n=ansible | TASK [fail] *****************************************************************************************************************
+2020-03-20 16:10:10,359 p=11532 u=root n=ansible | Friday 20 March 2020  16:10:10 +0800 (0:00:00.233)       0:00:05.875 ********** 
+2020-03-20 16:10:10,450 p=11532 u=root n=ansible | PLAY RECAP ******************************************************************************************************************
+2020-03-20 16:10:10,450 p=11532 u=root n=ansible | localhost                  : ok=7    changed=0    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   
+2020-03-20 16:10:10,450 p=11532 u=root n=ansible | Friday 20 March 2020  16:10:10 +0800 (0:00:00.091)       0:00:05.967 ********** 
+2020-03-20 16:10:10,451 p=11532 u=root n=ansible | =============================================================================== 
+2020-03-20 16:10:10,451 p=11532 u=root n=ansible | Gathering Facts ------------------------------------------------------------------------------------------------------ 2.07s
+2020-03-20 16:10:10,451 p=11532 u=root n=ansible | Include the variables from the YAML file ----------------------------------------------------------------------------- 0.07s
+2020-03-20 16:10:10,451 p=11532 u=root n=ansible | Get an authentication PowerVC Token ---------------------------------------------------------------------------------- 2.32s
+2020-03-20 16:10:10,451 p=11532 u=root n=ansible | Set Variable TOKEN --------------------------------------------------------------------------------------------------- 0.13s
+2020-03-20 16:10:10,451 p=11532 u=root n=ansible | debug ---------------------------------------------------------------------------------------------------------------- 0.14s
+2020-03-20 16:10:10,451 p=11532 u=root n=ansible | Get PowerVC Tenant ID ------------------------------------------------------------------------------------------------ 0.86s
+2020-03-20 16:10:10,451 p=11532 u=root n=ansible | Set Variable Tenant ID ----------------------------------------------------------------------------------------------- 0.23s
+2020-03-20 16:10:10,451 p=11532 u=root n=ansible | fail ----------------------------------------------------------------------------------------------------------------- 0.09s
+2020-03-20 16:10:10,452 p=11532 u=root n=ansible | Playbook run took 0 days, 0 hours, 0 minutes, 5 seconds
+2020-03-20 16:11:08,981 p=14217 u=root n=ansible | [WARNING]: provided hosts list is empty, only localhost is available. Note that the implicit localhost does not match 'all'
+
+2020-03-20 16:11:09,490 p=14217 u=root n=ansible | PLAY [localhost] ************************************************************************************************************
+2020-03-20 16:11:09,527 p=14217 u=root n=ansible | TASK [Gathering Facts] ******************************************************************************************************
+2020-03-20 16:11:09,528 p=14217 u=root n=ansible | Friday 20 March 2020  16:11:09 +0800 (0:00:00.074)       0:00:00.074 ********** 
+2020-03-20 16:11:11,187 p=14217 u=root n=ansible | ok: [localhost]
+2020-03-20 16:11:11,263 p=14217 u=root n=ansible | TASK [Include the variables from the YAML file] *****************************************************************************
+2020-03-20 16:11:11,263 p=14217 u=root n=ansible | Friday 20 March 2020  16:11:11 +0800 (0:00:01.735)       0:00:01.810 ********** 
+2020-03-20 16:11:11,284 p=14217 u=root n=ansible | ok: [localhost]
+2020-03-20 16:11:11,333 p=14217 u=root n=ansible | TASK [Get an authentication PowerVC Token] **********************************************************************************
+2020-03-20 16:11:11,334 p=14217 u=root n=ansible | Friday 20 March 2020  16:11:11 +0800 (0:00:00.070)       0:00:01.880 ********** 
+2020-03-20 16:11:13,672 p=14217 u=root n=ansible | ok: [localhost]
+2020-03-20 16:11:13,732 p=14217 u=root n=ansible | TASK [Set Variable TOKEN] ***************************************************************************************************
+2020-03-20 16:11:13,733 p=14217 u=root n=ansible | Friday 20 March 2020  16:11:13 +0800 (0:00:02.398)       0:00:04.279 ********** 
+2020-03-20 16:11:13,839 p=14217 u=root n=ansible | ok: [localhost]
+2020-03-20 16:11:13,885 p=14217 u=root n=ansible | TASK [debug] ****************************************************************************************************************
+2020-03-20 16:11:13,885 p=14217 u=root n=ansible | Friday 20 March 2020  16:11:13 +0800 (0:00:00.152)       0:00:04.431 ********** 
+2020-03-20 16:11:13,976 p=14217 u=root n=ansible | ok: [localhost] => {
+    "TOKEN": "gAAAAABedHqhqZHP-tbZXoE6CrVBFl6-wP7TGjDiS__dvrwbLPDTtrhdlomc9ItIoNgzTUkWFfNKnZNX_WBWDJgv3zIh_8s9L9xnIOFV_jEg9p55rgluzc18knKUQd22l8X5J8qyXrGn62kFw-EXEG86Aeq6FbHQenqdHgzb1U99hahrRXMZXt5foSDuWHd-MmYdRLK1o9DEiCN1ry_ZYp5cAOd5AxDxQDN_ShmC2WI9wpkjbcSeMS8"
+}
+2020-03-20 16:11:14,032 p=14217 u=root n=ansible | TASK [Get PowerVC Tenant ID] ************************************************************************************************
+2020-03-20 16:11:14,032 p=14217 u=root n=ansible | Friday 20 March 2020  16:11:14 +0800 (0:00:00.147)       0:00:04.578 ********** 
+2020-03-20 16:11:14,853 p=14217 u=root n=ansible | ok: [localhost]
+2020-03-20 16:11:14,896 p=14217 u=root n=ansible | TASK [Set Variable Tenant ID] ***********************************************************************************************
+2020-03-20 16:11:14,896 p=14217 u=root n=ansible | Friday 20 March 2020  16:11:14 +0800 (0:00:00.864)       0:00:05.442 ********** 
+2020-03-20 16:11:15,033 p=14217 u=root n=ansible | ok: [localhost] => (item={u'is_domain': False, u'description': u'IBM Default Tenant', u'links': {u'self': u'https://192.168.56.101:5000/v3/projects/b2eb6efb8b4e468d93e53935f291716d'}, u'tags': [], u'enabled': True, u'domain_id': u'default', u'parent_id': u'default', u'id': u'b2eb6efb8b4e468d93e53935f291716d', u'name': u'ibm-default'})
+2020-03-20 16:11:15,115 p=14217 u=root n=ansible | TASK [fail] *****************************************************************************************************************
+2020-03-20 16:11:15,115 p=14217 u=root n=ansible | Friday 20 March 2020  16:11:15 +0800 (0:00:00.218)       0:00:05.661 ********** 
+2020-03-20 16:11:15,231 p=14217 u=root n=ansible | PLAY RECAP ******************************************************************************************************************
+2020-03-20 16:11:15,231 p=14217 u=root n=ansible | localhost                  : ok=7    changed=0    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   
+2020-03-20 16:11:15,231 p=14217 u=root n=ansible | Friday 20 March 2020  16:11:15 +0800 (0:00:00.116)       0:00:05.778 ********** 
+2020-03-20 16:11:15,232 p=14217 u=root n=ansible | =============================================================================== 
+2020-03-20 16:11:15,232 p=14217 u=root n=ansible | Gathering Facts ------------------------------------------------------------------------------------------------------ 1.74s
+2020-03-20 16:11:15,232 p=14217 u=root n=ansible | Include the variables from the YAML file ----------------------------------------------------------------------------- 0.07s
+2020-03-20 16:11:15,232 p=14217 u=root n=ansible | Get an authentication PowerVC Token ---------------------------------------------------------------------------------- 2.40s
+2020-03-20 16:11:15,232 p=14217 u=root n=ansible | Set Variable TOKEN --------------------------------------------------------------------------------------------------- 0.15s
+2020-03-20 16:11:15,232 p=14217 u=root n=ansible | debug ---------------------------------------------------------------------------------------------------------------- 0.15s
+2020-03-20 16:11:15,232 p=14217 u=root n=ansible | Get PowerVC Tenant ID ------------------------------------------------------------------------------------------------ 0.86s
+2020-03-20 16:11:15,233 p=14217 u=root n=ansible | Set Variable Tenant ID ----------------------------------------------------------------------------------------------- 0.22s
+2020-03-20 16:11:15,233 p=14217 u=root n=ansible | fail ----------------------------------------------------------------------------------------------------------------- 0.12s
+2020-03-20 16:11:15,233 p=14217 u=root n=ansible | Playbook run took 0 days, 0 hours, 0 minutes, 5 seconds
+2020-03-20 16:11:18,271 p=15071 u=root n=ansible | [WARNING]: provided hosts list is empty, only localhost is available. Note that the implicit localhost does not match 'all'
+
+2020-03-20 16:11:18,771 p=15071 u=root n=ansible | PLAY [localhost] ************************************************************************************************************
+2020-03-20 16:11:18,846 p=15071 u=root n=ansible | TASK [Include the variables from the YAML file] *****************************************************************************
+2020-03-20 16:11:18,846 p=15071 u=root n=ansible | Friday 20 March 2020  16:11:18 +0800 (0:00:00.117)       0:00:00.117 ********** 
+2020-03-20 16:11:18,870 p=15071 u=root n=ansible | ok: [localhost]
+2020-03-20 16:11:18,920 p=15071 u=root n=ansible | TASK [Get an authentication PowerVC Token] **********************************************************************************
+2020-03-20 16:11:18,920 p=15071 u=root n=ansible | Friday 20 March 2020  16:11:18 +0800 (0:00:00.073)       0:00:00.190 ********** 
+2020-03-20 16:11:20,667 p=15071 u=root n=ansible | ok: [localhost]
+2020-03-20 16:11:20,724 p=15071 u=root n=ansible | TASK [Set Variable TOKEN] ***************************************************************************************************
+2020-03-20 16:11:20,726 p=15071 u=root n=ansible | Friday 20 March 2020  16:11:20 +0800 (0:00:01.805)       0:00:01.996 ********** 
+2020-03-20 16:11:20,820 p=15071 u=root n=ansible | ok: [localhost]
+2020-03-20 16:11:20,868 p=15071 u=root n=ansible | TASK [debug] ****************************************************************************************************************
+2020-03-20 16:11:20,868 p=15071 u=root n=ansible | Friday 20 March 2020  16:11:20 +0800 (0:00:00.142)       0:00:02.138 ********** 
+2020-03-20 16:11:20,991 p=15071 u=root n=ansible | ok: [localhost] => {
+    "TOKEN": "gAAAAABedHqowVE8AoFviVR_lZF5IuDEQL5LbtNrTB8x_eiRCc7gXCToRSdU_FnUGJmzGcp6eauZQDxKCN2nNwGhPkBCaA8VwZOUN_Ze4TfLYVB0eax1KvJkvqNtmfqdsMu0luPaE2ekWRmac4n8L29D0ViA7OAIrp20RtGwU0kIrieKaJjpFt9e3czXs_7AyWBzSdUnzc6shTqJyyBKJOX7SuJxSlgexhB9_dkJVVipHBIqKWujLlo"
+}
+2020-03-20 16:11:21,033 p=15071 u=root n=ansible | TASK [Get PowerVC Tenant ID] ************************************************************************************************
+2020-03-20 16:11:21,033 p=15071 u=root n=ansible | Friday 20 March 2020  16:11:21 +0800 (0:00:00.164)       0:00:02.303 ********** 
+2020-03-20 16:11:21,912 p=15071 u=root n=ansible | ok: [localhost]
+2020-03-20 16:11:21,958 p=15071 u=root n=ansible | TASK [Set Variable Tenant ID] ***********************************************************************************************
+2020-03-20 16:11:21,958 p=15071 u=root n=ansible | Friday 20 March 2020  16:11:21 +0800 (0:00:00.925)       0:00:03.228 ********** 
+2020-03-20 16:11:22,107 p=15071 u=root n=ansible | ok: [localhost] => (item={u'is_domain': False, u'description': u'IBM Default Tenant', u'links': {u'self': u'https://192.168.56.101:5000/v3/projects/b2eb6efb8b4e468d93e53935f291716d'}, u'tags': [], u'enabled': True, u'domain_id': u'default', u'parent_id': u'default', u'id': u'b2eb6efb8b4e468d93e53935f291716d', u'name': u'ibm-default'})
+2020-03-20 16:11:22,177 p=15071 u=root n=ansible | TASK [fail] *****************************************************************************************************************
+2020-03-20 16:11:22,178 p=15071 u=root n=ansible | Friday 20 March 2020  16:11:22 +0800 (0:00:00.219)       0:00:03.448 ********** 
+2020-03-20 16:11:22,264 p=15071 u=root n=ansible | PLAY RECAP ******************************************************************************************************************
+2020-03-20 16:11:22,265 p=15071 u=root n=ansible | localhost                  : ok=6    changed=0    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   
+2020-03-20 16:11:22,265 p=15071 u=root n=ansible | Friday 20 March 2020  16:11:22 +0800 (0:00:00.087)       0:00:03.535 ********** 
+2020-03-20 16:11:22,266 p=15071 u=root n=ansible | =============================================================================== 
+2020-03-20 16:11:22,266 p=15071 u=root n=ansible | Include the variables from the YAML file ----------------------------------------------------------------------------- 0.07s
+2020-03-20 16:11:22,266 p=15071 u=root n=ansible | Get an authentication PowerVC Token ---------------------------------------------------------------------------------- 1.81s
+2020-03-20 16:11:22,266 p=15071 u=root n=ansible | Set Variable TOKEN --------------------------------------------------------------------------------------------------- 0.14s
+2020-03-20 16:11:22,266 p=15071 u=root n=ansible | debug ---------------------------------------------------------------------------------------------------------------- 0.16s
+2020-03-20 16:11:22,266 p=15071 u=root n=ansible | Get PowerVC Tenant ID ------------------------------------------------------------------------------------------------ 0.92s
+2020-03-20 16:11:22,266 p=15071 u=root n=ansible | Set Variable Tenant ID ----------------------------------------------------------------------------------------------- 0.22s
+2020-03-20 16:11:22,266 p=15071 u=root n=ansible | fail ----------------------------------------------------------------------------------------------------------------- 0.09s
+2020-03-20 16:11:22,267 p=15071 u=root n=ansible | Playbook run took 0 days, 0 hours, 0 minutes, 3 seconds

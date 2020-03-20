@@ -1,0 +1,26 @@
+{
+    "auth": {
+        "scope": {
+            "project": {
+                "domain": {
+                    "name": "Default"
+                },
+                "name": "ibm-default"
+            }
+        },
+        "identity": {
+            "methods": [
+                "password"
+            ],
+            "password": {
+                "user": {
+                    "domain": {
+                        "id": "default"
+                    },
+                    "name": "{{ OS_USERNAME }}",
+                    "password": "{{ OS_PASSWORD }}"
+                }
+            }
+        }
+    }
+}
