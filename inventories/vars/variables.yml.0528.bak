@@ -3,10 +3,10 @@
 #nb_retry: 12
 #nb_delay: 10
 #nb_timeout: 300
-OS_AUTH_URL: https://10.222.77.141:5000/v3/
-IP_PVC: 10.222.77.141
+OS_AUTH_URL: https://192.168.93.11:5000/v3/
+IP_PVC: 192.168.93.11
 URL_PVC: 'https://{{ IP_PVC }}'
 #OS_AUTH_URL: https://{{ansible_hostname}}:5000/v3/
 OS_PROJECT_NAME: ibm-default
 OS_USERNAME: root
-OS_PASSWORD: abc123
+OS_PASSWORD: passw0rd

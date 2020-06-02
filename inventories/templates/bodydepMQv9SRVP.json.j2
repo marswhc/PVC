@@ -1,0 +1,41 @@
+{
+    "server": {
+        "imageRef": "bc5bcb1f-8d7f-494c-a601-a07bf0cafe12",
+        "host_group_id": ":900922A_7869180",
+        "block_device_mapping_v2": [],
+        "availability_zone": "",
+        "max_count": 1,
+        "flavor": {
+            "extra_specs": {
+                "powervm:processor_compatibility": "default",
+                "powervm:max_proc_units": "2",
+                "powervm:srr_capability": "false",
+                "powervm:storage_connectivity_group": "66dca22e-2816-428d-8c26-cb776b12e004",
+                "powervm:shared_weight": "128",
+                "powervm:min_mem": "16384",
+                "powervm:max_mem": "24576",
+                "powervm:secure_boot": "0",
+                "powervm:uncapped": "true",
+                "powervm:availability_priority": "127",
+                "powervm:proc_units": "1",
+                "powervm:dedicated_proc": "false",
+                "powervm:max_vcpu": "8",
+                "powervm:enable_lpar_metric": "false",
+                "powervm:shared_proc_pool_name": "DefaultPool",
+                "powervm:min_proc_units": "0.5",
+                "powervm:enforce_affinity_check": "false",
+                "powervm:min_vcpu": "2",
+                "powervm:ame_expansion_factor": "0"
+            },
+            "vcpus": 4,
+            "disk": 100,
+            "ram": 20480
+        },
+        "name": "DR-MQv9SRVP{{ 101 | random }}",
+        "networks": [{
+                "uuid": "bf4e13e9-615e-47f8-a11e-68d20102bb4c"
+            }
+        ],
+        "config_drive": true
+    }
+}

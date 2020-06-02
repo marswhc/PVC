@@ -1,0 +1,213 @@
+- name: LPAR GTSAUAPP on DR3 S922_7869170
+  uri:
+   url: '{{ URL_PVC }}/powervc/openstack/compute/v2.1/{{ tenant_id }}/servers'
+   method: POST
+   validate_certs: no
+   headers:
+    Content-Type: "application/json"
+    X-Auth-Token: "{{ TOKEN }}"
+   body_format: json
+   body: "{{ lookup('template', 'bodydepGTSAUAPP.json.j2')}}"
+   return_content: yes
+   status_code: 202
+  register: deploy
+  tags: [ GTSAUAPP, DR3 ]
+
+- name: LPAR GTSAUDBP on DR3 S922_7869170
+  uri:
+   url: '{{ URL_PVC }}/powervc/openstack/compute/v2.1/{{ tenant_id }}/servers'
+   method: POST
+   validate_certs: no
+   headers:
+    Content-Type: "application/json"
+    X-Auth-Token: "{{ TOKEN }}"
+   body_format: json
+   body: "{{ lookup('template', 'bodydepGTSAUDBP.json.j2')}}"
+   return_content: yes
+   status_code: 202
+  register: deploy
+  tags: [ GTSAUDBP, DR3 ]
+
+- name: LPAR GTSSGP on DR3 S922_7869170
+  uri:
+   url: '{{ URL_PVC }}/powervc/openstack/compute/v2.1/{{ tenant_id }}/servers'
+   method: POST
+   validate_certs: no
+   headers:
+    Content-Type: "application/json"
+    X-Auth-Token: "{{ TOKEN }}"
+   body_format: json
+   body: "{{ lookup('template', 'bodydepGTSSGP.json.j2')}}"
+   return_content: yes
+   status_code: 202
+  register: deploy
+  tags: [ GTSSGP, DR3 ]
+  
+- name: LPAR GTSLAP on DR1 S922_7869180
+  uri:
+   url: '{{ URL_PVC }}/powervc/openstack/compute/v2.1/{{ tenant_id }}/servers'
+   method: POST
+   validate_certs: no
+   headers:
+    Content-Type: "application/json"
+    X-Auth-Token: "{{ TOKEN }}"
+   body_format: json
+   body: "{{ lookup('template', 'bodydepGTSLAP.json.j2')}}"
+   return_content: yes
+   status_code: 202
+  register: deploy
+  tags: [ GTSLAP, DR1 ]
+  
+- name: LPAR GTSHKP on DR1 S922_7869180
+  uri:
+   url: '{{ URL_PVC }}/powervc/openstack/compute/v2.1/{{ tenant_id }}/servers'
+   method: POST
+   validate_certs: no
+   headers:
+    Content-Type: "application/json"
+    X-Auth-Token: "{{ TOKEN }}"
+   body_format: json
+   body: "{{ lookup('template', 'bodydepGTSHKP.json.j2')}}"
+   return_content: yes
+   status_code: 202
+  register: deploy
+  tags: [ GTSHKP, DR1 ]
+
+- name: LPAR WISESGDB1P on DR3 S922_7869170
+  uri:
+   url: '{{ URL_PVC }}/powervc/openstack/compute/v2.1/{{ tenant_id }}/servers'
+   method: POST
+   validate_certs: no
+   headers:
+    Content-Type: "application/json"
+    X-Auth-Token: "{{ TOKEN }}"
+   body_format: json
+   body: "{{ lookup('template', 'bodydepWISESGDB1P.json.j2')}}"
+   return_content: yes
+   status_code: 202
+  register: deploy
+  tags: [ WISESGDB1P, DR3 ]
+  
+  
+- name: LPAR WISEHKDB1P on DR3 S922_7869170
+  uri:
+   url: '{{ URL_PVC }}/powervc/openstack/compute/v2.1/{{ tenant_id }}/servers'
+   method: POST
+   validate_certs: no
+   headers:
+    Content-Type: "application/json"
+    X-Auth-Token: "{{ TOKEN }}"
+   body_format: json
+   body: "{{ lookup('template', 'bodydepWISEHKDB1P.json.j2')}}"
+   return_content: yes
+   status_code: 202
+  register: deploy
+  tags: [ WISEHKDB1P, DR3 ]
+  
+
+- name: LPAR PIBMWEB1P on DR4 S922_78691D0
+  uri:
+   url: '{{ URL_PVC }}/powervc/openstack/compute/v2.1/{{ tenant_id }}/servers'
+   method: POST
+   validate_certs: no
+   headers:
+    Content-Type: "application/json"
+    X-Auth-Token: "{{ TOKEN }}"
+   body_format: json
+   body: "{{ lookup('template', 'bodydepPIBMWEB1P.json.j2')}}"
+   return_content: yes
+   status_code: 202
+  register: deploy
+  tags: [ PIBMWEB1P, DR4 ]
+  
+- name: LPAR PIBMAP1P on DR4 S922_78691D0
+  uri:
+   url: '{{ URL_PVC }}/powervc/openstack/compute/v2.1/{{ tenant_id }}/servers'
+   method: POST
+   validate_certs: no
+   headers:
+    Content-Type: "application/json"
+    X-Auth-Token: "{{ TOKEN }}"
+   body_format: json
+   body: "{{ lookup('template', 'bodydepPIBMAP1P.json.j2')}}"
+   return_content: yes
+   status_code: 202
+  register: deploy
+  tags: [ PIBMAP1P, DR4 ]
+  
+- name: LPAR MQv9SRVP on DR1 S922_7869180
+  uri:
+   url: '{{ URL_PVC }}/powervc/openstack/compute/v2.1/{{ tenant_id }}/servers'
+   method: POST
+   validate_certs: no
+   headers:
+    Content-Type: "application/json"
+    X-Auth-Token: "{{ TOKEN }}"
+   body_format: json
+   body: "{{ lookup('template', 'bodydepMQv9SRVP.json.j2')}}"
+   return_content: yes
+   status_code: 202
+  register: deploy
+  tags: [ MQv9SRVP, DR1 ]
+  
+  
+- name: LPAR FEPTX1P on DR4 S922_78691D0
+  uri:
+   url: '{{ URL_PVC }}/powervc/openstack/compute/v2.1/{{ tenant_id }}/servers'
+   method: POST
+   validate_certs: no
+   headers:
+    Content-Type: "application/json"
+    X-Auth-Token: "{{ TOKEN }}"
+   body_format: json
+   body: "{{ lookup('template', 'bodydepFEPTX1P.json.j2')}}"
+   return_content: yes
+   status_code: 202
+  register: deploy
+  tags: [ FEPTX1P, DR4 ]
+  
+- name: LPAR FEPGW1P on DR4 S922_78691D0
+  uri:
+   url: '{{ URL_PVC }}/powervc/openstack/compute/v2.1/{{ tenant_id }}/servers'
+   method: POST
+   validate_certs: no
+   headers:
+    Content-Type: "application/json"
+    X-Auth-Token: "{{ TOKEN }}"
+   body_format: json
+   body: "{{ lookup('template', 'bodydepFEPGW1P.json.j2')}}"
+   return_content: yes
+   status_code: 202
+  register: deploy
+  tags: [ FEPGW1P, DR4 ]
+  
+- name: LPAR FEPDB1P on DR3 S922_7869170
+  uri:
+   url: '{{ URL_PVC }}/powervc/openstack/compute/v2.1/{{ tenant_id }}/servers'
+   method: POST
+   validate_certs: no
+   headers:
+    Content-Type: "application/json"
+    X-Auth-Token: "{{ TOKEN }}"
+   body_format: json
+   body: "{{ lookup('template', 'bodydepFEPDB1P.json.j2')}}"
+   return_content: yes
+   status_code: 202
+  register: deploy
+  tags: [ FEPDB1P, DR3 ]
+  
+  
+- name: LPAR EAMLDB1P on DR1 S922_7869180
+  uri:
+   url: '{{ URL_PVC }}/powervc/openstack/compute/v2.1/{{ tenant_id }}/servers'
+   method: POST
+   validate_certs: no
+   headers:
+    Content-Type: "application/json"
+    X-Auth-Token: "{{ TOKEN }}"
+   body_format: json
+   body: "{{ lookup('template', 'bodydepEAMLDB1P.json.j2')}}"
+   return_content: yes
+   status_code: 202
+  register: deploy
+  tags: [ EAMLDB1P, DR1 ]

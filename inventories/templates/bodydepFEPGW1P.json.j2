@@ -1,0 +1,41 @@
+{
+    "server": {
+        "imageRef": "122c0f62-5ac2-4c17-bd64-04ce0ac21035",
+        "host_group_id": ":900922A_78691D0",
+        "block_device_mapping_v2": [],
+        "availability_zone": "",
+        "max_count": 1,
+        "flavor": {
+            "extra_specs": {
+                "powervm:processor_compatibility": "default",
+                "powervm:max_proc_units": "3",
+                "powervm:srr_capability": "false",
+                "powervm:storage_connectivity_group": "66dca22e-2816-428d-8c26-cb776b12e004",
+                "powervm:shared_weight": "128",
+                "powervm:min_mem": "16384",
+                "powervm:max_mem": "30720",
+                "powervm:secure_boot": "0",
+                "powervm:uncapped": "true",
+                "powervm:availability_priority": "127",
+                "powervm:proc_units": "2",
+                "powervm:dedicated_proc": "false",
+                "powervm:max_vcpu": "12",
+                "powervm:enable_lpar_metric": "false",
+                "powervm:shared_proc_pool_name": "DefaultPool",
+                "powervm:min_proc_units": "1",
+                "powervm:enforce_affinity_check": "false",
+                "powervm:min_vcpu": "4",
+                "powervm:ame_expansion_factor": "0"
+            },
+            "vcpus": 8,
+            "disk": 100,
+            "ram": 28672
+        },
+        "name": "DR-FEPGW1P{{ 101 | random }}",
+        "networks": [{
+                "uuid": "dde1e89e-00ac-4708-8302-da19c2a4a83f"
+            }
+        ],
+        "config_drive": true
+    }
+}

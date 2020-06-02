@@ -1,0 +1,34 @@
+{
+    "server": {
+        "imageRef": "569ee23a-ee72-4369-87d7-a1a18bee4a3d",
+        "host_group_id": ":900922A_7869170",
+        "block_device_mapping_v2": [],
+        "availability_zone": "",
+        "max_count": 1,
+        "flavor": {
+            "extra_specs": {
+                "powervm:max_proc_units": "1",
+                "powervm:storage_connectivity_group": "66dca22e-2816-428d-8c26-cb776b12e004",
+                "powervm:shared_weight": "128",
+                "powervm:min_mem": "2048",
+                "powervm:max_mem": "6144",
+                "powervm:uncapped": "true",
+                "powervm:proc_units": "0.5",
+                "powervm:dedicated_proc": "false",
+                "powervm:max_vcpu": "1",
+                "powervm:availability_priority": "127",
+                "powervm:min_proc_units": "0.1",
+                "powervm:min_vcpu": "1"
+            },
+            "vcpus": 1,
+            "disk": 100,
+            "ram": 4096
+        },
+        "name": "DR-WISESGDB1P{{ 101 | random }}",
+        "networks": [{
+                "uuid": "bf4e13e9-615e-47f8-a11e-68d20102bb4c"
+            }
+        ],
+        "config_drive": true
+    }
+}

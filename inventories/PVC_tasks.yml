@@ -1,13 +1,12 @@
 ---
-- hosts: localhost
-#  gather_facts: no
+- hosts: asbpvc1r
+  gather_facts: yes
 
   tasks:
 
   - name: Include the variables from the YAML file
     include_vars: vars/variables.yml
     tags: always
-    no_log: True
 
   - name:
     import_tasks: tasks/PVC_Get_Token.yml
@@ -15,4 +14,8 @@
 
   - name: 
     import_tasks: tasks/PVC_Get_TenantID.yml
-    tags: tenant
+    tags: always
+
+  - name:
+    import_tasks: tasks/PVC_DeployVM.yml
+    tags: deploy

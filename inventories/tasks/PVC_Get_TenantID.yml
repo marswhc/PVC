@@ -15,8 +15,13 @@
   set_fact: tenant_id={{ item.id }}
   with_items:
    - "{{ tenant.json.projects }}"
-  when: item.name == "ibm-default"
+  when: item.name in [OS_PROJECT_NAME]
   tags: ibm-default
+
+- debug:
+   var: tenant_id
+  when: tenant_id is defined
+
 
 - fail: msg="Could not get Tenant ID"
   when: tenant_id is undefined
